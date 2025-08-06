@@ -23,7 +23,7 @@ export default function PreviewCard({
       <h2 className="bold mt-[8px] mb-[3px] hidden md:block md:text-[16px] lg:text-[24px]">
         {title}
       </h2>
-      <p className="text-description hidden text-[12px] leading-[12px] md:block md:text-[11px] md:leading-[13px] lg:text-[12px] lg:leading-[12px]">
+      <p className="text-description hidden text-[14px] leading-[16px] md:block md:text-[11px] md:leading-[13px] lg:text-[14px] lg:leading-[16px]">
         {description}
       </p>
     </div>
