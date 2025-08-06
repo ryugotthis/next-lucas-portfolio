@@ -1,103 +1,127 @@
-import Image from "next/image";
+import Hearder from '@/components/layouts/Header';
+import BookingButton from '@/components/ui/BookingButton';
+
+import PreviewCard from '@/components/ui/PreviewCard';
+import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div>
+      <Hearder />
+      <section className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
+        <div>
+          <span className="text-[10px] md:text-[14px] lg:text-[16px]">
+            Branding • Identité visuelle
+          </span>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          <p className="bold block text-[28px] leading-[28px] md:w-[470px] md:text-[40px] md:leading-[40px] lg:h-[153px] lg:w-[750px] lg:text-[64px] lg:leading-[64px]">
+            Osez un branding unique
+            <br /> et devenez l’option N°1
+          </p>
+
+          <p className="mt-[51px] mb-[21px] block w-[315px] text-[14px] md:mt-[60px] md:mb-[16px] md:w-[435px] lg:mt-[36px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
+            Je vous accompagne dans la création d’une identité visuelle claire et vraiment
+            différenciante, pour révéler le plein potentiel de votre projet.
+          </p>
+
+          {/* <button className="bg-primary mt-[12px] h-[41px] w-[216px] rounded-[5px] text-[14px] text-white">
+            Prendre RDV
+          </button> */}
+          <BookingButton />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="relative">
+          <div className="absolute hidden md:left-[-70px] md:mt-[-120px] md:block md:h-[459px] md:w-[458px] lg:left-[-68px] lg:mt-[-230px] lg:h-[634px] lg:w-[634px]">
+            <Image src={'/illustrations/Blurred_Illu.png'} alt="illustration" fill />
+          </div>
+        </div>
+      </section>
+
+      <section className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]">
+        <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
+          <PreviewCard
+            url="/"
+            imageSrc="/images/homepage/desktop-tablet/1.mp4"
+            className="aspect-[340/192] md:aspect-[660/450]"
+            title="KenKo"
+            description="Kenko, un studio où la poterie et le bien-être intérieur ne font qu’un."
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <PreviewCard
+            url="/"
+            className="aspect-[340/192] md:aspect-[660/450]"
+            imageSrc="/images/homepage/desktop-tablet/2.mp4"
+            title="Data Governance Kitchen"
+            description={
+              <>
+                Le canal de communication qui aide à concocter de savoureuses stratégies
+                <br />
+                grâce à vos données.
+              </>
+            }
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+        </div>
+
+        <PreviewCard
+          url="/"
+          className="aspect-[340/192] md:aspect-[660/450]"
+          imageSrc="/images/homepage/desktop-tablet/3.jpg"
+          title="Alcôve"
+          description={
+            <>
+              Un coffee shop, un studio de pilates, dans un seul et même lieu.
+              <br />
+              Un double concept pensé pour vous revitaliser et vous apaiser.
+            </>
+          }
+        />
+        <div className="grid grid-cols-1 gap-[12px] md:grid-cols-3 md:gap-[24px]">
+          <PreviewCard
+            url="/"
+            className="aspect-[340/192] md:aspect-[432/450]"
+            imageSrc="/images/homepage/desktop-tablet/4.gif"
+            title="Jeremy Savary"
+            description={
+              <>
+                Une identité visuelle tech et premium pour un profil data <br />
+                d’exception.
+              </>
+            }
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
+          <PreviewCard
+            url="/"
+            className="aspect-[340/192] md:aspect-[432/450]"
+            imageSrc="/images/homepage/desktop-tablet/5.jpg"
+            title="Sneaky"
+            description={
+              <>
+                L’agence de voyage pour enfin pouvoir profitez et être loin des <br />
+                foules. Partez là où 99% des touristes ne vont pas.
+              </>
+            }
+          />
+          <PreviewCard
+            url="/"
+            className="aspect-[340/192] md:aspect-[432/450]"
+            imageSrc="/images/homepage/desktop-tablet/6.gif"
+            title="Okna"
+            description={
+              <>
+                La solution cloud sur-mesure pour accompagner les marques <br />
+                dans leurs projets en utilisant seulement ce dont ils ont besoins.
+              </>
+            }
+          />
+        </div>
+      </section>
+      <section className="mt-[64px] md:mt-[76px] lg:mt-[138px]">
+        <div className="flex flex-col items-center gap-[12px] lg:gap-[20px]">
+          <h1 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
+            La méthode pour garantir la réussite de votre projet
+          </h1>
+          <p className="text-description w-[239px] text-center text-[12px] leading-[16px] md:w-[386px] md:text-[14px] md:leading-[16px] lg:w-[470px] lg:text-[18px] lg:leading-[22px]">
+            C’est moi qui vous accompagne pour définir les meilleures solutions pour votre marque
+          </p>
+        </div>
+      </section>
     </div>
   );
 }
