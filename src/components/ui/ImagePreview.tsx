@@ -1,6 +1,6 @@
 'use client';
 
-import Image from 'next/image';
+// import Image from 'next/image';
 import React from 'react';
 
 interface ImagePreviewProps {
@@ -58,13 +58,14 @@ export default function ImagePreview({
         aria-label="more button"
         tabIndex={0}
       >
-        <Image
+        <div className="h-[48px] w-[48px] bg-[url('/icons/More_button.svg')] bg-contain bg-no-repeat" />
+        {/* <Image
           src="/icons/More_button.svg"
           alt="more button icon"
           width={48}
           height={48}
           draggable={false}
-        />
+        /> */}
       </button>
     </div>
   );

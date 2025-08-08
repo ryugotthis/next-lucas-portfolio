@@ -65,7 +65,7 @@ export default function ProcessCard({
 
       {/* mobile 버전 */}
       <div className="flex h-full w-full flex-col gap-[10px] rounded-[5px] bg-[#F1F3FF] p-[4%] md:hidden">
-        <div className="flex gap-[7px]">
+        <div className="flex items-center gap-[7px]">
           <div className="bg-primary flex h-[24px] w-[24px] items-center justify-center rounded-full">
             <span className="text-center text-[14px] leading-[14px] font-bold text-white">
               {order}
