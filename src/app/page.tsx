@@ -1,3 +1,4 @@
+import ProcessList from '@/components/homepage/ProcessList';
 import Hearder from '@/components/layouts/Header';
 import BookingButton from '@/components/ui/BookingButton';
 
@@ -113,15 +114,18 @@ export default function Home() {
         </div>
       </section>
       <section className="mt-[64px] md:mt-[76px] lg:mt-[138px]">
-        <div className="flex flex-col items-center gap-[12px] lg:gap-[20px]">
+        <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
           <h1 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
             La méthode pour garantir la réussite de votre projet
           </h1>
-          <p className="text-description w-[239px] text-center text-[12px] leading-[16px] md:w-[386px] md:text-[14px] md:leading-[16px] lg:w-[470px] lg:text-[18px] lg:leading-[22px]">
-            C’est moi qui vous accompagne pour définir les meilleures solutions pour votre marque
+          <p className="w-[239px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[386px] md:text-[14px] md:leading-[16px] lg:w-[470px] lg:text-[18px] lg:leading-[22px]">
+            Pas de micromanagement, c’est moi qui vous accompagne pour définir les meilleures
+            solutions pour votre marque
           </p>
         </div>
+        <ProcessList />
       </section>
+      <section></section>
     </div>
   );
 }
