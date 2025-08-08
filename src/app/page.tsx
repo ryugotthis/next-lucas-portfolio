@@ -1,3 +1,4 @@
+import PackageList from '@/components/homepage/PackageLists';
 import ProcessList from '@/components/homepage/ProcessList';
 import Hearder from '@/components/layouts/Header';
 import BookingButton from '@/components/ui/BookingButton';
@@ -125,7 +126,22 @@ export default function Home() {
         </div>
         <ProcessList />
       </section>
-      <section></section>
+      <section className="mt-[64px] flex flex-col items-center md:mt-[76px] lg:mt-[138px]">
+        <h1 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
+          Le package Identité Intégrale
+        </h1>
+        <p className="text-description bold mt-[5px] mb-[20px] w-[201px] text-[12px] leading-[16px] md:mt-[0px] md:mb-[37px] md:w-auto md:text-[14px] md:leading-[16px] lg:mt-[20px] lg:mb-[25px] lg:text-[18px] lg:leading-[22px]">
+          Pour vous donner une longueur d’avance sur la concurrence.
+        </p>
+        <div className="flex h-[28px] w-[174px] items-center justify-center rounded-[22px] bg-[#0A0832] text-[10px] leading-[10px] text-[#DAD8FF] shadow-[0_0_16px_rgba(112,97,255,0.6)] md:h-[33px] md:w-[206px] md:text-[14px] md:leading-[14px] lg:h-[37px] lg:w-[238px] lg:text-[16px] lg:leading-[18px]">
+          <p>
+            Plus que <span className="bold">2 places</span> ce mois
+          </p>
+        </div>
+        <div className="mt-[27px] w-full lg:mt-[33px]">
+          <PackageList />
+        </div>
+      </section>
     </div>
   );
 }
