@@ -119,9 +119,9 @@ export default function Home() {
           <h1 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
             La méthode pour garantir la réussite de votre projet
           </h1>
-          <p className="w-[239px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[386px] md:text-[14px] md:leading-[16px] lg:w-[470px] lg:text-[18px] lg:leading-[22px]">
-            Pas de micromanagement, c’est moi qui vous accompagne pour définir les meilleures
-            solutions pour votre marque
+          <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
+            En tant que brand designer, je vous accompagne pour définir les meilleures solutions
+            pour votre marque
           </p>
         </div>
         <ProcessList />
@@ -138,7 +138,7 @@ export default function Home() {
             Plus que <span className="bold">2 places</span> ce mois
           </p>
         </div>
-        <div className="mt-[27px] w-full lg:mt-[33px]">
+        <div className="mt-[27px] w-full lg:mt-[33px] lg:px-[8%]">
           <PackageList />
         </div>
       </section>
