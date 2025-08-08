@@ -2,6 +2,7 @@
 
 // import Image from 'next/image';
 import React from 'react';
+import ArrowIcon from './ArrowIcon';
 
 interface ImagePreviewProps {
   url: string;
@@ -54,11 +55,13 @@ export default function ImagePreview({
           e.stopPropagation();
           window.open(url, '_blank', 'noopener,noreferrer');
         }}
-        className="absolute right-[20px] bottom-[20px] flex h-8 w-8 items-center justify-center rounded-full bg-white/80 transition hover:bg-white"
+        className="absolute right-[20px] bottom-[20px] flex h-8 w-8 items-center justify-center rounded-full"
         aria-label="more button"
         tabIndex={0}
       >
-        <div className="h-[48px] w-[48px] bg-[url('/icons/More_button.svg')] bg-contain bg-no-repeat" />
+        {/* className="absolute right-[20px] bottom-[20px] flex h-8 w-8 items-center justify-center rounded-full bg-white/80 transition hover:bg-white" */}
+        <ArrowIcon />
+
         {/* <Image
           src="/icons/More_button.svg"
           alt="more button icon"
