@@ -65,7 +65,7 @@ export default function Email() {
       {/* 4행: 버튼 (가득, 보라색) */}
       <button
         type="submit"
-        className="bg-primary text-bgCard bold mt-4 h-[10%] w-full rounded-[5px] text-[12px] transition hover:bg-[#4e46ff] active:translate-y-[1px] lg:text-[16px]"
+        className="bg-primary text-bgCard bold mt-4 h-[15%] w-full rounded-[5px] text-[12px] transition hover:bg-[#4e46ff] active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
       >
         Envoyer
       </button>

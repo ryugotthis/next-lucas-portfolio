@@ -22,7 +22,7 @@ export default function InquiryCard() {
           </p>
         </div>
         {/* contact */}
-        <div className="mt-[36px] flex flex-row gap-[6px] md:flex-col md:gap-[6px] lg:mt-[86px] lg:gap-[8px]">
+        <div className="mt-[36px] flex flex-row gap-[6px] md:flex-col md:gap-[6px] lg:mt-[75px] lg:gap-[8px]">
           <div className="flex items-center gap-[13px]">
             <a
               href=""
@@ -55,7 +55,7 @@ export default function InquiryCard() {
           </div>
         </div>
       </div>
-      <div className="">
+      <div className="h-[281px] md:h-auto">
         <Email />
       </div>
     </div>
