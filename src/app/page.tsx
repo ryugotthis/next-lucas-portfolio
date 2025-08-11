@@ -1,5 +1,6 @@
 import PackageList from '@/components/homepage/PackageLists';
 import ProcessList from '@/components/homepage/ProcessList';
+import ReviewList from '@/components/homepage/ReviewList';
 import Hearder from '@/components/layouts/Header';
 import BookingButton from '@/components/ui/BookingButton';
 
@@ -140,6 +141,24 @@ export default function Home() {
         </div>
         <div className="mt-[27px] w-full lg:mt-[33px] lg:px-[8%]">
           <PackageList />
+        </div>
+        <div className="mt-[19px] text-[14px] leading-[16px] md:mt-[26px] lg:mt-[35px] lg:text-[18px] lg:leading-[22px]">
+          Ou créer votre propre package <br />
+          en prenant rendez-vous avec moi
+        </div>
+      </section>
+      {/* Review section */}
+      <section className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]">
+        <h1 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
+          + de 100 marques accompagnées
+        </h1>
+        <div className="mt-[23px] md:mt-[34px] lg:mt-[36px]">
+          <ReviewList />
+        </div>
+
+        <button className="text-description hidden underline md:block">Voir plus d’avis</button>
+        <div className="mt-[16px] md:mt-[12px] lg:mt-[18px]">
+          <BookingButton />
         </div>
       </section>
     </div>

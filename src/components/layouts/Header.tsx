@@ -33,7 +33,7 @@ export default function Hearder() {
       {/* 데스크톱 클라이언트 섹션 */}
       <div className="hidden items-center gap-[11px] lg:flex lg:justify-end">
         <div className="flex items-center">
-          {['client1.jpeg', 'client2.jpeg', 'client3.png'].map((img, idx) => (
+          {['client1.jpeg', 'client3.jpeg', 'client5.png'].map((img, idx) => (
             <Image
               key={img}
               src={`/images/homepage/desktop-tablet/clients/${img}`}
