@@ -1,3 +1,5 @@
+import FAQCard from '@/components/homepage/FAQCard';
+import InquiryCard from '@/components/homepage/InquiryCard';
 import PackageList from '@/components/homepage/PackageLists';
 import ProcessList from '@/components/homepage/ProcessList';
 import ReviewList from '@/components/homepage/ReviewList';
@@ -159,6 +161,16 @@ export default function Home() {
         <button className="text-description hidden underline md:block">Voir plus d’avis</button>
         <div className="mt-[16px] md:mt-[12px] lg:mt-[18px]">
           <BookingButton />
+        </div>
+      </section>
+      {/* inquiry section */}
+      <section className="mt-[64px] lg:mt-[145px]">
+        <InquiryCard />
+      </section>
+      <section className="mt-[69px] flex flex-col items-center md:mt-[149px]">
+        <h1 className="bold text-[24px] lg:text-[48px]">FAQ</h1>
+        <div className="mt-[26px] w-full md:mt-[34px] lg:mt-[31px]">
+          <FAQCard />
         </div>
       </section>
     </div>

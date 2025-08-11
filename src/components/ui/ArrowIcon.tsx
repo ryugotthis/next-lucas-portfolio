@@ -1,11 +1,18 @@
 export default function ArrowIcon() {
   return (
-    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      xmlns="http://www.w3.org/2000/svg"
+      className="text-gray-800" // Tailwind로 색 변경 가능
+    >
+      {/* 원 배경 색은 필요하면 고정, 아니면 currentColor로 변경 가능 */}
       <circle cx="24" cy="24" r="24" fill="#FAF9FF" />
       <g filter="url(#filter0_d_267_3)">
         <path
           d="M36.7071 24.7071C37.0976 24.3166 37.0976 23.6834 36.7071 23.2929L30.3431 16.9289C29.9526 16.5384 29.3195 16.5384 28.9289 16.9289C28.5384 17.3195 28.5384 17.9526 28.9289 18.3431L34.5858 24L28.9289 29.6569C28.5384 30.0474 28.5384 30.6805 28.9289 31.0711C29.3195 31.4616 29.9526 31.4616 30.3431 31.0711L36.7071 24.7071ZM12 24V25L36 25V24V23L12 23V24Z"
-          fill="#0A0832"
+          fill="currentColor"
         />
       </g>
       <defs>

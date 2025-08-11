@@ -8,6 +8,7 @@
   --color-primary: #5c53ff;
   --color-secondary: #0a0832;
   --color-description: #888888;
+  --color-bgCard: #f1f3ff;
 }
 
 /* 커스텀 폰트 선언: font 폴더 내 폰트 파일 사용 예시 */
@@ -35,6 +36,7 @@
   --color-primary: var(--color-primary);
   --color-secondary: var(--color-secondary);
   --color-description: var(--color-description);
+  --color-bgCard: var(--color-bgCard);
 }
 
 @media (prefers-color-scheme: dark) {

@@ -3,7 +3,7 @@ import PackageCard from './PackgeCard';
 export default function PackageList() {
   const items = [
     {
-      title: 'Le Statter',
+      title: 'Le starter',
       content: [
         { name: 'Packs de logos', include: true },
         { name: 'Couleurs & typos', include: true },
@@ -32,7 +32,7 @@ export default function PackageList() {
       ],
       extraContent: [
         { name: 'Appel stratégique', include: true },
-        { name: '5 révisions/livrable', include: true },
+        { name: 'Révisions illimitées', include: true },
         { name: 'Brandboard', include: true },
         { name: 'Atelier conseil après projet', include: true },
       ],
