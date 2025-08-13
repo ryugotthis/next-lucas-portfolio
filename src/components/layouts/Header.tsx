@@ -12,9 +12,12 @@ export default function Hearder() {
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <div className="bg-background fixed top-0 z-10 w-full items-center justify-between px-[24px] py-[16px] md:static md:flex md:justify-between md:p-0 lg:grid lg:grid-cols-3">
+    <div className="bg-background fixed top-0 z-10 w-full items-center justify-between py-[16px] md:static md:flex md:justify-between md:p-0 lg:grid lg:grid-cols-3">
       <div className="lg:justify-start">
-        <Link href="/" className="">
+        <Link
+          href="/"
+          className="block h-[44.8px] w-[45px] md:h-[54.8px] md:w-[52px] lg:h-[65.22px] lg:w-[70px]"
+        >
           <Image src="/icons/Logo_Lucas-03.svg" alt="Lucas_logo" width={70} height={65} />
         </Link>
       </div>

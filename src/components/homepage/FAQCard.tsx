@@ -105,7 +105,7 @@ export default function FAQCard() {
           className={`${openId === content.id ? 'bg-[#F0F0F0]' : 'bg-[#D9D9D9]'} overflow-hidden rounded-[5px] text-[#464646]`}
         >
           <div className="flex justify-between">
-            <p className="bold p-4 text-[12px] md:text-[14px] lg:text-[16px]">{content.question}</p>
+            <p className="bold p-4 text-[14px] md:text-[14px] lg:text-[16px]">{content.question}</p>
 
             <div className="my-auto pr-4">
               {openId === content.id ? (
@@ -116,7 +116,7 @@ export default function FAQCard() {
             </div>
           </div>
           <div
-            className={`${openId === content.id ? 'h-auto px-4 pb-4' : 'h-0 opacity-0'} text-[10px] leading-[12px] transition-[h] duration-300 ease-in-out md:text-[12px] md:leading-[14px] lg:text-[14px] lg:leading-[18px]`}
+            className={`${openId === content.id ? 'h-auto px-4 pb-4' : 'h-0 opacity-0'} text-[12px] leading-[14px] transition-[h] duration-300 ease-in-out md:text-[12px] md:leading-[14px] lg:text-[14px] lg:leading-[18px]`}
           >
             {content.answer}
           </div>
