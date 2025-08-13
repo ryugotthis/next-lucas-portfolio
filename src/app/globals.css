@@ -52,15 +52,22 @@ body {
   font-family: Pretendard, Arial, Helvetica, sans-serif;
   padding: 14px 12px 0 12px;
 }
+
+@media (max-width: 767px) {
+  html {
+    scroll-padding-top: 110px;
+  }
+}
+
 /* 태블릿 (640px - 767px) */
-@media (min-width: 641px) {
+@media (min-width: 767px) {
   body {
     padding: 16px 24px 0 24px;
   }
 }
 
-/* PC (768px 이상) */
-@media (min-width: 769px) {
+/* PC (1023px 이상) */
+@media (min-width: 1023px) {
   body {
     padding: 16px 48px 0 48px;
     max-width: 100%;

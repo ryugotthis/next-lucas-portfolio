@@ -12,7 +12,7 @@ export default function Footer() {
   };
   return (
     <div className="relative pb-[12px] md:pb-[24px] lg:pb-[48px]">
-      <div className="md:[256px] flex h-[302px] flex-col items-center justify-center gap-[32px] md:w-[75%] md:flex-row md:items-end md:justify-between md:gap-0">
+      <div className="flex h-[302px] flex-col items-center justify-center gap-[32px] md:h-[256px] md:w-[75%] md:flex-row md:items-end md:justify-between md:gap-0">
         <Link href="/" className="">
           <Image src="/icons/Logo_Lucas-03.svg" alt="Lucas_logo" width={70} height={65} />
         </Link>
