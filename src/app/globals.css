@@ -63,6 +63,7 @@ body {
 @media (min-width: 769px) {
   body {
     padding: 16px 48px 0 48px;
+    max-width: 100%;
     overflow-x: hidden;
   }
 }

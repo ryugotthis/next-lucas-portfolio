@@ -3,6 +3,7 @@ import InquiryCard from '@/components/homepage/InquiryCard';
 import PackageList from '@/components/homepage/PackageLists';
 import ProcessList from '@/components/homepage/ProcessList';
 import ReviewList from '@/components/homepage/ReviewList';
+import Footer from '@/components/layouts/Footer';
 import Hearder from '@/components/layouts/Header';
 import BookingButton from '@/components/ui/BookingButton';
 
@@ -40,8 +41,11 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      <section className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]">
+      {/* project section */}
+      <section
+        id="project"
+        className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]"
+      >
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
           <PreviewCard
             url="/"
@@ -117,7 +121,8 @@ export default function Home() {
           />
         </div>
       </section>
-      <section className="mt-[64px] md:mt-[76px] lg:mt-[138px]">
+      {/* process section */}
+      <section id="process" className="mt-[64px] md:mt-[76px] lg:mt-[138px]">
         <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
           <h1 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
             La méthode pour garantir la réussite de votre projet
@@ -129,7 +134,11 @@ export default function Home() {
         </div>
         <ProcessList />
       </section>
-      <section className="mt-[64px] flex flex-col items-center md:mt-[76px] lg:mt-[138px]">
+      {/* offer section */}
+      <section
+        id="offer"
+        className="mt-[64px] flex flex-col items-center md:mt-[76px] lg:mt-[138px]"
+      >
         <h1 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
           Le package Identité Intégrale
         </h1>
@@ -150,7 +159,10 @@ export default function Home() {
         </div>
       </section>
       {/* Review section */}
-      <section className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]">
+      <section
+        id="review"
+        className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]"
+      >
         <h1 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
           + de 100 marques accompagnées
         </h1>
@@ -163,8 +175,8 @@ export default function Home() {
           <BookingButton />
         </div>
       </section>
-      {/* inquiry section */}
-      <section className="mt-[64px] lg:mt-[145px]">
+      {/* contact section */}
+      <section id="contact" className="mt-[64px] lg:mt-[145px]">
         <InquiryCard />
       </section>
       <section className="mt-[69px] flex flex-col items-center md:mt-[149px]">
@@ -173,6 +185,8 @@ export default function Home() {
           <FAQCard />
         </div>
       </section>
+
+      <Footer />
     </div>
   );
 }
