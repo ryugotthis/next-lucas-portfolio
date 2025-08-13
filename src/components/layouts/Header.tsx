@@ -11,6 +11,19 @@ export default function Hearder() {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleScroll = (id: string) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  // 모바일 메뉴 항목 클릭 시: 스크롤 + 메뉴 닫기
+  const handleMenuItemClick = (id: string) => {
+    handleScroll(id);
+    setIsMenuOpen(false);
+  };
   return (
     <div className="bg-background fixed top-0 z-10 w-full items-center justify-between py-[16px] md:static md:flex md:justify-between md:p-0 lg:grid lg:grid-cols-3">
       <div className="lg:justify-start">
@@ -25,10 +38,19 @@ export default function Hearder() {
       {/* 데스크톱 네비게이션 */}
       <div className="hidden md:flex lg:justify-center">
         <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
-          <li className="whitespace-nowrap">Projets</li>
-          <li className="whitespace-nowrap">Ma méthode</li>
-          <li className="whitespace-nowrap">Offres</li>
-          <li className="whitespace-nowrap">Qui suis-je ?</li>
+          <li className="whitespace-nowrap">
+            <button onClick={() => handleScroll('project')}>Projets</button>
+          </li>
+          <li className="whitespace-nowrap">
+            <button onClick={() => handleScroll('process')}>Ma méthode</button>
+          </li>
+
+          <li className="whitespace-nowrap">
+            <button onClick={() => handleScroll('offer')}>Offres</button>
+          </li>
+          <li className="whitespace-nowrap">
+            <button onClick={() => handleScroll('contact')}>Qui suis-je ?</button>
+          </li>
           <li className="whitespace-nowrap">Contacnt</li>
         </nav>
       </div>
@@ -66,11 +88,22 @@ export default function Hearder() {
         <div className="fixed inset-0 top-0 right-0 bg-black/50 md:hidden">
           <div className="bg-background absolute top-0 right-0 h-full w-[60%] md:hidden">
             <nav className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
-              <li className="px-4 py-3 hover:bg-gray-100">Projets</li>
-              <li className="px-4 py-3 hover:bg-gray-100">Ma méthode</li>
-              <li className="px-4 py-3 hover:bg-gray-100">Offres</li>
-              <li className="px-4 py-3 hover:bg-gray-100">Qui suis-je ?</li>
-              <li className="px-4 py-3 hover:bg-gray-100">Contact</li>
+              <li className="px-4 py-3 hover:bg-gray-100">
+                {' '}
+                <button onClick={() => handleMenuItemClick('project')}>Projets</button>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-100">
+                <button onClick={() => handleMenuItemClick('process')}>Ma méthode</button>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-100">
+                <button onClick={() => handleMenuItemClick('offer')}>Offres</button>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-100">
+                <button onClick={() => handleMenuItemClick('contact')}>Qui suis-je ?</button>
+              </li>
+              <li className="px-4 py-3 hover:bg-gray-100">
+                <button onClick={() => handleMenuItemClick('contact')}>Contact</button>
+              </li>
             </nav>
           </div>
         </div>
