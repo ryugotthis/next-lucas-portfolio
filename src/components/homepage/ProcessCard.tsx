@@ -51,10 +51,8 @@ export default function ProcessCard({
         {/* 제목 */}
         <div className={`flex flex-col gap-[15px] ${reverse ? 'order-1' : 'order-2'}`}>
           <div className="flex gap-[7px]">
-            <div className="bg-primary flex h-[24px] w-[24px] items-center justify-center rounded-full">
-              <span className="text-center text-[14px] leading-[14px] font-bold text-white">
-                {order}
-              </span>
+            <div className="bg-primary relative flex h-[24px] w-[24px] items-center justify-center overflow-hidden rounded-full">
+              <Image src={order} alt={`order ${id}`} fill />
             </div>
             <h1 className="bold text-[20px] leading-[20px]">{title}</h1>
           </div>
@@ -66,10 +64,8 @@ export default function ProcessCard({
       {/* mobile 버전 */}
       <div className="flex h-full w-full flex-col gap-[10px] rounded-[5px] bg-[#F1F3FF] p-[4%] md:hidden">
         <div className="flex items-center gap-[7px]">
-          <div className="bg-primary flex h-[24px] w-[24px] items-center justify-center rounded-full">
-            <span className="text-center text-[14px] leading-[14px] font-bold text-white">
-              {order}
-            </span>
+          <div className="bg-primary relative flex h-[24px] w-[24px] items-center justify-center overflow-hidden rounded-full">
+            <Image src={order} alt={`order ${id}`} fill />
           </div>
           <h1 className="bold text-[16px] leading-[16px]">{title}</h1>
         </div>
