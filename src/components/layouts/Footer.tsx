@@ -19,21 +19,31 @@ export default function Footer() {
         <div className="bold flex h-[30%] w-full justify-between text-[11px] md:w-[60%] md:justify-between md:text-[12px] lg:text-[16px]">
           <ul className="flex flex-col items-start justify-between md:items-center">
             <li className="">
-              <button onClick={() => handleScroll('project')}>Projets</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('project')}>
+                Projets
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScroll('process')}>Ma méthode</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('process')}>
+                Ma méthode
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScroll('offer')}>Offres</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('offer')}>
+                Offres
+              </button>
             </li>
           </ul>
           <ul className="flex flex-col items-center justify-between">
             <li>
-              <button onClick={() => handleScroll('contact')}>Qui suis-je ?</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('contact')}>
+                Qui suis-je ?
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScroll('contact')}>Contact</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('contact')}>
+                Contact
+              </button>
             </li>
             <li>
               <Link href="/">Prendre RDV</Link>
@@ -41,13 +51,19 @@ export default function Footer() {
           </ul>
           <ul className="flex flex-col items-end justify-between md:items-center">
             <li>
-              <button onClick={() => handleScroll('project')}>Mentions Légales</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('project')}>
+                Mentions Légales
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScroll('project')}>CGPS</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('project')}>
+                CGPS
+              </button>
             </li>
             <li>
-              <button onClick={() => handleScroll('project')}>Politique de Confidentialité</button>
+              <button className="cursor-pointer" onClick={() => handleScroll('project')}>
+                Politique de Confidentialité
+              </button>
             </li>
           </ul>
         </div>

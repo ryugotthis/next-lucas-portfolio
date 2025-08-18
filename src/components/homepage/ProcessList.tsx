@@ -3,7 +3,8 @@ import ProcessCard from './ProcessCard';
 export default function ProcessList() {
   const contents = [
     {
-      order: 1,
+      id: 1,
+      order: '/icons/N1.svg',
       title: 'Atelier Stratégique',
       description: (
         <>
@@ -20,7 +21,8 @@ export default function ProcessList() {
       // imageRatio: 'aspect-[1/1]', //248
     },
     {
-      order: 2,
+      id: 2,
+      order: '/icons/N2.svg',
       title: 'Étude du projet',
       description: (
         <>
@@ -37,7 +39,8 @@ export default function ProcessList() {
       // imageRatio: 'aspect-square', //248
     },
     {
-      order: 3,
+      id: 3,
+      order: '/icons/N3.svg',
       title: 'Création',
       description: (
         <>
@@ -56,7 +59,8 @@ export default function ProcessList() {
       // imageRatio: 'aspect-square', //255
     },
     {
-      order: 4,
+      id: 4,
+      order: '/icons/N4.svg',
       title: 'Livraison et suivi',
       description: (
         <>
@@ -79,6 +83,7 @@ export default function ProcessList() {
       <div className="grid grid-cols-1 items-stretch gap-[2%] lg:grid-cols-4">
         {contents.map((card, index) => (
           <ProcessCard
+            id={card.id}
             order={card.order}
             title={card.title}
             description={card.description}

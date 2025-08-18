@@ -1,7 +1,8 @@
 import Image from 'next/image';
 
 interface ProcessCardProps {
-  order: number;
+  id: number;
+  order: string;
   title: string;
   description: string | React.ReactNode;
   imageSrc: string;
@@ -10,6 +11,7 @@ interface ProcessCardProps {
 }
 
 export default function ProcessCard({
+  id,
   order,
   title,
   description,
@@ -22,10 +24,8 @@ export default function ProcessCard({
       <div className={`hidden h-full w-full rounded-[5px] bg-[#F1F3FF] p-[15px] lg:block`}>
         {/* 제목 */}
         <div className={`flex gap-[7px]`}>
-          <div className="bg-primary flex h-[24px] w-[24px] items-center justify-center rounded-full">
-            <span className="text-center text-[14px] leading-[14px] font-bold text-white">
-              {order}
-            </span>
+          <div className="relative flex h-[24px] w-[24px] items-center justify-center overflow-hidden rounded-full">
+            <Image src={order} alt={`order ${id}`} fill />
           </div>
           <h1 className="bold text-[20px] leading-[20px]">{title}</h1>
         </div>

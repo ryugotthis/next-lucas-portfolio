@@ -8,6 +8,7 @@ import Hearder from '@/components/layouts/Header';
 import BookingButton from '@/components/ui/BookingButton';
 
 import PreviewCard from '@/components/ui/PreviewCard';
+import { Link } from 'lucide-react';
 import Image from 'next/image';
 
 export default function Home() {
@@ -170,7 +171,12 @@ export default function Home() {
           <ReviewList />
         </div>
 
-        <button className="text-description hidden underline md:block">Voir plus d’avis</button>
+        <Link
+          className="text-description hidden underline md:block"
+          href="https://www.malt.fr/profile/lucasprovost"
+        >
+          Voir plus d’avis
+        </Link>
         <div className="mt-[16px] md:mt-[12px] lg:mt-[18px]">
           <BookingButton />
         </div>
@@ -185,8 +191,9 @@ export default function Home() {
           <FAQCard />
         </div>
       </section>
-
-      <Footer />
+      <div className="mt-[4%]">
+        <Footer />
+      </div>
     </div>
   );
 }

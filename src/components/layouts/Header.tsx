@@ -39,19 +39,31 @@ export default function Hearder() {
       <div className="hidden md:flex lg:justify-center">
         <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('project')}>Projets</button>
+            <button onClick={() => handleScroll('project')} className="cursor-pointer">
+              Projets
+            </button>
           </li>
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('process')}>Ma méthode</button>
+            <button onClick={() => handleScroll('process')} className="cursor-pointer">
+              Ma méthode
+            </button>
           </li>
 
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('offer')}>Offres</button>
+            <button onClick={() => handleScroll('offer')} className="cursor-pointer">
+              Offres
+            </button>
           </li>
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('contact')}>Qui suis-je ?</button>
+            <button onClick={() => handleScroll('contact')} className="cursor-pointer">
+              Qui suis-je ?
+            </button>
           </li>
-          <li className="whitespace-nowrap">Contacnt</li>
+          <li className="whitespace-nowrap">
+            <button onClick={() => handleScroll('contact')} className="cursor-pointer">
+              Contact
+            </button>
+          </li>
         </nav>
       </div>
 
