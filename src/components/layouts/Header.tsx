@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 
-export default function Hearder() {
+export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

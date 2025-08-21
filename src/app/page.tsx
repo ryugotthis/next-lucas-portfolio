@@ -4,7 +4,7 @@ import PackageList from '@/components/homepage/PackageLists';
 import ProcessList from '@/components/homepage/ProcessList';
 import ReviewList from '@/components/homepage/ReviewList';
 import Footer from '@/components/layouts/Footer';
-import Hearder from '@/components/layouts/Header';
+// import Hearder from '@/components/layouts/Header';
 import BookingButton from '@/components/ui/BookingButton';
 
 import PreviewCard from '@/components/ui/PreviewCard';
@@ -14,7 +14,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-      <Hearder />
+      {/* <Hearder /> */}
       <section className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
         <div>
           <span className="text-[10px] md:text-[14px] lg:text-[16px]">
@@ -49,14 +49,14 @@ export default function Home() {
       >
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
           <PreviewCard
-            url="/"
+            url="/project/kenko"
             imageSrc="/images/homepage/desktop-tablet/1.mp4"
             className="aspect-[340/192] md:aspect-[660/450]"
             title="KenKo"
             description="Kenko, un studio où la poterie et le bien-être intérieur ne font qu’un."
           />
           <PreviewCard
-            url="/"
+            url="/project/DGK"
             className="aspect-[340/192] md:aspect-[660/450]"
             imageSrc="/images/homepage/desktop-tablet/2.mp4"
             title="Data Governance Kitchen"
@@ -191,9 +191,7 @@ export default function Home() {
           <FAQCard />
         </div>
       </section>
-      <div className="mt-[4%]">
-        <Footer />
-      </div>
+      <div className="mt-[4%]">{/* <Footer /> */}</div>
     </div>
   );
 }
