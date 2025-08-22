@@ -56,7 +56,7 @@ export default function Home() {
             description="Kenko, un studio où la poterie et le bien-être intérieur ne font qu’un."
           />
           <PreviewCard
-            url="/project/DGK"
+            url="/project/dgk"
             className="aspect-[340/192] md:aspect-[660/450]"
             imageSrc="/images/homepage/desktop-tablet/2.mp4"
             title="Data Governance Kitchen"
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
 
         <PreviewCard
-          url="/"
+          url="/project/alcove"
           className="aspect-[340/192] md:aspect-[660/450]"
           imageSrc="/images/homepage/desktop-tablet/3.jpg"
           title="Alcôve"
@@ -85,7 +85,7 @@ export default function Home() {
         />
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-3 md:gap-[24px]">
           <PreviewCard
-            url="/"
+            url="/project/jeremy-savary"
             className="aspect-[340/192] md:aspect-[432/450]"
             imageSrc="/images/homepage/desktop-tablet/4.gif"
             title="Jeremy Savary"
@@ -97,7 +97,7 @@ export default function Home() {
             }
           />
           <PreviewCard
-            url="/"
+            url="/project/sneaky"
             className="aspect-[340/192] md:aspect-[432/450]"
             imageSrc="/images/homepage/desktop-tablet/5.jpg"
             title="Sneaky"
@@ -109,7 +109,7 @@ export default function Home() {
             }
           />
           <PreviewCard
-            url="/"
+            url="/project/okna"
             className="aspect-[340/192] md:aspect-[432/450]"
             imageSrc="/images/homepage/desktop-tablet/6.gif"
             title="Okna"
