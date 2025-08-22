@@ -343,7 +343,7 @@ const contents = [
       },
       {
         order: 4,
-        imgType: 3,
+        imgType: 5,
         isLast: true,
         imgSrc1: '/images/sneaky/8.jpg',
         imgSrc2: '/images/sneaky/9.jpg',
