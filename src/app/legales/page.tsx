@@ -1,7 +1,7 @@
 export default function page() {
   return (
-    <>
-      <h1 className="bold text-[24px] md:text-[34px]">légales</h1>
+    <div className="mt-[100px]">
+      <h1 className="bold text-[24px] md:text-[34px]">Informations légales - Lucas Provost</h1>
       <p className="text-[11px] md:text-[24px]">
         <span className="bold">Identité de l`&lsquo;`entreprise</span> : PROVOST Lucas -
         Entrepreneur individuel - 44 rue de la madeleine, La Bazoge, 72650.
@@ -20,6 +20,6 @@ export default function page() {
         <br />
         Le responsable publication est une personne physique ou une personne morale.
       </p>
-    </>
+    </div>
   );
 }

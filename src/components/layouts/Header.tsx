@@ -92,19 +92,29 @@ export default function Header() {
             <nav className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
               <li className="px-4 py-3 hover:bg-gray-100">
                 {' '}
-                <Link href="/#project">Projets</Link>
+                <Link href="/#project" onClick={() => setIsMenuOpen(false)}>
+                  Projets
+                </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/#process">Ma méthode</Link>
+                <Link href="/#process" onClick={() => setIsMenuOpen(false)}>
+                  Ma méthode
+                </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/#offer">Offres</Link>
+                <Link href="/#offer" onClick={() => setIsMenuOpen(false)}>
+                  Offres
+                </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/qui-suis-je">Qui suis-je ?</Link>
+                <Link href="/qui-suis-je" onClick={() => setIsMenuOpen(false)}>
+                  Qui suis-je ?
+                </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/#contact">Contact</Link>
+                <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
+                  Contact
+                </Link>
               </li>
             </nav>
           </div>
