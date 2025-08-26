@@ -36,34 +36,23 @@ export default function Header() {
       </div>
 
       {/* 데스크톱 네비게이션 */}
-      <div className="hidden md:flex lg:justify-center">
+      <div className="z-30 hidden md:flex lg:justify-center">
         <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('project')} className="cursor-pointer">
-              Projets
-            </button>
+            <Link href="/#project">Projets</Link>
           </li>
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('process')} className="cursor-pointer">
-              Ma méthode
-            </button>
+            <Link href="/#process">Ma méthode</Link>
           </li>
 
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('offer')} className="cursor-pointer">
-              Offres
-            </button>
+            <Link href="/#offer">Offres</Link>
           </li>
           <li className="whitespace-nowrap">
-            {/* <button onClick={() => handleScroll('contact')} className="cursor-pointer"> */}
-
             <Link href="/qui-suis-je">Qui suis-je ?</Link>
-            {/* </button> */}
           </li>
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('contact')} className="cursor-pointer">
-              Contact
-            </button>
+            <Link href="/#contact">Contact</Link>
           </li>
         </nav>
       </div>
@@ -103,19 +92,19 @@ export default function Header() {
             <nav className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
               <li className="px-4 py-3 hover:bg-gray-100">
                 {' '}
-                <button onClick={() => handleMenuItemClick('project')}>Projets</button>
+                <Link href="/#project">Projets</Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <button onClick={() => handleMenuItemClick('process')}>Ma méthode</button>
+                <Link href="/#process">Ma méthode</Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <button onClick={() => handleMenuItemClick('offer')}>Offres</button>
+                <Link href="/#offer">Offres</Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <button onClick={() => handleMenuItemClick('contact')}>Qui suis-je ?</button>
+                <Link href="/qui-suis-je">Qui suis-je ?</Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
-                <button onClick={() => handleMenuItemClick('contact')}>Contact</button>
+                <Link href="/#contact">Contact</Link>
               </li>
             </nav>
           </div>

@@ -3,8 +3,7 @@ import InquiryCard from '@/components/homepage/InquiryCard';
 import PackageList from '@/components/homepage/PackageLists';
 import ProcessList from '@/components/homepage/ProcessList';
 import ReviewList from '@/components/homepage/ReviewList';
-import Footer from '@/components/layouts/Footer';
-// import Hearder from '@/components/layouts/Header';
+
 import BookingButton from '@/components/ui/BookingButton';
 
 import PreviewCard from '@/components/ui/PreviewCard';
