@@ -1,4 +1,5 @@
 import ProjectList from '@/components/projects/ProjectList';
+import BookingButton from '@/components/ui/BookingButton';
 
 interface ProjectProps {
   params: Promise<{ slug: string }>;
@@ -10,6 +11,13 @@ export default async function projectPage({ params }: ProjectProps) {
   return (
     <div className="mt-[100]">
       <ProjectList project={slug} />
+      <div className="flex flex-col items-center justify-center">
+        <p className="bold text-[14px] md:text-[24px]">Besoin du même package ?</p>
+        <p className="text-description mb-[2%] text-[11px] md:text-[16px]">
+          Prenez rendez-vous gratuitement pour échanger sur votre projet.
+        </p>
+        <BookingButton />
+      </div>
     </div>
   );
 }

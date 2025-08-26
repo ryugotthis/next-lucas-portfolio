@@ -441,7 +441,7 @@ export default function ProjectList({ project }: ProjectListProps) {
             <p className="w-[67%] text-[11px] md:text-[18px] lg:text-[26px]">
               {projectGroup.section[0].description}
             </p>
-            <div className="divide-description w-[30%] divide-y text-[14px] leading-[32px]">
+            <div className="divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
               <div className="flex justify-between">
                 <div className="text-description">Client</div>
                 <div>{projectGroup.section[0].introduction?.client}</div>

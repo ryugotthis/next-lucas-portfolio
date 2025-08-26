@@ -55,9 +55,10 @@ export default function Header() {
             </button>
           </li>
           <li className="whitespace-nowrap">
-            <button onClick={() => handleScroll('contact')} className="cursor-pointer">
-              Qui suis-je ?
-            </button>
+            {/* <button onClick={() => handleScroll('contact')} className="cursor-pointer"> */}
+
+            <Link href="/qui-suis-je">Qui suis-je ?</Link>
+            {/* </button> */}
           </li>
           <li className="whitespace-nowrap">
             <button onClick={() => handleScroll('contact')} className="cursor-pointer">
