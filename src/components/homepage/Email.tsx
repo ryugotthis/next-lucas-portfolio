@@ -1,12 +1,53 @@
 'use client';
+import { useState } from 'react';
 
 export default function Email() {
+  const [loading, setLoading] = useState(false);
+  const [msg, setMsg] = useState<string | null>(null);
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+    setMsg(null);
+    setLoading(true);
+
+    const fd = new FormData(e.currentTarget);
+    const payload = {
+      lastName: String(fd.get('lastName') || '').trim(),
+      firstName: String(fd.get('firstName') || '').trim(),
+      email: String(fd.get('email') || '').trim(),
+      message: String(fd.get('message') || '').trim(),
+    };
+
+    // 간단 검증
+    if (!payload.email || !payload.message) {
+      setLoading(false);
+      setMsg('Merci d’indiquer votre adresse e-mail et un message.');
+      return;
+    }
+
+    try {
+      const res = await fetch('/api/send', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await res.json();
+      setMsg(
+        data.success
+          ? '✅ Votre message a été envoyé avec succès.'
+          : '❌ Une erreur est survenue, veuillez réessayer.'
+      );
+      if (data.success) e.currentTarget.reset();
+    } catch {
+      setMsg('❌ Erreur réseau, veuillez vérifier votre connexion.');
+    } finally {
+      setLoading(false);
+    }
+  }
   return (
     <form
-      onSubmit={(e) => {
-        e.preventDefault();
-        // TODO: submit
-      }}
+      onSubmit={handleSubmit}
       className="mx-auto h-full w-full max-w-xl rounded-[5px] bg-transparent"
     >
       {/* 1행: Nom / Prénom */}
@@ -65,10 +106,12 @@ export default function Email() {
       {/* 4행: 버튼 (가득, 보라색) */}
       <button
         type="submit"
+        disabled={loading}
         className="bg-primary text-bgCard bold mt-4 h-[15%] w-full rounded-[5px] text-[12px] transition hover:bg-[#4e46ff] active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
       >
-        Envoyer
+        {loading ? 'Envoi...' : 'Envoyer'}
       </button>
+      {msg && <p className="mt-2 text-sm">{msg}</p>}
     </form>
   );
 }

@@ -25,7 +25,7 @@ export default function InquiryCard() {
         <div className="mt-[36px] flex flex-row gap-[6px] md:flex-col md:gap-[6px] lg:mt-[75px] lg:gap-[8px]">
           <div className="flex items-center gap-[13px]">
             <a
-              href=""
+              href="https://www.linkedin.com/in/lucasprovost?trk=contact-info"
               className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
             >
               <Image src="/icons/Linkedin.svg" fill alt="linkedin" className="object-contain" />
@@ -34,7 +34,7 @@ export default function InquiryCard() {
           </div>
           <div className="flex items-center gap-[13px]">
             <a
-              href=""
+              href="https://www.instagram.com/lucas.prvst/"
               className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
             >
               <Image src="/icons/Instagram.svg" alt="instagram" fill className="object-contain" />
@@ -47,7 +47,7 @@ export default function InquiryCard() {
           <div className="flex items-center gap-[13px]">
             <a
               href=""
-              className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
+              className="relative h-[30px] w-[30px] cursor-none overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
             >
               <Image src="/icons/WhatsApp.svg" alt="whatsapp" fill className="object-contain" />
             </a>
