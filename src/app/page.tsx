@@ -7,7 +7,8 @@ import ReviewList from '@/components/homepage/ReviewList';
 import BookingButton from '@/components/ui/BookingButton';
 
 import PreviewCard from '@/components/ui/PreviewCard';
-import { Link } from 'lucide-react';
+
+import Link from 'next/link';
 import Image from 'next/image';
 
 export default function Home() {
@@ -176,6 +177,7 @@ export default function Home() {
         >
           Voir plus d’avis
         </Link>
+
         <div className="mt-[16px] md:mt-[12px] lg:mt-[18px]">
           <BookingButton />
         </div>
