@@ -169,7 +169,7 @@ export default function ReviewList() {
           ))}
         </div>
         {/* 하단 그라데이션 오버레이 */}
-        <div className="pointer-events-none absolute bottom-0 left-0 h-[200px] w-full bg-gradient-to-t from-white to-transparent" />
+        <div className="from-background pointer-events-none absolute bottom-0 left-0 h-[200px] w-full bg-gradient-to-t to-transparent" />
       </div>
       {/* <div className="grid items-start gap-[2%] lg:grid-cols-4">
         {reviews.map((review) => (
