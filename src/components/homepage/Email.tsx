@@ -77,7 +77,7 @@ export default function Email() {
       </div>
 
       {/* 2행: Email */}
-      <div className="mt-11 h-[10%]">
+      <div className="mt-11 h-[10%] md:mt-3">
         <label htmlFor="email" className="sr-only">
           Email
         </label>

@@ -32,7 +32,7 @@ export async function POST(req: Request) {
 
     if (!res.ok) {
       const errorText = await res.text();
-      console.error('Postmark error:', errorText);
+      console.error('Postmark error:', res.status, errorText);
       return NextResponse.json(
         { success: false, error: 'Postmark request failed' },
         { status: 500 }
