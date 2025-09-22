@@ -154,9 +154,9 @@ export default function Home() {
         <div className="mt-[27px] w-full lg:mt-[33px] lg:px-[8%]">
           <PackageList />
         </div>
-        <div className="mt-[19px] text-[14px] leading-[16px] md:mt-[26px] lg:mt-[35px] lg:text-[18px] lg:leading-[22px]">
-          Ou créer votre propre package <br />
-          en prenant rendez-vous avec moi
+        <div className="text-description mt-[19px] text-center text-[14px] leading-[16px] md:mt-[26px] lg:mt-[35px] lg:text-[18px] lg:leading-[22px]">
+          Ou créer votre propre package en <br />
+          prenant rendez-vous avec moi
         </div>
       </section>
       {/* Review section */}

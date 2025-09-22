@@ -51,8 +51,8 @@ export default function Email() {
       className="mx-auto h-full w-full max-w-xl rounded-[5px] bg-transparent"
     >
       {/* 1행: Nom / Prénom */}
-      <div className="grid h-[10%] grid-cols-1 gap-3 md:grid-cols-2">
-        <div className="relative">
+      <div className="flex h-[10%] flex-col gap-3 md:flex-row md:justify-between">
+        <div className="relative w-full">
           <label htmlFor="lastName" className="sr-only">
             Nom
           </label>
@@ -63,7 +63,7 @@ export default function Email() {
             className="bg-bgCard h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] ring-0 outline-none focus:ring-2 focus:ring-[#6c63ff]/40 focus:outline-none"
           />
         </div>
-        <div className="relative">
+        <div className="relative w-full">
           <label htmlFor="firstName" className="sr-only">
             Prénom
           </label>
@@ -77,7 +77,7 @@ export default function Email() {
       </div>
 
       {/* 2행: Email */}
-      <div className="mt-3 h-[10%]">
+      <div className="mt-11 h-[10%]">
         <label htmlFor="email" className="sr-only">
           Email
         </label>
