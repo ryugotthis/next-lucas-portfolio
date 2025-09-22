@@ -48,7 +48,7 @@ export default function Email() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="mx-auto h-full w-full max-w-xl rounded-[5px] bg-transparent"
+      className="text-text-eamil mx-auto h-full w-full max-w-xl rounded-[5px] bg-transparent"
     >
       {/* 1행: Nom / Prénom */}
       <div className="flex h-[10%] flex-col gap-3 md:flex-row md:justify-between">
