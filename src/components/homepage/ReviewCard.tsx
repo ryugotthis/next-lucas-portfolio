@@ -9,7 +9,7 @@ interface ReviewProps {
 
 export default function ReviewCard({ imageSrc, name, role, content }: ReviewProps) {
   return (
-    <div className="rounded-[2px] bg-[#F1F3FF] p-[5%] md:rounded-[5px]">
+    <div className="bg-background-sub rounded-[2px] p-[5%] md:rounded-[5px]">
       <div className="flex items-center">
         <div className="relative h-[59px] w-[59px] overflow-hidden rounded-full md:h-[30px] md:w-[30px] lg:h-[59px] lg:w-[59px]">
           <Image src={imageSrc} alt={`${name} photo`} fill />

@@ -21,7 +21,7 @@ export default function ProcessCard({
   return (
     <>
       {/* pc버전 */}
-      <div className={`hidden h-full w-full rounded-[5px] bg-[#F1F3FF] p-[15px] lg:block`}>
+      <div className={`bg-background-sub hidden h-full w-full rounded-[5px] p-[15px] lg:block`}>
         {/* 제목 */}
         <div className={`flex gap-[7px]`}>
           <div className="relative flex h-[24px] w-[24px] items-center justify-center overflow-hidden rounded-full">
@@ -35,11 +35,11 @@ export default function ProcessCard({
           <Image src={imageSrc} alt={title} fill className="object-contain" />
         </div>
 
-        <p className="text-[14px] leading-[18px] text-[#464646]">{description}</p>
+        <p className="text-text-sub text-[14px] leading-[18px]">{description}</p>
       </div>
 
       {/* tablet버전 */}
-      <div className="hidden h-full w-full grid-cols-2 rounded-[5px] bg-[#F1F3FF] p-[15px] md:grid lg:hidden">
+      <div className="bg-background-sub hidden h-full w-full grid-cols-2 rounded-[5px] p-[15px] md:grid lg:hidden">
         {/* 이미지 */}
 
         <div
@@ -57,19 +57,19 @@ export default function ProcessCard({
             <h1 className="bold text-[20px] leading-[20px]">{title}</h1>
           </div>
 
-          <p className="max-w-[299px] text-[14px] leading-[18px] text-[#464646]">{description}</p>
+          <p className="text-text-sub max-w-[299px] text-[14px] leading-[18px]">{description}</p>
         </div>
       </div>
 
       {/* mobile 버전 */}
-      <div className="flex h-full w-full flex-col gap-[10px] rounded-[5px] bg-[#F1F3FF] p-[4%] md:hidden">
+      <div className="bg-background-sub flex h-full w-full flex-col gap-[10px] rounded-[5px] p-[4%] md:hidden">
         <div className="flex items-center gap-[7px]">
           <div className="bg-primary relative flex h-[24px] w-[24px] items-center justify-center overflow-hidden rounded-full">
             <Image src={order} alt={`order ${id}`} fill />
           </div>
           <h1 className="bold text-[16px] leading-[16px]">{title}</h1>
         </div>
-        <p className="max-w-[299px] text-[10px] leading-[14px] text-[#464646]">{description}</p>
+        <p className="text-text-sub max-w-[299px] text-[10px] leading-[14px]">{description}</p>
       </div>
     </>
   );

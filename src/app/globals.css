@@ -3,12 +3,15 @@
 :root {
   --background: #faf9ff;
   --foreground: #0a0832;
+  --color-background-sub: #f1f3ff;
   --font-geist-sans: 'Sk-Modernist', Arial, Helvetica, sans-serif;
   --font-geist-mono: 'Fira Mono';
   --color-primary: #5c53ff;
   --color-secondary: #0a0832;
   --color-description: #888888;
   --color-bgCard: #f1f3ff;
+  --color-unselected: #888888;
+  --color-text-sub: #464646;
 }
 
 /* 커스텀 폰트 선언: font 폴더 내 폰트 파일 사용 예시 */
@@ -37,12 +40,16 @@
   --color-secondary: var(--color-secondary);
   --color-description: var(--color-description);
   --color-bgCard: var(--color-bgCard);
+  --color-background-sub: var(--color-background-sub);
+  --color-text-sub: var(--color-text-sub);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #1e1e1e;
+    --foreground: #faf9ff;
+    --color-background-sub: #2a2c45;
+    --color-text-sub: #faf9ff;
   }
 }
 

@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import LogoIcon from '../ui/LogoIcon';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -31,7 +32,8 @@ export default function Header() {
           href="/"
           className="block h-[44.8px] w-[45px] md:h-[54.8px] md:w-[52px] lg:h-[65.22px] lg:w-[70px]"
         >
-          <Image src="/icons/Logo_Lucas-03.svg" alt="Lucas_logo" width={70} height={65} />
+          <LogoIcon className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
+          {/* <Image src="/icons/Logo_Lucas-03.svg" alt="Lucas_logo" width={70} height={65} /> */}
         </Link>
       </div>
 

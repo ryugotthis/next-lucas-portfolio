@@ -18,7 +18,7 @@ interface PackageCardProps {
 
 export default function PackageCard({ title, contents, extraContents, price }: PackageCardProps) {
   return (
-    <div className="flex flex-col items-center rounded-[2px] bg-[#F1F3FF] py-[4%] md:rounded-[5px]">
+    <div className="bg-background-sub flex flex-col items-center rounded-[2px] py-[4%] md:rounded-[5px]">
       <h1 className="bold text-[24px] leading-[24px] lg:text-[48px] lg:leading-[48px]">{title}</h1>
       <div className="mx-auto mt-[15px] mb-[41px] flex flex-col gap-[19px] text-[13px] leading-[22px] lg:mt-[31px] lg:mb-[48px] lg:gap-[35px] lg:text-[20px] lg:leading-[36px]">
         <div className="">
@@ -30,7 +30,7 @@ export default function PackageCard({ title, contents, extraContents, price }: P
                 width={content.include ? 13.5 : 11}
                 height={content.include ? 8.5 : 11}
               />
-              <p className={content.include ? 'bold text-[0A0832]' : 'text-description'}>
+              <p className={content.include ? 'bold text-foreground' : 'text-description'}>
                 {content.name}
               </p>
             </div>
