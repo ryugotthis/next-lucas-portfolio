@@ -40,20 +40,20 @@ export default function Header() {
       {/* 데스크톱 네비게이션 */}
       <div className="z-30 hidden md:flex lg:justify-center">
         <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
-          <li className="whitespace-nowrap">
+          <li className="whitespace-nowrap hover:font-bold">
             <Link href="/#project">Projets</Link>
           </li>
-          <li className="whitespace-nowrap">
+          <li className="whitespace-nowrap hover:font-bold">
             <Link href="/#process">Ma méthode</Link>
           </li>
 
-          <li className="whitespace-nowrap">
+          <li className="whitespace-nowrap hover:font-bold">
             <Link href="/#offer">Offres</Link>
           </li>
-          <li className="whitespace-nowrap">
+          <li className="whitespace-nowrap hover:font-bold">
             <Link href="/qui-suis-je">Qui suis-je ?</Link>
           </li>
-          <li className="whitespace-nowrap">
+          <li className="whitespace-nowrap hover:font-bold">
             <Link href="/#contact">Contact</Link>
           </li>
         </nav>

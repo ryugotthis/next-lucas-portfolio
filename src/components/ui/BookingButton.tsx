@@ -12,7 +12,7 @@ export default function BookingButton() {
   return (
     <button
       type="button"
-      className="bg-primary h-[41px] w-[216px] cursor-pointer rounded-[5px] text-[14px] text-white"
+      className="bg-primary hover:bg-primary-active h-[41px] w-[216px] cursor-pointer rounded-[5px] text-[14px] text-white"
       onClick={handleClick}
     >
       Prendre RDV

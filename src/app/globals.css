@@ -11,6 +11,7 @@
   --color-description: #888888;
   --color-bgCard: #f1f3ff;
   --color-unselected: #888888;
+  --color-primary-active: #3d3992;
   --color-text-sub: #464646;
   --color-text-eamil: #464646;
 }
@@ -38,6 +39,7 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-primary: var(--color-primary);
+  --color-primary-active: var(--color-primary-active);
   --color-secondary: var(--color-secondary);
   --color-description: var(--color-description);
   --color-bgCard: var(--color-bgCard);
