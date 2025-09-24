@@ -23,34 +23,26 @@ export default function InquiryCard() {
         </div>
         {/* contact */}
         <div className="mt-[36px] flex flex-row gap-[6px] md:flex-col md:gap-[6px] lg:mt-[75px] lg:gap-[8px]">
-          <div className="flex items-center gap-[13px]">
-            <a
-              href="https://www.linkedin.com/in/lucasprovost?trk=contact-info"
-              className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
-            >
+          <a
+            className="flex items-center gap-[13px]"
+            href="https://www.linkedin.com/in/lucasprovost?trk=contact-info"
+          >
+            <div className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]">
               <Image src="/icons/Linkedin.svg" fill alt="linkedin" className="object-contain" />
-            </a>
+            </div>
             <p className="bold hidden text-[12px] md:block lg:text-[16px]">@lucasprovost</p>
-          </div>
-          <div className="flex items-center gap-[13px]">
-            <a
-              href="https://www.instagram.com/lucas.prvst/"
-              className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
-            >
+          </a>
+          <a className="flex items-center gap-[13px]" href="https://www.instagram.com/lucas.prvst/">
+            <div className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]">
               <Image src="/icons/Instagram.svg" alt="instagram" fill className="object-contain" />
-            </a>
-            <p className="bold lg:text-[16px ] hidden text-[12px] md:block lg:text-[16px]">
-              @lucas.prvst
-            </p>
-          </div>
+            </div>
+            <p className="bold hidden text-[12px] md:block lg:text-[16px]">@lucas.prvst</p>
+          </a>
 
           <div className="flex items-center gap-[13px]">
-            <a
-              href=""
-              className="relative h-[30px] w-[30px] cursor-none overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]"
-            >
+            <div className="relative h-[30px] w-[30px] cursor-none overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]">
               <Image src="/icons/WhatsApp.svg" alt="whatsapp" fill className="object-contain" />
-            </a>
+            </div>
             <p className="bold hidden text-[12px] md:block lg:text-[16px]">+33 6 48 43 51 24</p>
           </div>
         </div>
