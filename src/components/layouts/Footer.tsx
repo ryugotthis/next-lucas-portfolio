@@ -48,7 +48,7 @@ export default function Footer() {
               <Link href="/cgps">CGPS</Link>
             </li>
             <li>
-              <Link href="/confidentialité">Politique de Confidentialité</Link>
+              <Link href="/confidentialite">Politique de Confidentialité</Link>
             </li>
           </ul>
         </div>
