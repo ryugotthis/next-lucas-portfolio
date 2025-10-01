@@ -10,6 +10,7 @@ export default function Email() {
     setMsg(null);
     setLoading(true);
 
+    const form = e.currentTarget; // 따로 저장
     const fd = new FormData(e.currentTarget);
     const payload = {
       lastName: String(fd.get('lastName') || '').trim(),
@@ -34,14 +35,19 @@ export default function Email() {
         body: JSON.stringify(payload),
       });
 
+      if (!res.ok) {
+        throw new Error(`HTTP error! status: ${res.status}`);
+      }
+
       const data = await res.json();
       setMsg(
         data.success
           ? '✅ Votre message a été envoyé avec succès.'
           : '❌ Une erreur est survenue, veuillez réessayer.'
       );
-      if (data.success) e.currentTarget.reset();
-    } catch {
+      if (data.success) form.reset(); // ✅ 여기서 안전하게 reset
+    } catch (err) {
+      console.error(err);
       setMsg('❌ Erreur réseau, veuillez vérifier votre connexion.');
     } finally {
       setLoading(false);
