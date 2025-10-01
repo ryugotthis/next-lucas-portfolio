@@ -26,7 +26,9 @@ export default function Email() {
     }
 
     try {
-      const res = await fetch('/api/send', {
+      const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || window.location.origin;
+
+      const res = await fetch(`${baseUrl}/api/send`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
