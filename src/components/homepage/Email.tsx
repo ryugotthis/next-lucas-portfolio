@@ -114,7 +114,7 @@ export default function Email() {
       <button
         type="submit"
         disabled={loading}
-        className="bg-primary text-bgCard bold mt-4 h-[40px] w-full rounded-[5px] text-[12px] transition hover:bg-[#4e46ff] active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
+        className="bg-primary hover:bg-primary-active text-bgCard bold mt-4 h-[40px] w-full cursor-pointer rounded-[5px] text-[12px] transition active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
       >
         {loading ? 'Envoi...' : 'Envoyer'}
       </button>
