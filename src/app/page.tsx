@@ -182,17 +182,20 @@ export default function Home() {
           <BookingButton />
         </div>
       </section>
-      {/* contact section */}
-      <section id="contact" className="mt-[64px] lg:mt-[145px]">
-        <InquiryCard />
+      {/* contact section & FAQ 사이에 메시지 공간 조정 위해 합침  */}
+      <section className="mt-[64px] flex flex-col gap-[69px] md:mt-[149px] lg:mt-[145px]">
+        {/* contact section */}
+        <section id="contact">
+          <InquiryCard />
+        </section>
+        {/* FAQ section */}
+        <section className="flex flex-col items-center">
+          <h1 className="bold text-[24px] lg:text-[48px]">FAQ</h1>
+          <div className="mt-[26px] w-full md:mt-[34px] lg:mt-[31px]">
+            <FAQCard />
+          </div>
+        </section>
       </section>
-      <section className="mt-[69px] flex flex-col items-center md:mt-[149px]">
-        <h1 className="bold text-[24px] lg:text-[48px]">FAQ</h1>
-        <div className="mt-[26px] w-full md:mt-[34px] lg:mt-[31px]">
-          <FAQCard />
-        </div>
-      </section>
-      <div className="mt-[4%]">{/* <Footer /> */}</div>
     </div>
   );
 }

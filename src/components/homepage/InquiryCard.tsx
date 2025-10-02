@@ -3,8 +3,8 @@ import Email from './Email';
 
 export default function InquiryCard() {
   return (
-    <div className="grid grid-cols-1 gap-[23px] md:grid-cols-2 md:gap-0">
-      <div className="">
+    <div className="flex flex-col gap-[23px] md:grid md:grid-cols-2 md:gap-0">
+      <div>
         <div>
           <h1 className="bold text-center text-[20px] md:text-start md:text-[24px] lg:text-[48px]">
             Un projet ? Une question ?
@@ -47,9 +47,10 @@ export default function InquiryCard() {
           </div>
         </div>
       </div>
-      <div className="h-[281px] md:h-auto">
-        <Email />
-      </div>
+
+      {/* [281px] */}
+
+      <Email />
     </div>
   );
 }

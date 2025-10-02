@@ -47,7 +47,6 @@ export default function Email() {
       );
       if (data.success) form.reset(); // ✅ 여기서 안전하게 reset
     } catch (err) {
-      console.error(err);
       setMsg('❌ Erreur réseau, veuillez vérifier votre connexion.');
     } finally {
       setLoading(false);
@@ -56,11 +55,11 @@ export default function Email() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="text-text-eamil mx-auto h-full w-full max-w-xl rounded-[5px] bg-transparent"
+      className="text-text-email mx-auto w-full max-w-xl rounded-[5px] bg-transparent"
     >
       {/* 1행: Nom / Prénom */}
-      <div className="flex h-[10%] flex-col gap-3 md:flex-row md:justify-between">
-        <div className="relative w-full">
+      <div className="flex flex-col gap-3 md:h-[10%] md:flex-row md:justify-between">
+        <div className="relative h-[35px] w-full md:h-full">
           <label htmlFor="lastName" className="sr-only">
             Nom
           </label>
@@ -71,7 +70,7 @@ export default function Email() {
             className="bg-bgCard h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] ring-0 outline-none focus:ring-2 focus:ring-[#6c63ff]/40 focus:outline-none"
           />
         </div>
-        <div className="relative w-full">
+        <div className="relative h-[35px] w-full md:h-full">
           <label htmlFor="firstName" className="sr-only">
             Prénom
           </label>
@@ -85,7 +84,7 @@ export default function Email() {
       </div>
 
       {/* 2행: Email */}
-      <div className="mt-11 h-[10%] md:mt-3">
+      <div className="mt-3 h-[35px] md:mt-3 md:h-[10%]">
         <label htmlFor="email" className="sr-only">
           Email
         </label>
@@ -99,7 +98,7 @@ export default function Email() {
       </div>
 
       {/* 3행: Message (큰 영역) */}
-      <div className="mt-3 h-[60%]">
+      <div className="mt-3 h-[168px] md:h-[60%]">
         <label htmlFor="message" className="sr-only">
           Message
         </label>
@@ -115,11 +114,12 @@ export default function Email() {
       <button
         type="submit"
         disabled={loading}
-        className="bg-primary text-bgCard bold mt-4 h-[15%] w-full rounded-[5px] text-[12px] transition hover:bg-[#4e46ff] active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
+        className="bg-primary text-bgCard bold mt-4 h-[40px] w-full rounded-[5px] text-[12px] transition hover:bg-[#4e46ff] active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
       >
         {loading ? 'Envoi...' : 'Envoyer'}
       </button>
-      {msg && <p className="mt-2 text-sm">{msg}</p>}
+      <div className="mt-2 text-sm">✅ Votre message a été envoyé avec succès.</div>
+      {msg && <div className="mt-2 bg-pink-200 text-sm">{msg}</div>}
     </form>
   );
 }
