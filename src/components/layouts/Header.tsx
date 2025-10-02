@@ -80,10 +80,7 @@ export default function Header() {
         <span>+100 clients accompagnés</span>
       </div>
       {/* 모바일 햄버거 버튼 */}
-      <button
-        onClick={toggleMenu}
-        className="absolute top-0 right-[48px] z-30 px-[24px] py-[16px] md:hidden"
-      >
+      <button onClick={toggleMenu} className="absolute top-0 right-[48px] z-30 py-[16px] md:hidden">
         {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
       </button>
 
