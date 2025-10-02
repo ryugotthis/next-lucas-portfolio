@@ -90,7 +90,7 @@ export default function Header() {
               <li className="px-4 py-3 hover:bg-gray-100">
                 {' '}
                 <Link href="/#project" onClick={() => setIsMenuOpen(false)}>
-                  Projets
+                  Projects
                 </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
