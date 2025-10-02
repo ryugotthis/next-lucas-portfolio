@@ -13,7 +13,7 @@
   --color-unselected: #888888;
   --color-primary-active: #3d3992;
   --color-text-sub: #464646;
-  --color-text-eamil: #464646;
+  --color-text-email: #464646;
 }
 
 /* 커스텀 폰트 선언: font 폴더 내 폰트 파일 사용 예시 */
@@ -45,7 +45,7 @@
   --color-bgCard: var(--color-bgCard);
   --color-background-sub: var(--color-background-sub);
   --color-text-sub: var(--color-text-sub);
-  --color-text-eamil: var(--color-text-eamil);
+  --color-text-email: var(--color-text-eamil);
 }
 
 @media (prefers-color-scheme: dark) {

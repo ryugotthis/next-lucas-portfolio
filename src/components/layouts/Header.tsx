@@ -82,7 +82,7 @@ export default function Header() {
       {/* 모바일 햄버거 버튼 */}
       <button
         onClick={toggleMenu}
-        className="absolute top-0 right-0 z-30 px-[24px] py-[16px] md:hidden"
+        className="absolute top-0 right-[48px] z-30 px-[24px] py-[16px] md:hidden"
       >
         {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
       </button>
