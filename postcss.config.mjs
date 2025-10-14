@@ -1,9 +1,7 @@
 const config = {
-  plugins: {
-    plugins: ['@tailwindcss/postcss', 'autoprefixer'],
-    // 클래스 이름(bg-red-500 등)을 실제 CSS로 변환
-    // -webkit-, -moz- 같은 접두사를 자동으로 붙임
-  },
+  plugins: ['@tailwindcss/postcss', 'autoprefixer'],
+  // 클래스 이름(bg-red-500 등)을 실제 CSS로 변환
+  // -webkit-, -moz- 같은 접두사를 자동으로 붙임
 };
 
 export default config;
