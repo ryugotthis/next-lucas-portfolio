@@ -52,7 +52,7 @@ export default function Home() {
             url="/project/kenko"
             imageSrc="/images/homepage/desktop-tablet/1.mp4"
             className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            title="KenKo"
+            title="Kenko"
             description="Kenko, un studio où la poterie et le bien-être intérieur ne font qu’un."
           />
           <PreviewCard

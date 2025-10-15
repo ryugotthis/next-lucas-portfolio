@@ -18,7 +18,7 @@ export default function ImagePreview({
   className = '',
 }: ImagePreviewProps) {
   const handleClick = () => {
-    window.open(url, '_blank', 'noopener,noreferrer');
+    window.open(url, '_self', 'noopener,noreferrer');
   };
 
   const isVideo = imageSrc.endsWith('.mp4');

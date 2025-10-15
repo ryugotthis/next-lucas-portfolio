@@ -26,13 +26,20 @@ export default function InquiryCard() {
           <a
             className="flex items-center gap-[13px]"
             href="https://www.linkedin.com/in/lucasprovost?trk=contact-info"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <div className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]">
               <Image src="/icons/Linkedin.svg" fill alt="linkedin" className="object-contain" />
             </div>
             <p className="bold hidden text-[12px] md:block lg:text-[16px]">@lucasprovost</p>
           </a>
-          <a className="flex items-center gap-[13px]" href="https://www.instagram.com/lucas.prvst/">
+          <a
+            className="flex items-center gap-[13px]"
+            href="https://www.instagram.com/lucas.prvst/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <div className="relative h-[30px] w-[30px] overflow-hidden rounded-[5px] lg:h-[38px] lg:w-[38px]">
               <Image src="/icons/Instagram.svg" alt="instagram" fill className="object-contain" />
             </div>
