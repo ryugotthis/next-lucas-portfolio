@@ -118,7 +118,7 @@ export default function Email() {
       >
         {loading ? 'Envoi...' : 'Envoyer'}
       </button>
-      <div className="mt-2 text-sm">✅ Votre message a été envoyé avec succès.</div>
+
       {msg && <div className="mt-2 bg-pink-200 text-sm">{msg}</div>}
     </form>
   );
