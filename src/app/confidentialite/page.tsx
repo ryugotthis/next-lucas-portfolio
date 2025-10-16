@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="mt-[100px] space-y-8 px-6 text-[14px] leading-relaxed text-gray-800 lg:px-20">
+    <div className="mt-[100px] space-y-8 px-6 text-[14px] leading-relaxed lg:px-20">
       <h1 className="text-2xl font-bold">Politiques de confidentialité – Lucas Provost</h1>
 
       {/* ARTICLE 1 */}

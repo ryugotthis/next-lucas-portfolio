@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="mt-[100px] px-6 text-[14px] leading-relaxed text-gray-800 lg:px-20">
+    <div className="mt-[100px] px-6 text-[14px] leading-relaxed lg:px-20">
       <h1 className="mb-6 text-2xl font-bold">Conditions Générales de Prestations de Services</h1>
 
       <ul className="list-disc space-y-4 pl-6">

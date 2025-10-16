@@ -45,7 +45,7 @@
   --color-bgCard: var(--color-bgCard);
   --color-background-sub: var(--color-background-sub);
   --color-text-sub: var(--color-text-sub);
-  --color-text-email: var(--color-text-eamil);
+  --color-text-email: var(--color-text-email);
 }
 
 @media (prefers-color-scheme: dark) {
