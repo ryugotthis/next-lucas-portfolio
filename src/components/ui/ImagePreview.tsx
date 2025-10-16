@@ -2,7 +2,9 @@
 
 // import Image from 'next/image';
 import React from 'react';
+import { useState } from 'react';
 import ArrowIcon from './ArrowIcon';
+import ArrowHoverIcon from './ArrowHoverIcon';
 
 interface ImagePreviewProps {
   url: string;
@@ -17,6 +19,7 @@ export default function ImagePreview({
   alt = 'preview image',
   className = '',
 }: ImagePreviewProps) {
+  const [isHovered, setIsHovered] = useState(false);
   const handleClick = () => {
     window.open(url, '_self', 'noopener,noreferrer');
   };
@@ -55,12 +58,14 @@ export default function ImagePreview({
           e.stopPropagation();
           window.open(url, '_blank', 'noopener,noreferrer');
         }}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
         className="absolute right-[20px] bottom-[20px] flex h-8 w-8 cursor-pointer items-center justify-center rounded-full"
         aria-label="more button"
         tabIndex={0}
       >
         {/* className="absolute right-[20px] bottom-[20px] flex h-8 w-8 items-center justify-center rounded-full bg-white/80 transition hover:bg-white" */}
-        <ArrowIcon />
+        {isHovered ? <ArrowHoverIcon /> : <ArrowIcon />}
 
         {/* <Image
           src="/icons/More_button.svg"
