@@ -25,7 +25,7 @@ export default function PackageList() {
       content: [
         { name: 'Packs de logos', include: true },
         { name: 'Couleurs & typos', include: true },
-        { name: 'Mini Charte graphique', include: true },
+        { name: 'Charte graphique Pro', include: true },
         { name: 'Photos de profil et bannières réseaux', include: true },
         { name: 'Illustrations & éléments graphiques', include: true, puls: false },
         { name: 'Templates posts réseaux sociaux', include: true, puls: false },
