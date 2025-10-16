@@ -56,7 +56,7 @@ export default function ImagePreview({
         type="button"
         onClick={(e) => {
           e.stopPropagation();
-          window.open(url, '_blank', 'noopener,noreferrer');
+          window.open(url, '_self', 'noopener,noreferrer');
         }}
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
