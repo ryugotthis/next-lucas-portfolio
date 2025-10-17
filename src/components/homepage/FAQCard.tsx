@@ -12,7 +12,7 @@ export default function FAQCard() {
       question: 'Quelle est la durée des prestations ?',
       answer: (
         <>
-          <span className="bold">Charte graphique</span> : Le but est de vous lancer avec une charte
+          <span className="bold">Le Starter</span> : Le but est de vous lancer avec une charte
           graphique et les éléments de base d’une identité visuelle en 2 semaines.
           <br />
           <br />

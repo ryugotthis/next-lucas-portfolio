@@ -174,6 +174,8 @@ export default function Home() {
         <Link
           className="text-description hidden underline md:block"
           href="https://www.malt.fr/profile/lucasprovost"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Voir plus d’avis
         </Link>
