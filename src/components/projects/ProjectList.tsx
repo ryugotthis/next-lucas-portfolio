@@ -131,7 +131,7 @@ const contents = [
             Lucas.&rdquo;
           </>
         ),
-        semeDescription: 'Brand & Content Manager chez Data Governance Kitchen & Data Galaxy',
+        semiDescription: 'Brand & Content Manager chez Data Governance Kitchen & Data Galaxy',
       },
       {
         order: 5,

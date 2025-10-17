@@ -52,9 +52,14 @@ export default function ProjectCard({ section }: ProjectCardProps) {
   return (
     <>
       {imgType === 1 && imgSrc && (
-        <div>
+        <div className="text-[11px] md:text-[18px] lg:text-[26px]">
           <div className="relative aspect-video w-full">{renderMedia(imgSrc!)}</div>
-          {!isLast && <div className="mt-[2%] w-[67%]">{description}</div>}
+          {!isLast && (
+            <div className="mt-[2%] w-[67%]">
+              <div className={semiDescription ? 'bold' : ''}>{description}</div>
+              <div className="mt-[1%] text-[20px]">{semiDescription}</div>
+            </div>
+          )}
         </div>
       )}
       {imgType === 2 && (
