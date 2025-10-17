@@ -38,7 +38,7 @@ export default function Header() {
       <div className="z-30 hidden md:flex lg:justify-center">
         <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
           <li className="whitespace-nowrap hover:font-bold">
-            <Link href="/#project">Projects</Link>
+            <Link href="/#project">Projets</Link>
           </li>
           <li className="whitespace-nowrap hover:font-bold">
             <Link href="/#process">Ma méthode</Link>
