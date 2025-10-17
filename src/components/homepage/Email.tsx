@@ -119,7 +119,7 @@ export default function Email() {
         {loading ? 'Envoi...' : 'Envoyer'}
       </button>
 
-      {msg && <div className="mt-2 bg-pink-200 text-sm">{msg}</div>}
+      {msg && <div className="mt-2 text-sm">{msg}</div>}
     </form>
   );
 }
