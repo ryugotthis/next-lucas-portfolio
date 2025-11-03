@@ -32,8 +32,11 @@ export const metadata: Metadata = {
     description: 'Identité visuelle & branding.',
     images: ['https://www.lucasprovost.com//og/og-default.jpg'],
   },
-  alternates: { canonical: '/' },
-  icons: { icon: '/favicon.ico', apple: '/apple-touch-icon.png' },
+  alternates: { canonical: 'https://www.lucasprovost.com/' },
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: ['/favicon.ico'],
+  },
 };
 
 export default function RootLayout({
