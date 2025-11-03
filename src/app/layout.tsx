@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://lucasprovost.com'),
+  metadataBase: new URL('https://www.lucasprovost.com'),
 
   title: { default: 'PORTFOLIO | Lucas Provost', template: '%s | Lucas Provost' },
   description: 'Identité visuelle & branding. Portfolio de Lucas Provost',
