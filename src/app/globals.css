@@ -19,12 +19,14 @@
 /* 커스텀 폰트 선언: font 폴더 내 폰트 파일 사용 예시 */
 @font-face {
   font-family: 'Pretendard-Bold';
-  src: url('/font/Sk-Modernist-Bold.otf') format('opentype');
+  src: url('/font/Sk-Modernist-Bold.woff2') format('woff2');
+  font-display: swap;
 }
 
 @font-face {
   font-family: 'Pretendard';
-  src: url('/font/Sk-Modernist-Regular.otf') format('opentype');
+  src: url('/font/Sk-Modernist-Regular.woff2') format('woff2');
+  font-display: swap;
 }
 
 /* 기본 폰트 패밀리 적용 */
