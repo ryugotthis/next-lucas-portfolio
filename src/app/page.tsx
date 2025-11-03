@@ -14,37 +14,39 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <div>
-      {/* <Hearder /> */}
-      <section className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
+      {/* Hero */}
+      <section aria-labelledby="hero-title" className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
         <div>
           <span className="text-[10px] md:text-[14px] lg:text-[16px]">
             Branding • Identité visuelle
           </span>
 
-          <p className="bold block text-[28px] leading-[28px] md:w-[470px] md:text-[40px] md:leading-[40px] lg:h-[153px] lg:w-[750px] lg:text-[64px] lg:leading-[64px]">
+          <h1
+            id="hero-title"
+            className="bold block text-[28px] leading-[28px] md:w-[470px] md:text-[40px] md:leading-[40px] lg:h-[153px] lg:w-[750px] lg:text-[64px] lg:leading-[64px]"
+          >
             Osez un branding unique
             <br /> et devenez l’option N°1
-          </p>
+          </h1>
 
           <p className="mt-[51px] mb-[21px] block w-[315px] text-[14px] md:mt-[60px] md:mb-[16px] md:w-[435px] lg:mt-[36px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
             Je vous accompagne dans la création d’une identité visuelle claire et vraiment
             différenciante, pour révéler le plein potentiel de votre projet.
           </p>
-
-          {/* <button className="bg-primary mt-[12px] h-[41px] w-[216px] rounded-[5px] text-[14px] text-white">
-            Prendre RDV
-          </button> */}
           <BookingButton />
         </div>
-        <div className="relative">
+
+        <div className="relative" aria-hidden="true">
           <div className="absolute hidden md:left-[-70px] md:mt-[-120px] md:block md:h-[459px] md:w-[458px] lg:left-[-68px] lg:mt-[-230px] lg:h-[634px] lg:w-[634px]">
-            <Image src={'/illustrations/Blurred_Illu.png'} alt="illustration" fill />
+            <Image src={'/illustrations/Blurred_Illu.png'} alt="illustration" fill priority />
           </div>
         </div>
       </section>
+
       {/* project section */}
       <section
         id="project"
+        aria-labelledby="project-title"
         className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]"
       >
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
@@ -122,12 +124,17 @@ export default function Home() {
           />
         </div>
       </section>
+
       {/* process section */}
-      <section id="process" className="mt-[64px] md:mt-[76px] lg:mt-[138px]">
+      <section
+        id="process"
+        aria-labelledby="process-title"
+        className="mt-[64px] md:mt-[76px] lg:mt-[138px]"
+      >
         <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
-          <h1 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
+          <h2 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
             La méthode pour garantir la réussite de votre projet
-          </h1>
+          </h2>
           <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
             En tant que brand designer, je vous accompagne pour définir les meilleures solutions
             pour votre marque
@@ -138,15 +145,20 @@ export default function Home() {
       {/* offer section */}
       <section
         id="offer"
+        aria-labelledby="offer-title"
         className="mt-[64px] flex flex-col items-center md:mt-[76px] lg:mt-[138px]"
       >
-        <h1 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
+        <h2 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
           Mes packages
-        </h1>
+        </h2>
         <p className="text-description bold mt-[5px] mb-[20px] w-[201px] text-[12px] leading-[16px] md:mt-[0px] md:mb-[37px] md:w-auto md:text-[14px] md:leading-[16px] lg:mt-[20px] lg:mb-[25px] lg:text-[18px] lg:leading-[22px]">
           Pour vous donner une longueur d’avance sur la concurrence.
         </p>
-        <div className="flex h-[28px] w-[174px] items-center justify-center rounded-[22px] bg-[#0A0832] text-[10px] leading-[10px] text-[#DAD8FF] shadow-[0_0_16px_rgba(112,97,255,0.6)] md:h-[33px] md:w-[206px] md:text-[14px] md:leading-[14px] lg:h-[37px] lg:w-[238px] lg:text-[16px] lg:leading-[18px]">
+        <div
+          role="note"
+          aria-label="Disponibilité"
+          className="flex h-[28px] w-[174px] items-center justify-center rounded-[22px] bg-[#0A0832] text-[10px] leading-[10px] text-[#DAD8FF] shadow-[0_0_16px_rgba(112,97,255,0.6)] md:h-[33px] md:w-[206px] md:text-[14px] md:leading-[14px] lg:h-[37px] lg:w-[238px] lg:text-[16px] lg:leading-[18px]"
+        >
           <p>
             Seulement <span className="bold">2 places</span> par mois
           </p>
@@ -159,14 +171,16 @@ export default function Home() {
           prenant rendez-vous avec moi
         </div>
       </section>
+
       {/* Review section */}
       <section
         id="review"
+        aria-labelledby="review-title"
         className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]"
       >
-        <h1 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
+        <h2 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
           + de 100 marques accompagnées
-        </h1>
+        </h2>
         <div className="mt-[23px] md:mt-[34px] lg:mt-[36px]">
           <ReviewList />
         </div>
@@ -184,15 +198,19 @@ export default function Home() {
           <BookingButton />
         </div>
       </section>
+
       {/* contact section & FAQ 사이에 메시지 공간 조정 위해 합침  */}
-      <section className="mt-[64px] flex flex-col gap-[69px] md:mt-[149px] lg:mt-[145px]">
+      <section
+        aria-label="Contact et FAQ"
+        className="mt-[64px] flex flex-col gap-[69px] md:mt-[149px] lg:mt-[145px]"
+      >
         {/* contact section */}
-        <section id="contact">
+        <section id="contact" aria-labelledby="contact-title">
           <InquiryCard />
         </section>
         {/* FAQ section */}
-        <section className="flex flex-col items-center">
-          <h1 className="bold text-[24px] lg:text-[48px]">FAQ</h1>
+        <section aria-labelledby="faq-title" className="flex flex-col items-center">
+          <h2 className="bold text-[24px] lg:text-[48px]">FAQ</h2>
           <div className="mt-[26px] w-full md:mt-[34px] lg:mt-[31px]">
             <FAQCard />
           </div>
