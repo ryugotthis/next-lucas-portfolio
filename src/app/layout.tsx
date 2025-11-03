@@ -24,13 +24,13 @@ export const metadata: Metadata = {
     url: 'https://lucasprovost.com',
     title: 'Lucas Provost — Brand Designer',
     description: 'Identité visuelle & branding.',
-    images: [{ url: 'https://www.lucasprovost.com//og/og-default.jpg', width: 1200, height: 630 }],
+    images: [{ url: 'https://www.lucasprovost.com/og/og-default.jpg', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Lucas Provost — Brand Designer',
     description: 'Identité visuelle & branding.',
-    images: ['https://www.lucasprovost.com//og/og-default.jpg'],
+    images: ['https://www.lucasprovost.com/og/og-default.jpg'],
   },
   alternates: { canonical: 'https://www.lucasprovost.com/' },
   icons: {
