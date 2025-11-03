@@ -5,6 +5,15 @@ interface ProjectProps {
   params: Promise<{ slug: string }>;
 }
 
+export async function generateMetadata({ params }: { params: { slug: string } }) {
+  const { slug } = await params;
+
+  return {
+    title: slug, // → 예: "kenko | Lucas Provost"
+    description: `Projet ${slug} — Portfolio de Lucas Provost.`,
+  };
+}
+
 export default async function projectPage({ params }: ProjectProps) {
   const { slug } = await params;
 
