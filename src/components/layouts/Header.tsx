@@ -37,20 +37,20 @@ export default function Header() {
       {/* 데스크톱 네비게이션 */}
       <div className="z-30 hidden md:flex lg:justify-center">
         <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
-          <li className="whitespace-nowrap hover:font-bold">
+          <li className="lg:w-[43.5px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
             <Link href="/#project">Projets</Link>
           </li>
-          <li className="whitespace-nowrap hover:font-bold">
+          <li className="lg:w-[80.4px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
             <Link href="/#process">Ma méthode</Link>
           </li>
 
-          <li className="whitespace-nowrap hover:font-bold">
+          <li className="lg:w-[38px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
             <Link href="/#offer">Offres</Link>
           </li>
-          <li className="whitespace-nowrap hover:font-bold">
+          <li className="lg:w-[77.1px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
             <Link href="/qui-suis-je">Qui suis-je ?</Link>
           </li>
-          <li className="whitespace-nowrap hover:font-bold">
+          <li className="lg:w-[51.4px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200 ">
             <Link href="/#contact">Contact</Link>
           </li>
         </nav>
