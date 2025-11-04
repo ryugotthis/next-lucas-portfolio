@@ -93,6 +93,7 @@ export default function FAQCard() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   const onClick = (id: number) => {
+    console.log('clicked');
     setOpenId((prev) => (prev === id ? null : id));
   };
 
@@ -102,7 +103,7 @@ export default function FAQCard() {
         <div
           key={content.id}
           onClick={() => onClick(content.id)}
-          className={`${openId === content.id ? 'bg-[#F0F0F0]' : 'bg-[#D9D9D9]'} overflow-hidden rounded-[5px] text-[#464646]`}
+          className={`${openId === content.id ? 'bg-[#F0F0F0]' : 'bg-[#D9D9D9]'} cursor-pointer overflow-hidden rounded-[5px] text-[#464646] md:z-2`}
         >
           <div className="flex justify-between">
             <p className="bold p-4 text-[14px] md:text-[14px] lg:text-[16px]">{content.question}</p>
