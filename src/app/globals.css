@@ -4,8 +4,6 @@
   --background: #faf9ff;
   --foreground: #0a0832;
   --background-sub: #f1f3ff;
-  /* --font-geist-sans: 'Sk-Modernist', Arial, Helvetica, sans-serif;
-  --font-geist-mono: 'Fira Mono'; */
   --brand-primary: #5c53ff;
   --brand-secondary: #0a0832;
   --text-description: #888888;
@@ -19,18 +17,6 @@
   --font-bold: 'SkModernist-Bold', Arial, Helvetica, sans-serif;
 }
 
-/* 커스텀 폰트 선언: font 폴더 내 폰트 파일 사용 예시 */
-/* @font-face {
-  font-family: 'Pretendard-Bold';
-  src: url('/font/Sk-Modernist-Bold.woff2') format('woff2');
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Pretendard';
-  src: url('/font/Sk-Modernist-Regular.woff2') format('woff2');
-  font-display: swap;
-} */
 
 @font-face {
   font-family: 'SkModernist-Regular';
@@ -91,14 +77,14 @@ body {
 }
 
 /* 태블릿 (640px - 767px) */
-@media (min-width: 767px) {
+@media (min-width: 768px) {
   body {
     padding: 16px 24px 0 24px;
   }
 }
 
 /* PC (1023px 이상) */
-@media (min-width: 1023px) {
+@media (min-width: 1024px) {
   body {
     padding: 16px 48px 0 48px;
     max-width: 100%;
@@ -109,5 +95,4 @@ body {
 .bold {
   font-family: var(--font-bold);
   font-weight: normal;
-  /* font-family: 'Pretendard-Bold'; */
 }

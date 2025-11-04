@@ -33,10 +33,6 @@ export const metadata: Metadata = {
     images: ['https://www.lucasprovost.com/og/og-default.jpg'],
   },
   alternates: { canonical: 'https://www.lucasprovost.com/' },
-  icons: {
-    icon: '/favicon.ico',
-    shortcut: ['/favicon.ico'],
-  },
 };
 
 export default function RootLayout({
