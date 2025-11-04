@@ -67,7 +67,7 @@ export default function Email() {
             id="lastName"
             name="lastName"
             placeholder="Nom"
-            className="bg-bgCard h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] ring-0 outline-none focus:ring-2 focus:ring-[#6c63ff]/40 focus:outline-none"
+            className="bg-bg-card h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] ring-0 outline-none focus:ring-2 focus:ring-[#6c63ff]/40 focus:outline-none"
           />
         </div>
         <div className="relative h-[35px] w-full md:h-full">
@@ -78,7 +78,7 @@ export default function Email() {
             id="firstName"
             name="firstName"
             placeholder="Prénom"
-            className="bg-bgCard h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] ring-0 outline-none focus:ring-2 focus:ring-[#6c63ff]/40 focus:outline-none"
+            className="bg-bg-card h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] ring-0 outline-none focus:ring-2 focus:ring-[#6c63ff]/40 focus:outline-none"
           />
         </div>
       </div>
@@ -93,7 +93,7 @@ export default function Email() {
           name="email"
           type="email"
           placeholder="Email"
-          className="bg-bgCard h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] outline-none focus:ring-2 focus:ring-[#6c63ff]/40"
+          className="bg-bg-card h-full w-full rounded-md border-0 px-4 text-[15px] placeholder-[#BEC5F5] outline-none focus:ring-2 focus:ring-[#6c63ff]/40"
         />
       </div>
 
@@ -106,7 +106,7 @@ export default function Email() {
           id="message"
           name="message"
           placeholder="Message"
-          className="bg-bgCard h-full w-full resize-none rounded-md border-0 p-4 text-[15px] placeholder-[#BEC5F5] outline-none focus:ring-2 focus:ring-[#6c63ff]/40"
+          className="bg-bg-card h-full w-full resize-none rounded-md border-0 p-4 text-[15px] placeholder-[#BEC5F5] outline-none focus:ring-2 focus:ring-[#6c63ff]/40"
         />
       </div>
 
@@ -114,7 +114,7 @@ export default function Email() {
       <button
         type="submit"
         disabled={loading}
-        className="bg-primary hover:bg-primary-active text-bgCard bold mt-4 h-[40px] w-full cursor-pointer rounded-[5px] text-[12px] transition active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
+        className="bg-primary hover:bg-primary-active text-bg-card bold mt-4 h-[40px] w-full cursor-pointer rounded-[5px] text-[12px] transition active:translate-y-[1px] md:h-[10%] lg:text-[16px]"
       >
         {loading ? 'Envoi...' : 'Envoyer'}
       </button>
