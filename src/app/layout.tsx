@@ -4,15 +4,7 @@ import './globals.css';
 import Footer from '@/components/layouts/Footer';
 import Header from '@/components/layouts/Header';
 
-const geistSans = Geist({
-  variable: '--font-geist-sans',
-  subsets: ['latin'],
-});
 
-const geistMono = Geist_Mono({
-  variable: '--font-geist-mono',
-  subsets: ['latin'],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lucasprovost.com'),
@@ -42,7 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+      <body>
         <Header />
         {children}
         <Footer />
