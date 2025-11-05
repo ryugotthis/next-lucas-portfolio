@@ -1,6 +1,9 @@
 import ProjectList from '@/components/projects/ProjectList';
 import BookingButton from '@/components/ui/BookingButton';
 
+// 정적 목록 외의 slug는 자동 404로 처리
+export const dynamicParams = false;
+
 // 1) 메타데이터: params를 Promise로 받고 await
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
