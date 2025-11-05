@@ -93,7 +93,6 @@ export default function FAQCard() {
   const [openId, setOpenId] = useState<number | null>(null);
 
   const onClick = (id: number) => {
-    console.log('clicked');
     setOpenId((prev) => (prev === id ? null : id));
   };
 
