@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Media from '../ui/Media'; 
 import ProjectCard from './ProjectCard';
 
 const contents = [
@@ -10,7 +10,7 @@ const contents = [
         isFirst: true,
         order: 0,
         title: 'Kenko',
-        semeTitle: (
+        semiTitle: (
           <>
             Kenko, un studio où la poterie et le
             <br /> bien-être intérieur ne font qu’un.
@@ -67,7 +67,7 @@ const contents = [
         isFirst: true,
         order: 0,
         title: 'Data Governance Kitchen',
-        semeTitle: (
+        semiTitle: (
           <>
             Le canal de communication qui aide à concocter
             <br /> de savoureuses stratégies grâce à vos données.
@@ -149,7 +149,7 @@ const contents = [
         isFirst: true,
         order: 0,
         title: 'Alcôve',
-        semeTitle: (
+        semiTitle: (
           <>
             Un lieu unique au double concept :<br /> Coffee shop et studio de pilates.
           </>
@@ -235,7 +235,7 @@ const contents = [
         isFirst: true,
         order: 0,
         title: 'OKNA',
-        semeTitle: (
+        semiTitle: (
           <>
             La solution sur-mesure pour accompagner les
             <br /> marques dans leurs projets cloud.
@@ -301,7 +301,7 @@ const contents = [
         isFirst: true,
         order: 0,
         title: 'Sneaky',
-        semeTitle: (
+        semiTitle: (
           <>
             L’agence de voyage pour pouvoir
             <br /> enfin profitez et être loin des foules.
@@ -359,7 +359,7 @@ const contents = [
         isFirst: true,
         order: 0,
         title: 'Jeremy Savary',
-        semeTitle: (
+        semiTitle: (
           <>
             Une identité visuelle tech et premium
             <br /> pour un profil data d’exception.
@@ -386,7 +386,7 @@ const contents = [
       {
         order: 2,
         imgType: 1,
-        imgSrc1: '/images/jeremy-savary/4.mp4',
+        imgSrc: '/images/jeremy-savary/4.mp4',
         description:
           'Du noir, pour souligner le côté premium. Un rouge vif, pour incarner la dimension analytique et technique. Des mises en page épurées et percutantes sur les réseaux sociaux, pour mettre en valeur la clarté de son discours et de sa méthode.',
       },
@@ -412,52 +412,55 @@ type ProjectListProps = {
   project: string; // slug 문자열
 };
 export default function ProjectList({ project }: ProjectListProps) {
-  const filteredContents = contents.filter((group) => group.project === project.toLowerCase());
+
+  // 전체 프로젝트 배열(contents)에서 현재 slug와 매칭되는 프로젝트만 필터링
+  const group = contents.find((g) => g.project === project.toLowerCase());
+  if (!group) return null; // 혹은 notFound()
+
+  const hero = group.section[0];
+  // const filteredContents = contents.filter((group) => group.project === project.toLowerCase());
   return (
-    <>
-      {filteredContents.map((projectGroup) => (
-        <div key={projectGroup.project}>
-          <h1 className="pl-1.5 text-[11px] md:text-[16px]">{projectGroup.section[0].title}</h1>
-          <h2 className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
-            {projectGroup.section[0].semeTitle}
-          </h2>
-          <div className="relative my-[2%] aspect-video w-full overflow-hidden rounded-[5px]">
-            {projectGroup.section[0].imgSrc!.endsWith('.mp4') ? (
-              <video className="h-full w-full object-cover" autoPlay loop muted playsInline>
-                <source src={projectGroup.section[0].imgSrc} type="video/mp4" />
-              </video>
-            ) : (
-              <div className="relative aspect-video w-full">
-                <Image
-                  src={projectGroup.section[0].imgSrc!}
-                  alt="project photo"
-                  fill
-                  className="object-cover"
-                />
+ 
+    
+        
+          <div key={group.project}>
+      <h1 className="pl-1.5 text-[11px] md:text-[16px]">{hero.title}</h1>
+      <h2 className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
+        {hero.semiTitle}
+      </h2>
+
+          {/* 히어로 이미지/영상 렌더링 (Media 컴포넌트로 통일 처리) */}
+          {hero.imgSrc && (
+              <div className="relative my-[2%] aspect-video w-full overflow-hidden rounded-[5px]">
+                <Media src={hero.imgSrc} alt={`${hero.title} hero`} />
               </div>
             )}
-          </div>
+
+          {/* 히어로 설명 + 오른쪽 정보 패널(Client / Secteur / Accompagnement) */}
           <div className="flex justify-between">
             <p className="w-[67%] text-[11px] md:text-[18px] lg:text-[26px]">
-              {projectGroup.section[0].description}
+              {hero.description}
             </p>
+
+            {/* 데스크탑에서만 보이는 정보 섹션 */}
             <div className="divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
               <div className="flex justify-between">
                 <div className="text-description">Client</div>
-                <div>{projectGroup.section[0].introduction?.client}</div>
+                <div>{hero.introduction?.client}</div>
               </div>
               <div className="flex justify-between">
                 <div className="text-description">Secteur</div>
-                <div>{projectGroup.section[0].introduction?.secteur}</div>
+                <div>{hero.introduction?.secteur}</div>
               </div>
               <div className="flex justify-between">
                 <div className="text-description">Accompagnement</div>
-                <div>{projectGroup.section[0].introduction?.accompagnement}</div>
+                <div>{hero.introduction?.accompagnement}</div>
               </div>
             </div>
           </div>
-
-          {projectGroup.section
+          
+          {/* 나머지 섹션들: 이미지 갤러리 + 설명 → ProjectCard 컴포넌트로 분리 */}
+          {group.section
             .filter((section) => !section.isFirst) // isFirst 아닌 것만
             .map((section) => (
               <div key={section.order} className="my-[4%]">
@@ -465,7 +468,7 @@ export default function ProjectList({ project }: ProjectListProps) {
               </div>
             ))}
         </div>
-      ))}
-    </>
+
+ 
   );
 }
