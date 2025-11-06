@@ -60,7 +60,7 @@ export default function Home() {
           <PreviewCard
             url="/project/dgk"
             className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            imageSrc="/images/homepage/desktop-tablet/2.mp4"
+            imageSrc="/images/homepage/desktop-tablet/1.mp4"
             title="Data Governance Kitchen"
             description={
               <>
