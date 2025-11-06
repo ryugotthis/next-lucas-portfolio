@@ -5,12 +5,8 @@ type MediaProps = {
   alt?: string;
   fill?: boolean;              // 기본 true: 현재 레이아웃 패턴에 맞춤
   className?: string;
-  autoPlay?: boolean;
-  loop?: boolean;
-  muted?: boolean;
-  playsInline?: boolean;
-  preload?: 'none' | 'metadata' | 'auto';
-  poster?: string;
+
+
 };
 
 function mimeFrom(src: string) {
@@ -25,12 +21,7 @@ export default function Media({
   alt = 'media',
   fill = true,
   className,
-  autoPlay = true,
-  loop = true,
-  muted = true,
-  playsInline = true,
-  preload = 'metadata',
-  poster,
+
 }: MediaProps) {
   if (!src) return null;
   const lower = src.toLowerCase();
@@ -41,12 +32,12 @@ export default function Media({
     return (
       <video
         className={`h-full w-full object-cover ${className || ''}`}
-        autoPlay={autoPlay}
-        loop={loop}
-        muted={muted}
-        playsInline={playsInline}
-        preload={preload}
-        poster={poster}
+        autoPlay
+        loop
+        muted
+        playsInline
+        preload="metadata"
+        poster=""
       >
         <source src={src} type={type} />
       </video>
