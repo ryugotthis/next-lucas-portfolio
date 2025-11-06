@@ -94,7 +94,7 @@ const contents = [
       {
         order: 2,
         imgType: 1,
-        imgSrc1: '/images/dgk/4.jpg',
+        imgSrc: '/images/dgk/4.jpg',
         description:
           'L’image de marque est donc terre-à-terre, décalée et gourmande — tout en évoquant l’univers de la data à travers ses designs et ses couleurs.',
       },
@@ -175,7 +175,7 @@ const contents = [
       {
         order: 2,
         imgType: 1,
-        imgSrc1: '/images/alcove/4.mp4',
+        imgSrc: '/images/alcove/4.mp4',
         description:
           'Pour créer cette atmosphere réconfortante, j’ai choisi des couleurs chaudes et créer deux mascottes inspirées des deux tours de la Rochelle. Elle représente aussi bien le double concept, que les deux co-fondateurs, Vincent et Marine.',
       },
@@ -262,7 +262,7 @@ const contents = [
       {
         order: 2,
         imgType: 1,
-        imgSrc1: '/images/okna/4.mp4',
+        imgSrc: '/images/okna/4.mp4',
         description:
           'Pour cela, des couleurs vives traduisant à la fois le côté technologique de la marque mais également le côté humain et vivant.',
       },
@@ -328,7 +328,7 @@ const contents = [
       {
         order: 2,
         imgType: 1,
-        imgSrc1: '/images/sneaky/4.jpg',
+        imgSrc: '/images/sneaky/4.jpg',
         description:
           'J’ai donc créé une identité qui représente cette immersion dans ces lieux uniques. Des couleurs qui évoquent la découverte et des illustrations pour chacun des continents.',
       },

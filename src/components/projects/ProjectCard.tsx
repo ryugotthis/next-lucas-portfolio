@@ -29,11 +29,12 @@ export default function ProjectCard({ section }: ProjectCardProps) {
     isLast,
   } = section;
 
-  // ✅ 파일 확장자에 따라 컴포넌트 다르게 렌더링
+  // 파일 확장자에 따라 컴포넌트 다르게 렌더링
   const renderMedia = (src?: string) => {
     if (!src) return null;
     const lower = src.toLowerCase();
 
+    // 비디오 파일 처리
     if (lower.endsWith('.mp4') || lower.endsWith('.webm')) {
       return (
         <video className="fill object-cover" autoPlay loop muted playsInline>
