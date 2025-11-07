@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef,useMemo } from 'react';
+import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 type MediaProps = {
@@ -30,13 +30,9 @@ export default function Media({
   // if (!src) return null;
 
   // 파일 타입 판별(렌더 전 한 번만 계산)
-  const { isVideo, isGif } = useMemo(() => {
-    const lower = src.toLowerCase();
-    return {
-      isVideo: lower.endsWith(".mp4") || lower.endsWith(".webm"),
-      isGif: lower.endsWith(".gif"),
-    };
-  }, [src]);
+  const lower = src.toLowerCase();
+  const isVideo = lower.endsWith('.mp4') || lower.endsWith('.webm');
+  const isGif = lower.endsWith('.gif');
 
   const videoRef = useRef<HTMLVideoElement | null>(null);
 
@@ -55,23 +51,19 @@ export default function Media({
     video.muted = true;
     video.playsInline = true;
 
-    const onIntersect: IntersectionObserverCallback = (entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          // 재생 시 에러는 무시(사용자 제스처 없이 play 실패 가능성 대비)
-          video.play().catch(() => {});
-        } else {
-          video.pause();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) video.play().catch(() => {});
+          else video.pause();
         }
-      }
-    };
+      },
+      { threshold: 0.35 }
+    );
 
-    const observer = new IntersectionObserver(onIntersect, { threshold: 0.35 });
     observer.observe(video);
-
     return () => {
       observer.disconnect();
-      // 컴포넌트 언마운트 시 정지(리소스 절약)
       video.pause();
     };
   }, [isVideo]);
