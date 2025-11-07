@@ -27,7 +27,7 @@ export default function Media({
   className,
 
 }: MediaProps) {
-  if (!src) return null;
+  // if (!src) return null;
 
   // 파일 타입 판별(렌더 전 한 번만 계산)
   const { isVideo, isGif } = useMemo(() => {
