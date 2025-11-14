@@ -1,5 +1,6 @@
 import Media from '../ui/Media'; 
 import ProjectCard from './ProjectCard';
+import { notFound } from 'next/navigation';
 
 const contents = [
   // Kenko
@@ -415,7 +416,7 @@ export default function ProjectList({ project }: ProjectListProps) {
 
   // 전체 프로젝트 배열(contents)에서 현재 slug와 매칭되는 프로젝트만 필터링
   const group = contents.find((g) => g.project === project.toLowerCase());
-  if (!group) return null; // 혹은 notFound()
+  if (!group) return notFound(); // 혹은 notFound()
 
   const hero = group.section[0];
   // const filteredContents = contents.filter((group) => group.project === project.toLowerCase());
