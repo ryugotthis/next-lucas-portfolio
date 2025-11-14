@@ -74,7 +74,7 @@ export default function Media({
     const type = mimeFrom(src);
     return (
       <video
-      
+      ref={videoRef}
         className={`h-full w-full object-cover ${className || ''}`}
         autoPlay
         loop
