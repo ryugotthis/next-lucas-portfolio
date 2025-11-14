@@ -1,8 +1,36 @@
 import Media from '../ui/Media'; 
 import ProjectCard from './ProjectCard';
 import { notFound } from 'next/navigation';
+import { ReactNode } from 'react';
 
-const contents = [
+type ProjectSection = {
+  order: number;
+  imgType: 1 | 2 | 3 | 4 | 5;
+  isFirst?: boolean;
+  isLast?: boolean;
+  title?: string;
+  semiTitle?: ReactNode;
+  description?: ReactNode;
+  semiDescription?: ReactNode;
+  introduction?: {
+    client: string;
+    secteur: string;
+    accompagnement: string;
+  };
+  imgSrc?: string;
+  imgSrc1?: string;
+  imgSrc2?: string;
+  imgSrc3?: string;
+  imgSrc4?: string;
+};
+
+type ProjectGroup = {
+  project: string;
+  section: ProjectSection[];
+};
+
+
+const contents:ProjectGroup[] = [
   // Kenko
   {
     project: 'kenko',
@@ -424,7 +452,7 @@ export default function ProjectList({ project }: ProjectListProps) {
  
     
         
-          <div key={group.project}>
+          <div>
       <h1 className="pl-1.5 text-[11px] md:text-[16px]">{hero.title}</h1>
       <h2 className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
         {hero.semiTitle}
