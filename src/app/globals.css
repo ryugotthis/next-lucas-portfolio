@@ -55,7 +55,15 @@
     --background: #1e1e1e;
     --foreground: #faf9ff;
     --background-sub: #2a2c45;
-    --text-sub: #faf9ff;
+    --background-card: #2f314d;
+
+    --brand-primary: #7a74ff;        /* 조금 더 밝게 */
+    --brand-primary-active: #625cff;
+    --brand-secondary: #cfcfff;
+
+    --text-description: #bbb;
+    --text-sub: #e6e6ff;
+    --text-email: #cacaff;
   }
 }
 
