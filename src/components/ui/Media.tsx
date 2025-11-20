@@ -42,31 +42,31 @@ export default function Media({
    * - threshold 0.35: 35% 이상 보일 때 재생 (스크롤 중 토글 난조 완화)
    */
 
-  // useEffect(() => {
-  //   if (!isVideo || !videoRef.current) return;
+  useEffect(() => {
+    if (!isVideo || !videoRef.current) return;
 
-  //   const video = videoRef.current;
+    const video = videoRef.current;
 
-  //   // iOS 안정성: 속성 보장(혹시라도 동적으로 변했을 경우 대비)
-  //   video.muted = true;
-  //   video.playsInline = true;
+    // iOS 안정성: 속성 보장(혹시라도 동적으로 변했을 경우 대비)
+    video.muted = true;
+    video.playsInline = true;
 
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       for (const entry of entries) {
-  //         if (entry.isIntersecting) video.play().catch(() => {});
-  //         else video.pause();
-  //       }
-  //     },
-  //     { threshold: 0.35 }
-  //   );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) video.play().catch(() => {});
+          else video.pause();
+        }
+      },
+      { threshold: 0.35 }
+    );
 
-  //   observer.observe(video);
-  //   return () => {
-  //     observer.disconnect();
-  //     video.pause();
-  //   };
-  // }, [isVideo]);
+    observer.observe(video);
+    return () => {
+      observer.disconnect();
+      video.pause();
+    };
+  }, [isVideo]);
 
 
   // video
