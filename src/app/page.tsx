@@ -89,7 +89,7 @@ export default function Home() {
           <PreviewCard
             url="/project/jeremy-savary"
             className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/4.gif"
+            imageSrc="/images/homepage/desktop-tablet/4.mp4"
             title="Jeremy Savary"
             description={
               <>
@@ -113,7 +113,7 @@ export default function Home() {
           <PreviewCard
             url="/project/okna"
             className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/6.gif"
+            imageSrc="/images/homepage/desktop-tablet/6.mp4"
             title="Okna"
             description={
               <>

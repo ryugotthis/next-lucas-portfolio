@@ -58,7 +58,7 @@ const contents:ProjectGroup[] = [
       {
         order: 1,
         imgType: 2,
-        imgSrc1: '/images/kenko/2.gif',
+        imgSrc1: '/images/kenko/2.mp4',
         imgSrc2: '/images/kenko/3.jpg',
         description:
           'J’ai conçu l’identité de Kenko avec l’idée de créer un univers chaleureux et apaisant. Une image à la fois élégante et empreinte d’imperfections, pour valoriser l’acceptation de soi.',
@@ -115,7 +115,7 @@ const contents:ProjectGroup[] = [
       {
         order: 1,
         imgType: 2,
-        imgSrc1: '/images/dgk/2.gif',
+        imgSrc1: '/images/dgk/2.mp4',
         imgSrc2: '/images/dgk/3.jpg',
         description:
           'Le challenge ? Créer une identité qui marie l’univers de la data et celui de la cuisine. Car comme pour un bon plat, une stratégie data réussie repose sur une recette bien adaptée au résultat souhaité.',
@@ -196,7 +196,7 @@ const contents:ProjectGroup[] = [
       {
         order: 1,
         imgType: 2,
-        imgSrc1: '/images/alcove/2.gif',
+        imgSrc1: '/images/alcove/2.mp4',
         imgSrc2: '/images/alcove/3.jpg',
         description:
           'Que ce soit pour l’espace café ou pilates, la direction artistique est basée sur une ambiance chaleureuse, accueillante et accessible à tous.',
@@ -212,7 +212,7 @@ const contents:ProjectGroup[] = [
         order: 3,
         imgType: 5,
         imgSrc1: '/images/alcove/5.webp',
-        imgSrc2: '/images/alcove/6.gif',
+        imgSrc2: '/images/alcove/6.mp4',
         imgSrc3: '/images/alcove/7.webp',
         description:
           'Cette identité visuelle chaleureuse et pleine de vie se marie parfaitement avec ce lieu magnifique où l’on peut se dépenser, se relaxer, ou bien les deux. ',
@@ -284,7 +284,7 @@ const contents:ProjectGroup[] = [
         order: 1,
         imgType: 2,
         imgSrc1: '/images/okna/2.jpg',
-        imgSrc2: '/images/okna/3.gif',
+        imgSrc2: '/images/okna/3.mp4',
         description:
           'Ma mission ? Créer une identité visuelle friendly, tech et audacieuse pour représenter l’équipe d’experts passionnés qui compose la marque.',
       },
@@ -299,7 +299,7 @@ const contents:ProjectGroup[] = [
         order: 3,
         imgType: 5,
         imgSrc1: '/images/okna/5.mp4',
-        imgSrc2: '/images/okna/6.gif',
+        imgSrc2: '/images/okna/6.mp4',
         imgSrc3: '/images/okna/7.jpg',
         description:
           'Pour accentuer, l’aspect humain et friendly, une mascotte en forme d’éléphant incarne la marque. Celui-ci représente la robustesse et la mémoire, qui fait lien avec leur service cloud.',
@@ -307,7 +307,7 @@ const contents:ProjectGroup[] = [
       {
         order: 4,
         imgType: 2,
-        imgSrc1: '/images/okna/8.gif',
+        imgSrc1: '/images/okna/8.mp4',
         imgSrc2: '/images/okna/9.jpg',
         description:
           'Cette mascotte est mise en scène à travers la marque et ses visuelles pour guider le client et rendre l’expérience client accessible et agréable.',
@@ -407,7 +407,7 @@ const contents:ProjectGroup[] = [
       {
         order: 1,
         imgType: 2,
-        imgSrc1: '/images/jeremy-savary/2.gif',
+        imgSrc1: '/images/jeremy-savary/2.mp4',
         imgSrc2: '/images/jeremy-savary/3.jpg',
         description:
           'Il lui fallait donc une identité visuelle premium, à la hauteur de son expertise. Une image minimaliste, précise, qui reflète son univers data.',
