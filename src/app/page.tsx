@@ -13,7 +13,7 @@ import Image from 'next/image';
 
 export default function Home() {
   return (
-    <div>
+    <main>
       {/* Hero */}
       <section aria-labelledby="hero-title" className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
         <div>
@@ -216,6 +216,6 @@ export default function Home() {
           </div>
         </section>
       </section>
-    </div>
+    </main>
   );
 }

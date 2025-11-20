@@ -12,7 +12,7 @@ export default function Footer() {
     }
   };
   return (
-    <div className="relative pb-[12px] md:pb-[24px] lg:pb-[48px]">
+    <footer className="relative pb-[12px] md:pb-[24px] lg:pb-[48px]">
       <div className="flex h-[302px] flex-col items-center justify-center gap-[32px] md:h-[256px] md:w-[75%] md:flex-row md:items-end md:justify-between md:gap-0">
         <Link href="/" className="">
           <LogoIcon className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
@@ -59,6 +59,6 @@ export default function Footer() {
           <Image src="/illustrations/Meditation_Illu.png" alt="meditation illustration" fill />
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
