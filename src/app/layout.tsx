@@ -35,20 +35,20 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link
-          rel="preload"
-          href="/font/Sk-Modernist.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+  rel="preload"
+  href="/font/Sk-Modernist-Regular.woff2"
+  as="font"
+  type="font/woff2"
+  crossOrigin="anonymous"
+/>
 
-        <link
-          rel="preload"
-          href="/font/Sk-Modernist-Bold.woff2"
-          as="font"
-          type="font/woff2"
-          crossOrigin="anonymous"
-        />
+<link
+  rel="preload"
+  href="/font/Sk-Modernist-Bold.woff2"
+  as="font"
+  type="font/woff2"
+  crossOrigin="anonymous"
+/>
       </head>
       <body>
         <Header />
