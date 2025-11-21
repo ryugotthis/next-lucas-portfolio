@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     description: 'Identité visuelle & branding.',
     images: ['https://www.lucasprovost.com/og/og-default.jpg'],
   },
-  alternates: { canonical: 'https://www.lucasprovost.com/' },
+
 };
 
 export default function RootLayout({

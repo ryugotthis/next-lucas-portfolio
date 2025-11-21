@@ -11,6 +11,12 @@ import PreviewCard from '@/components/ui/PreviewCard';
 import Link from 'next/link';
 import Image from 'next/image';
 
+export const metadata = {
+  alternates: {
+    canonical: '/', // => https://www.lucasprovost.com/
+  },
+};
+
 export default function Home() {
   return (
     <main>

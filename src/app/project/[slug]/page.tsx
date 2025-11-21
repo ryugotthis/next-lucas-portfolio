@@ -10,6 +10,9 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   return {
     title: slug,
     description: `Projet ${slug} — Portfolio de Lucas Provost.`,
+     alternates: {
+      canonical: `/project/${slug}`,
+    },
   };
 }
 
@@ -36,3 +39,4 @@ export async function generateStaticParams() {
   const slugs = ['kenko', 'dgk', 'alcove', 'jeremy-savary', 'sneaky', 'okna'];
   return slugs.map((slug) => ({ slug }));
 }
+
