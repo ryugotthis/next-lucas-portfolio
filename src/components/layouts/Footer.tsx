@@ -15,7 +15,7 @@ export default function Footer() {
     <footer className="relative pb-[12px] md:pb-[24px] lg:pb-[48px]">
       <div className="flex h-[302px] flex-col items-center justify-center gap-[32px] md:h-[256px] md:w-[75%] md:flex-row md:items-end md:justify-between md:gap-0">
         <Link href="/" aria-label="Go to homepage" >
-          <LogoIcon className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
+          <LogoIcon aria-hidden="true" className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
         </Link>
         <div className="bold flex h-[30%] w-full justify-between text-[11px] md:w-[60%] md:justify-between md:text-[12px] lg:text-[16px]">
           <ul className="flex flex-col items-start justify-between md:items-center">
