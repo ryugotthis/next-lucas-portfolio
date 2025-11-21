@@ -29,8 +29,7 @@ export default function Header() {
     <header className="bg-background fixed top-0 right-0 left-0 z-10 flex items-center justify-between px-[19px] py-[16px] md:static md:flex md:justify-between md:p-0 md:px-[24px] lg:grid lg:grid-cols-3 lg:px-[48px]">
       <div className="lg:justify-start">
         <Link href="/" aria-label="Go to homepage" className="block">
-          <LogoIcon className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
-          {/* <Image src="/icons/Logo_Lucas-03.svg" alt="Lucas_logo" width={70} height={65} /> */}
+          <LogoIcon aria-hidden="true" className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
         </Link>
       </div>
 
