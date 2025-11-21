@@ -1,8 +1,7 @@
 import ProjectList from '@/components/projects/ProjectList';
 import BookingButton from '@/components/ui/BookingButton';
 
-// 정적 목록 외의 slug는 자동 404로 처리
-export const dynamicParams = false;
+
 
 // 1) 메타데이터: params를 Promise로 받고 await
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
@@ -34,9 +33,13 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   );
 }
 
+
 // 3) SSG용 정적 파라미터
+
 export async function generateStaticParams() {
   const slugs = ['kenko', 'dgk', 'alcove', 'jeremy-savary', 'sneaky', 'okna'];
   return slugs.map((slug) => ({ slug }));
 }
 
+// 정적 목록 외의 slug는 자동 404로 처리
+export const dynamicParams = false;

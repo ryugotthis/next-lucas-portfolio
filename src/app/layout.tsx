@@ -33,7 +33,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fr">
-      <head>
+      {/* <head>
         <link
   rel="preload"
   href="/font/Sk-Modernist-Regular.woff2"
@@ -49,7 +49,7 @@ export default function RootLayout({
   type="font/woff2"
   crossOrigin="anonymous"
 />
-      </head>
+      </head> */}
       <body>
         <Header />
         {children}
