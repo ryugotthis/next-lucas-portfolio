@@ -28,7 +28,7 @@ export default function Header() {
   return (
     <header className="bg-background fixed top-0 right-0 left-0 z-10 flex items-center justify-between px-[19px] py-[16px] md:static md:flex md:justify-between md:p-0 md:px-[24px] lg:grid lg:grid-cols-3 lg:px-[48px]">
       <div className="lg:justify-start">
-        <Link href="/" className="block">
+        <Link href="/" aria-label="Go to homepage" className="block">
           <LogoIcon className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
           {/* <Image src="/icons/Logo_Lucas-03.svg" alt="Lucas_logo" width={70} height={65} /> */}
         </Link>
@@ -36,7 +36,8 @@ export default function Header() {
 
       {/* 데스크톱 네비게이션 */}
       <div className="z-30 hidden md:flex lg:justify-center">
-        <nav className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
+        <nav aria-label="Menu">
+        <ul className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
           <li className="lg:w-[43.5px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
             <Link href="/#project">Projets</Link>
           </li>
@@ -53,6 +54,7 @@ export default function Header() {
           <li className="lg:w-[51.4px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200 ">
             <Link href="/#contact">Contact</Link>
           </li>
+        </ul>
         </nav>
       </div>
 
@@ -78,7 +80,7 @@ export default function Header() {
       </div>
 
       {/* 모바일 햄버거 버튼 */}
-      <button onClick={toggleMenu} className="relative top-0 right-0 z-30 py-[16px] md:hidden">
+      <button onClick={toggleMenu} aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="relative top-0 right-0 z-30 py-[16px] md:hidden">
         {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
       </button>
 
@@ -86,11 +88,12 @@ export default function Header() {
       {isMenuOpen && (
         <div className="fixed inset-0 top-0 right-0 bg-black/50 md:hidden">
           <div className="bg-background absolute top-0 right-0 h-full w-[60%] md:hidden">
-            <nav className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
+            <nav aria-label="Mobile Menu">
+            <ul className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
               <li className="px-4 py-3 hover:bg-gray-100">
                 {' '}
                 <Link href="/#project" onClick={() => setIsMenuOpen(false)}>
-                  Projects
+                  Projets
                 </Link>
               </li>
               <li className="px-4 py-3 hover:bg-gray-100">
@@ -113,6 +116,7 @@ export default function Header() {
                   Contact
                 </Link>
               </li>
+            </ul>
             </nav>
           </div>
         </div>
