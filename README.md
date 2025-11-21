@@ -60,7 +60,7 @@
 ---
 
 ## 📁 폴더 구조 (요약)
-src
+```src
 ┣ app
 ┃ ┣ api/send → 이메일 전송 Route Handler
 ┃ ┣ project/[slug] → 프로젝트 상세 SSG 페이지
@@ -71,7 +71,7 @@ src
 ┃ ┣ projects → 프로젝트 카드 · 리스트
 ┃ ┣ layouts → Header / Footer
 ┃ ┗ ui → Media, Button, Icon 등 공통 UI
-
+```
 ---
 
 ## 📝 회고 & 배운 점
