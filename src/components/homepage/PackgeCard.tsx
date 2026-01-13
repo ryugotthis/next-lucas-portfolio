@@ -51,10 +51,11 @@ export default function PackageCard({ title, contents, extraContents, price }: P
         </div>
       </div>
       <div>
-        <div className="flex items-baseline justify-center gap-[8px] text-[24px] lg:gap-[14px] lg:text-[48px]">
-          <div className="bold flex">{price}</div>
-          <div className="text-[14px] lg:text-[18px]">TTC</div>
+        <div className="flex leading-none items-baseline justify-center gap-[8px] text-[24px] lg:gap-[14px] lg:text-[48px]">
+          <span className="bold flex">{price}</span>
+          <span className="text-[14px] lg:text-[18px]">HT</span>
         </div>
+        <div className=" mb-[6px] text-center text-[14px] text-[#1E271D]">Exonéré de TVA</div>
         <BookingButton />
       </div>
     </div>

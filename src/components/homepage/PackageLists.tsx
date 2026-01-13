@@ -36,7 +36,7 @@ export default function PackageList() {
         { name: 'Brandboard', include: true },
         { name: 'Atelier conseil après projet', include: true },
       ],
-      price: '2650€',
+      price: '2850€',
     },
   ];
 
