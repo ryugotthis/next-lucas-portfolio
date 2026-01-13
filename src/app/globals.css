@@ -9,7 +9,7 @@
   --text-description: #888888;
   --background-card: #f1f3ff;
   --text-unselected: #888888;
-  --brand-primary-active: #3d3992;
+  --brand-primary-active: #7a74ff;
   --text-sub: #464646;
   --text-email: #464646;
 
@@ -62,8 +62,8 @@
     --background-sub: #2a2c45;
     --background-card: #2f314d;
 
-    --brand-primary: #7a74ff;        
-    --brand-primary-active: #625cff;
+    /* --brand-primary: #7a74ff;        
+    --brand-primary-active: #5c53ff; */
     --brand-secondary: #cfcfff;
 
     --text-description: #bbb;

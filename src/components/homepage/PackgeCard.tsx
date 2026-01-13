@@ -55,7 +55,7 @@ export default function PackageCard({ title, contents, extraContents, price }: P
           <span className="bold flex">{price}</span>
           <span className="text-[14px] lg:text-[18px]">HT</span>
         </div>
-        <div className=" mb-[6px] text-center text-[14px] text-[#1E271D]">Exonéré de TVA</div>
+        <div className=" mb-[6px] text-center text-[14px]">Exonéré de TVA</div>
         <BookingButton />
       </div>
     </div>
