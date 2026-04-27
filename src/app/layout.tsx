@@ -1,9 +1,7 @@
 import type { Metadata } from 'next';
-import './globals.css';
+import '@/app/globals.css';
 import Footer from '@/components/layouts/Footer';
 import Header from '@/components/layouts/Header';
-
-
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.lucasprovost.com'),
@@ -23,7 +21,6 @@ export const metadata: Metadata = {
     description: 'Identité visuelle & branding.',
     images: ['https://www.lucasprovost.com/og/og-default.jpg'],
   },
-
 };
 
 export default function RootLayout({

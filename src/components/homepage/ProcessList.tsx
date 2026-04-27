@@ -8,13 +8,13 @@ export default function ProcessList() {
       title: 'Atelier Stratégique',
       description: (
         <>
-          Après avoir répondu à un questionnaire pour{' '}
+          Après avoir répondu à un questionnaire pour
           <strong>comprendre en profondeur votre marque</strong>, nous échangerons ensemble pendant
           une petite heure.
           <br />
           <br />
-          Ceci dans le but de creuser sur vos objectifs, votre cible, ce qui vous rend différent et
-          comment l’exploiter à travers votre branding.
+          Ceci dans le but de définir avec précision vos objectifs, votre cible, ce qui vous rend
+          différent et comment l’exploiter à travers votre branding.
         </>
       ),
       imageSrc: '/illustrations/Echange.png',
@@ -44,15 +44,15 @@ export default function ProcessList() {
       title: 'Création',
       description: (
         <>
-          Maintenant que nos visions sont alignées, Je passe aux fourneaux. C’est là que débute la
-          création.
+          Maintenant que nos visions sont alignées, je passe aux fourneaux, là où la création
+          commence vraiment.
           <br />
           <br />
-          Je travaille sur les meilleures solutions pour répondre à vos objectifs et visions.
+          Je travaille sur les solutions les plus adaptées à vos objectifs.
           <br />
           <br />
-          Vous avez le droit à un nombre de <strong>révisions illimités</strong> afin d’être sûr que
-          le résultat vous plaît à 100%.
+          Vous bénéficiez de révisions illimitées pour garantir un résultat pleinement fidèle à la
+          stratégie définie ensemble.
         </>
       ),
       imageSrc: '/illustrations/Blurred_Illu.png',

@@ -36,8 +36,8 @@ export default function Home() {
           </h1>
 
           <p className="mt-[51px] mb-[21px] block w-[315px] text-[14px] md:mt-[60px] md:mb-[16px] md:w-[435px] lg:mt-[36px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
-            Je vous accompagne dans la création d’une identité visuelle claire et vraiment
-            différenciante, pour révéler le plein potentiel de votre projet.
+            Je vous accompagne dans la création d’un branding clair et vraiment différenciant, pour
+            révéler le plein potentiel de votre marque.
           </p>
           <BookingButton />
         </div>
@@ -165,9 +165,7 @@ export default function Home() {
           aria-label="Disponibilité"
           className="flex h-[28px] w-[174px] items-center justify-center rounded-[22px] bg-[#0A0832] text-[10px] leading-[10px] text-[#DAD8FF] shadow-[0_0_16px_rgba(112,97,255,0.6)] md:h-[33px] md:w-[206px] md:text-[14px] md:leading-[14px] lg:h-[37px] lg:w-[238px] lg:text-[16px] lg:leading-[18px]"
         >
-          <p>
-            Seulement <span className="bold">2 places</span> par mois
-          </p>
+          <p>Une place restante en mai</p>
         </div>
         <div className="mt-[27px] w-full lg:mt-[33px] lg:px-[8%]">
           <PackageList />
