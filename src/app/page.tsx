@@ -55,6 +55,19 @@ export default function Home() {
         aria-labelledby="project-title"
         className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]"
       >
+        <PreviewCard
+          url="/project/scorp-io"
+          className="aspect-[340/192] cursor-pointer md:aspect-[16/9]"
+          imageSrc="/images/homepage/desktop-tablet/7.mp4"
+          title="SCORP-IO"
+          description={
+            <>
+              Rebranding pour la solution ultra simplifiée de gestion
+              <br />
+              énergétique pour bâtiments tertiaires.
+            </>
+          }
+        />
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
           <PreviewCard
             url="/project/kenko"
@@ -80,7 +93,7 @@ export default function Home() {
 
         <PreviewCard
           url="/project/alcove"
-          className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
+          className="aspect-[340/192] cursor-pointer md:aspect-[16/9]"
           imageSrc="/images/homepage/desktop-tablet/3.jpg"
           title="Alcôve"
           description={
