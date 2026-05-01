@@ -1,4 +1,4 @@
-import Media from '../ui/Media'; 
+import Media from '../ui/Media';
 import ProjectCard from './ProjectCard';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
@@ -29,8 +29,7 @@ type ProjectGroup = {
   section: ProjectSection[];
 };
 
-
-const contents:ProjectGroup[] = [
+const contents: ProjectGroup[] = [
   // Kenko
   {
     project: 'kenko',
@@ -436,12 +435,133 @@ const contents:ProjectGroup[] = [
       },
     ],
   },
+  // scorp-io
+  {
+    project: 'scorp-io',
+    section: [
+      {
+        isFirst: true,
+        order: 0,
+        title: 'SCORP-IO',
+        semiTitle: (
+          <>
+            La solution ultra simplifiée de gestion énergétique
+            <br />
+            pour bâtiments tertiaires.
+          </>
+        ),
+        imgType: 1,
+        imgSrc: '/images/scorp-io/1.mp4',
+        description: (
+          <>
+            Dans un secteur historiquement complexe et vieillissant, leur ambition était claire :
+            affirmer un positionnement nouvelle génération, intuitif et innovant.
+            <br />
+            <br />
+            Ma mission : opérer un lifting pour devenir un marque capable d'asseoir sa crédibilité
+            dans un secteur dominé par des acteurs historiques.
+          </>
+        ),
+        introduction: {
+          client: 'SCORP-IO',
+          secteur: 'Gestion Énergétique Bâtiments',
+          accompagnement: 'Rebranding',
+        },
+      },
+      {
+        order: 1,
+        imgType: 2,
+        imgSrc1: '/images/scorp-io/2.mp4',
+        imgSrc2: '/images/scorp-io/3.jpg',
+        description: (
+          <>
+            L'enjeu central : créer une identité tech et premium, sans tomber dans les clichés du
+            secteur.
+            <br />
+            <br />
+            Pas de vert institutionnel ou de greenwashing visuel. SCorp-io devait inspirer
+            confiance, maîtrise et modernité.
+          </>
+        ),
+      },
+      {
+        order: 2,
+        imgType: 1,
+        imgSrc: '/images/scorp-io/4.jpg',
+        description: (
+          <>
+            Étant reconnu par leur audience pour leur dark mode rare dans ce secteur; nous avon
+            décidé de le garder pour cette nouvelle direction.
+            <br />
+            <br />À travers le côté visuel sombre de la marque, nous avons créé une palette
+            lumineuse et moderne pour traduire à la fois le côté technologique et énergétique de la
+            marque.
+          </>
+        ),
+      },
+      {
+        order: 3,
+        imgType: 5,
+        imgSrc1: '/images/scorp-io/5.mp4',
+        imgSrc2: '/images/scorp-io/6.jpg',
+        imgSrc3: '/images/scorp-io/7.jpg',
+        description: (
+          <>
+            Les éléments graphiques représentent les bâtiments que SCORP-IO accompagnent. Et les
+            dégradés sont comme chaleur qui se diffuse avec légèreté à l’intérieur des bâtiments.
+            <br />
+            <br />
+            Ils évoquent avec simplicité, le côté technologique, innovant et le confort ressenti à
+            l’intérieur de ces lieux.
+          </>
+        ),
+      },
+      {
+        order: 4,
+        imgType: 2,
+        imgSrc1: '/images/scorp-io/8.jpg',
+        imgSrc2: '/images/scorp-io/9.mp4',
+        description: `Dans ce secteur complexe, cette nouvelle identité retranscrit la simplicité de la solution que propose la marque et la facilité d’usage de celle-ci.`,
+      },
+      {
+        order: 5,
+        imgType: 4,
+        imgSrc1: '/images/scorp-io/10.mp4',
+        imgSrc2: '/images/scorp-io/11.jpg',
+        imgSrc3: '/images/scorp-io/12.jpg',
+        imgSrc4: '/images/scorp-io/13.mp4',
+        description: (
+          <>
+            “J’ai eu l’occasion de travailler avec Lucas sur notre branding, et le résultat est
+            vraiment à la hauteur de nos attentes. Il a su comprendre rapidement notre
+            positionnement et le traduire en une identité visuelle claire, cohérente et impactante.
+            <br />
+            <br />
+            Au-delà de la créativité, j’ai particulièrement apprécié sa capacité à challenger nos
+            idées tout en restant à l’écoute. Le travail est structuré, les livrables sont propres,
+            et surtout exploitables concrètement (ce qui n’est pas toujours le cas).
+            <br />
+            <br />
+            On sent une vraie réflexion derrière chaque choix graphique, avec une vision globale du
+            produit et de la marque. Je recommande sans hésiter.”
+          </>
+        ),
+        semiDescription: `Jean-Romain Bardet - Co-fondateur & CEO chez SCORP-IO`,
+      },
+
+      {
+        isLast: true,
+        order: 6,
+        imgType: 1,
+        imgSrc: '/images/scorp-io/14.jpg',
+      },
+    ],
+  },
 ];
 type ProjectListProps = {
   project: string; // slug 문자열
 };
 export default function ProjectList({ project }: ProjectListProps) {
-
   // 전체 프로젝트 배열(contents)에서 현재 slug와 매칭되는 프로젝트만 필터링
   const group = contents.find((g) => g.project === project.toLowerCase());
   if (!group) return notFound(); // 혹은 notFound()
@@ -449,55 +569,48 @@ export default function ProjectList({ project }: ProjectListProps) {
   const hero = group.section[0];
   // const filteredContents = contents.filter((group) => group.project === project.toLowerCase());
   return (
- 
-    
-        
-          <div>
+    <div>
       <h1 className="pl-1.5 text-[11px] md:text-[16px]">{hero.title}</h1>
       <h2 className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
         {hero.semiTitle}
       </h2>
 
-          {/* 히어로 이미지/영상 렌더링 (Media 컴포넌트로 통일 처리) */}
-          {hero.imgSrc && (
-              <div className="relative my-[2%] aspect-video w-full overflow-hidden rounded-[5px]">
-                <Media src={hero.imgSrc} alt={`${hero.title} hero`} />
-              </div>
-            )}
-
-          {/* 히어로 설명 + 오른쪽 정보 패널(Client / Secteur / Accompagnement) */}
-          <div className="flex justify-between">
-            <p className="w-[67%] text-[11px] md:text-[18px] lg:text-[26px]">
-              {hero.description}
-            </p>
-
-            {/* 데스크탑에서만 보이는 정보 섹션 */}
-            <div className="divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
-              <div className="flex justify-between">
-                <div className="text-description">Client</div>
-                <div>{hero.introduction?.client}</div>
-              </div>
-              <div className="flex justify-between">
-                <div className="text-description">Secteur</div>
-                <div>{hero.introduction?.secteur}</div>
-              </div>
-              <div className="flex justify-between">
-                <div className="text-description">Accompagnement</div>
-                <div>{hero.introduction?.accompagnement}</div>
-              </div>
-            </div>
-          </div>
-          
-          {/* 나머지 섹션들: 이미지 갤러리 + 설명 → ProjectCard 컴포넌트로 분리 */}
-          {group.section
-            .filter((section) => !section.isFirst) // isFirst 아닌 것만
-            .map((section) => (
-              <div key={section.order} className="my-[4%]">
-                <ProjectCard section={section} />
-              </div>
-            ))}
+      {/* 히어로 이미지/영상 렌더링 (Media 컴포넌트로 통일 처리) */}
+      {hero.imgSrc && (
+        <div className="relative my-[2%] aspect-video w-full overflow-hidden rounded-[5px]">
+          <Media src={hero.imgSrc} alt={`${hero.title} hero`} />
         </div>
+      )}
 
- 
+      {/* 히어로 설명 + 오른쪽 정보 패널(Client / Secteur / Accompagnement) */}
+      <div className="flex justify-between">
+        <p className="w-[67%] text-[11px] md:text-[18px] lg:text-[26px]">{hero.description}</p>
+
+        {/* 데스크탑에서만 보이는 정보 섹션 */}
+        <div className="divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
+          <div className="flex justify-between">
+            <div className="text-description">Client</div>
+            <div>{hero.introduction?.client}</div>
+          </div>
+          <div className="flex justify-between">
+            <div className="text-description">Secteur</div>
+            <div>{hero.introduction?.secteur}</div>
+          </div>
+          <div className="flex justify-between">
+            <div className="text-description">Accompagnement</div>
+            <div>{hero.introduction?.accompagnement}</div>
+          </div>
+        </div>
+      </div>
+
+      {/* 나머지 섹션들: 이미지 갤러리 + 설명 → ProjectCard 컴포넌트로 분리 */}
+      {group.section
+        .filter((section) => !section.isFirst) // isFirst 아닌 것만
+        .map((section) => (
+          <div key={section.order} className="my-[4%]">
+            <ProjectCard section={section} />
+          </div>
+        ))}
+    </div>
   );
 }

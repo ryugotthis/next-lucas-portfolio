@@ -1,15 +1,13 @@
 import ProjectList from '@/components/projects/ProjectList';
 import BookingButton from '@/components/ui/BookingButton';
 
-
-
 // 1) 메타데이터: params를 Promise로 받고 await
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   return {
     title: slug,
     description: `Projet ${slug} — Portfolio de Lucas Provost.`,
-     alternates: {
+    alternates: {
       canonical: `/project/${slug}`,
     },
   };
@@ -33,11 +31,10 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
   );
 }
 
-
 // 3) SSG용 정적 파라미터
 
 export async function generateStaticParams() {
-  const slugs = ['kenko', 'dgk', 'alcove', 'jeremy-savary', 'sneaky', 'okna'];
+  const slugs = ['kenko', 'dgk', 'alcove', 'jeremy-savary', 'sneaky', 'okna', 'scorp-io'];
   return slugs.map((slug) => ({ slug }));
 }
 
