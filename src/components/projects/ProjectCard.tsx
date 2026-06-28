@@ -29,7 +29,7 @@ function DescriptionBlock({
   return (
     <div className="mt-[2%] w-[67%]">
       <div className={semiDescription ? 'bold' : ''}>{description}</div>
-      {semiDescription && <div className="mt-[1%] text-[20px]">{semiDescription}</div>}
+      {semiDescription && <div className="mt-[1%] md:text-[20px]">{semiDescription}</div>}
     </div>
   );
 }
