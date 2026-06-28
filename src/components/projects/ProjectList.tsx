@@ -677,7 +677,7 @@ const contents: ProjectGroup[] = [
             <br />
             <br />
             Le processus a été efficace, avec des propositions pertinentes et des ajustements
-            rapides
+            rapides.
             <br />
             <br />
             Le résultat final est à la fois conforme à nos attentes et esthétique, nous ne pouvons
