@@ -554,6 +554,21 @@ const contents: ProjectGroup[] = [
         order: 6,
         imgType: 1,
         imgSrc: '/images/scorp-io/14.jpg',
+        description: (
+          <>
+            <span className="bold">Package :</span>
+            <br />
+            Brandbook
+            <br />
+            Système logos
+            <br />
+            Système de couleurs et typographique
+            <br />
+            Éléments graphiques
+            <br />
+            Kits réseaux sociaux
+          </>
+        ),
       },
     ],
   },
