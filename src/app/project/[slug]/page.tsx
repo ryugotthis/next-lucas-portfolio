@@ -34,7 +34,20 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
 // 3) SSG용 정적 파라미터
 
 export async function generateStaticParams() {
-  const slugs = ['kenko', 'dgk', 'alcove', 'jeremy-savary', 'sneaky', 'okna', 'scorp-io'];
+  const slugs = [
+    'kenko',
+    'dgk',
+    'alcove',
+    'jeremy-savary',
+    'sneaky',
+    'okna',
+    'scorp-io',
+    'lidory',
+    'sneaky-2',
+    'okna-2',
+    'scorp-io-2',
+    'lidory-2',
+  ];
   return slugs.map((slug) => ({ slug }));
 }
 

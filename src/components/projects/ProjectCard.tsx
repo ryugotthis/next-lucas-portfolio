@@ -25,7 +25,7 @@ function DescriptionBlock({
   semiDescription?: ReactNode;
   isLast?: boolean;
 }) {
-  if (isLast) return null;
+  if (!description && !semiDescription) return null;
   return (
     <div className="mt-[2%] w-[67%]">
       <div className={semiDescription ? 'bold' : ''}>{description}</div>
@@ -111,10 +111,7 @@ export default function ProjectCard({ section }: ProjectCardProps) {
         <div className="text-[11px] md:text-[18px] lg:text-[26px]">
           <div className="grid grid-cols-2 grid-rows-2 gap-[10px]">
             {[imgSrc1, imgSrc2, imgSrc3, imgSrc4].map((src, i) => (
-              <div
-                key={i}
-                className="relative aspect-square w-full overflow-hidden rounded-[5px]"
-              >
+              <div key={i} className="relative aspect-square w-full overflow-hidden rounded-[5px]">
                 {src && <Media src={src} alt={`project media ${i + 1}`} />}
               </div>
             ))}
