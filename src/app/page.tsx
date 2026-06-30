@@ -110,7 +110,9 @@ export default function Home() {
             className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
             imageSrc="/images/homepage/desktop-tablet/8.mp4"
             title="Lidory"
-            description={<>ne identité visuelle tech et premium pour un profil data d’exception.</>}
+            description={
+              <>Une identité visuelle tech et premium pour un profil data d’exception.</>
+            }
           />
           <PreviewCard
             url="/project/sneaky"
