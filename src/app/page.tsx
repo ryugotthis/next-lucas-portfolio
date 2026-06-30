@@ -68,13 +68,13 @@ export default function Home() {
             </>
           }
         />
-        {/* <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
+        <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
           <PreviewCard
-            url="/project/lidory"
-            imageSrc="/images/homepage/desktop-tablet/8.mp4"
+            url="/project/kenko"
+            imageSrc="/images/homepage/desktop-tablet/1.mp4"
             className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            title="Lidory"
-            description="Une identité visuelle tech et premium pour un profil data d’exception."
+            title="Kenko"
+            description="Kenko, un studio où la poterie et le bien-être intérieur ne font qu’un."
           />
           <PreviewCard
             url="/project/dgk"
@@ -89,9 +89,9 @@ export default function Home() {
               </>
             }
           />
-        </div> */}
+        </div>
 
-        {/* <PreviewCard
+        <PreviewCard
           url="/project/alcove"
           className="aspect-[340/192] cursor-pointer md:aspect-[16/9]"
           imageSrc="/images/homepage/desktop-tablet/3.jpg"
@@ -103,7 +103,7 @@ export default function Home() {
               Un double concept pensé pour vous revitaliser et vous apaiser.
             </>
           }
-        /> */}
+        />
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-3 md:gap-[24px]">
           <PreviewCard
             url="/project/lidory"
