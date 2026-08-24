@@ -34,7 +34,7 @@ export default function Home() {
           </h1>
 
           <p className="mt-[51px] mb-[21px] block w-[315px] text-[14px] md:mt-[60px] md:mb-[16px] md:w-[435px] lg:mt-[36px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
-            Je construis des systèmes visuels pour les boîtes tech, qui veulent monter en gamme.
+            Je construis des systèmes visuels pour les boîtes tech qui veulent monter en gamme.
             <b className="bold"> Livré en 21 jours, prêt à être utilisé par votre équipe.</b>
           </p>
           <BookingButton />
