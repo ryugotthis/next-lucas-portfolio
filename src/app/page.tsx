@@ -139,6 +139,95 @@ export default function Home() {
         </div>
       </section>
 
+      {/* pain points section */}
+      <section
+        aria-labelledby="pain-points-title"
+        className="mt-[64px] flex flex-col items-center px-[24px] md:mt-[76px] md:px-0 lg:mt-[138px]"
+      >
+        <h2
+          id="pain-points-title"
+          className="bold w-[352px] text-center text-[20px] leading-[24px] md:w-[320px] md:text-[24px] md:leading-[28px] lg:w-[659px] lg:text-[48px] lg:leading-[48px]"
+        >
+          Ce que les fondateurs
+          <br className="hidden md:block" />
+          tech vivent trop souvent
+        </h2>
+
+        <div className="mt-[32px] grid w-full grid-cols-1 items-center gap-y-[28px] md:mt-[48px] md:grid-cols-[1fr_auto_1fr] md:gap-x-0 md:gap-y-0 lg:mt-[64px]">
+          {/* 왼쪽 컬럼 */}
+          <div className="mx-auto flex w-full max-w-[420px] flex-col gap-[20px] md:mx-0 md:max-w-none md:gap-[32px]">
+            <div className="text-center md:text-right">
+              <p className="bold text-[16px] leading-[20px] md:border-r-[3px] md:border-[#7061FF] md:pr-[10px] md:text-[20px] md:leading-[24px] lg:border-r-4 lg:pr-[6px] lg:text-[24px] lg:leading-[24px]">
+                Votre produit avance,
+                <br />
+                mais votre marque reste
+                <br />à la traîne ?
+              </p>
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pr-[12px] md:text-[14px] md:leading-[18px]">
+                Je construis une identité qui évolue
+                <br />
+                avec votre produit, pas contre lui.
+              </p>
+            </div>
+            <div className="text-center md:text-right">
+              <p className="bold text-[16px] leading-[20px] md:border-r-[3px] md:border-[#7061FF] md:pr-[10px] md:text-[20px] md:leading-[24px] lg:border-r-4 lg:pr-[6px] lg:text-[24px] lg:leading-[24px]">
+                Vos devs inventent des
+                <br />
+                couleurs et des polices à<br />
+                chaque nouvelle feature ?
+              </p>
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pr-[12px] md:text-[14px] md:leading-[18px]">
+                Je livre un Figma structuré avec
+                <br />
+                variables et composants prêts à<br />
+                implémenter.
+              </p>
+            </div>
+          </div>
+
+          {/* 중앙 일러스트 - 작은 화면에서는 숨김 */}
+          <div className="relative mx-auto hidden h-[340px] w-[340px] md:block md:grid-cols-[1fr_340px_1fr] lg:h-[560px] lg:w-[560px] lg:grid-cols-[1fr_560px_1fr]">
+            <Image src="/illustrations/Thinking_illu.png" alt="" fill aria-hidden="true" />
+          </div>
+
+          {/* 오른쪽 컬럼 */}
+          <div className="mx-auto flex w-full max-w-[420px] flex-col gap-[20px] md:mx-0 md:max-w-none md:gap-[32px]">
+            <div className="text-center md:text-left">
+              <p className="bold text-[16px] leading-[20px] md:border-l-[3px] md:border-[#7061FF] md:pl-[10px] md:text-[20px] md:leading-[24px] lg:border-l-4 lg:pl-[6px] lg:text-[24px] lg:leading-[24px]">
+                Vous créez chaque nouveau
+                <br />
+                support de zéro : post, pitch,
+                <br />
+                page produit ?
+              </p>
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pl-[12px] md:text-[14px] md:leading-[18px]">
+                Un kit réseaux et des assets sont
+                <br />
+                prêts à l&apos;emploi dès le lendemain de
+                <br />
+                la livraison.
+              </p>
+            </div>
+            <div className="text-center md:text-left">
+              <p className="bold text-[16px] leading-[20px] md:border-l-[3px] md:border-[#7061FF] md:pl-[10px] md:text-[20px] md:leading-[24px] lg:border-l-4 lg:pl-[6px] lg:text-[24px] lg:leading-[24px]">
+                Vous hésitez à montrer votre
+                <br />
+                produit à des investisseurs
+                <br />
+                ou des clients ?
+              </p>
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pl-[12px] md:text-[14px] md:leading-[18px]">
+                Votre branding reflète enfin le
+                <br />
+                niveau de ce que vous avez
+                <br />
+                construit.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* process section */}
       <section
         id="process"
