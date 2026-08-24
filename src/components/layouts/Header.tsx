@@ -63,7 +63,7 @@ export default function Header() {
       {/* 데스크톱 클라이언트 섹션 */}
       <div className="hidden items-center gap-[11px] lg:flex lg:justify-end">
         <div className="flex items-center">
-          {['jr.jpeg', 'guillaume.jpeg', 'brenna.jpeg'].map((img, idx) => (
+          {['jr.png', 'guillaume.jpeg', 'brenna.jpeg'].map((img, idx) => (
             <Image
               key={img}
               src={`/images/homepage/desktop-tablet/clients/${img}`}
