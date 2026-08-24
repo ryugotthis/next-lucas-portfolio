@@ -57,7 +57,7 @@ export default function ReviewList() {
     },
     {
       id: 6,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client6.jpeg',
+      imageSrc: '/images/homepage/desktop-tablet/clients/emilie.jpeg',
       name: 'Emilie Mika',
       role: 'Hyperbare Revolution',
       content: (
@@ -81,7 +81,7 @@ export default function ReviewList() {
     },
     {
       id: 3,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client3.jpeg',
+      imageSrc: '/images/homepage/desktop-tablet/clients/brenna.jpeg',
       name: 'Brenna Palmer',
       role: 'Data Governance Kitchen',
       content:
@@ -120,7 +120,7 @@ export default function ReviewList() {
 
     {
       id: 8,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client8.jpeg',
+      imageSrc: '/images/homepage/desktop-tablet/clients/laura.jpeg',
       name: 'Laura Israel',
       role: 'Fondatrice de BCKL',
       content: (
@@ -137,7 +137,7 @@ export default function ReviewList() {
 
     {
       id: 12,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client12.jpeg',
+      imageSrc: '/images/homepage/desktop-tablet/clients/thierry.jpeg',
       name: 'Thierry Gomez ',
       role: 'Fondateur INTECHDIEM',
       content:

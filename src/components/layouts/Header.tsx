@@ -29,38 +29,41 @@ export default function Header() {
     <header className="bg-background fixed top-0 right-0 left-0 z-10 flex items-center justify-between px-[19px] py-[16px] md:static md:flex md:justify-between md:p-0 md:px-[24px] lg:grid lg:grid-cols-3 lg:px-[48px]">
       <div className="lg:justify-start">
         <Link href="/" aria-label="Go to homepage" className="block">
-          <LogoIcon aria-hidden="true" className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]" />
+          <LogoIcon
+            aria-hidden="true"
+            className="h-[65px] w-[70px] fill-black dark:fill-[#faf9ff]"
+          />
         </Link>
       </div>
 
       {/* 데스크톱 네비게이션 */}
       <div className="z-30 hidden md:flex lg:justify-center">
         <nav aria-label="Menu">
-        <ul className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
-          <li className="lg:w-[43.5px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
-            <Link href="/#project">Projets</Link>
-          </li>
-          <li className="lg:w-[80.4px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
-            <Link href="/#process">Ma méthode</Link>
-          </li>
+          <ul className="flex min-w-0 flex-shrink-0 list-none gap-[41px] text-[14px]">
+            <li className="[font-family:var(--font-regular)] whitespace-nowrap transition-all duration-200 hover:[font-family:var(--font-bold)] lg:w-[43.5px]">
+              <Link href="/#project">Projets</Link>
+            </li>
+            <li className="[font-family:var(--font-regular)] whitespace-nowrap transition-all duration-200 hover:[font-family:var(--font-bold)] lg:w-[80.4px]">
+              <Link href="/#process">Ma méthode</Link>
+            </li>
 
-          <li className="lg:w-[38px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
-            <Link href="/#offer">Offres</Link>
-          </li>
-          <li className="lg:w-[77.1px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200">
-            <Link href="/qui-suis-je">Qui suis-je ?</Link>
-          </li>
-          <li className="lg:w-[51.4px] whitespace-nowrap [font-family:var(--font-regular)] hover:[font-family:var(--font-bold)] transition-all duration-200 ">
-            <Link href="/#contact">Contact</Link>
-          </li>
-        </ul>
+            <li className="[font-family:var(--font-regular)] whitespace-nowrap transition-all duration-200 hover:[font-family:var(--font-bold)] lg:w-[38px]">
+              <Link href="/#offer">Offres</Link>
+            </li>
+            <li className="[font-family:var(--font-regular)] whitespace-nowrap transition-all duration-200 hover:[font-family:var(--font-bold)] lg:w-[77.1px]">
+              <Link href="/qui-suis-je">Qui suis-je ?</Link>
+            </li>
+            <li className="[font-family:var(--font-regular)] whitespace-nowrap transition-all duration-200 hover:[font-family:var(--font-bold)] lg:w-[51.4px]">
+              <Link href="/#contact">Contact</Link>
+            </li>
+          </ul>
         </nav>
       </div>
 
       {/* 데스크톱 클라이언트 섹션 */}
       <div className="hidden items-center gap-[11px] lg:flex lg:justify-end">
         <div className="flex items-center">
-          {['client1.jpeg', 'client3.jpeg', 'client5.png'].map((img, idx) => (
+          {['jr.jpeg', 'guillaume.jpeg', 'brenna.jpeg'].map((img, idx) => (
             <Image
               key={img}
               src={`/images/homepage/desktop-tablet/clients/${img}`}
@@ -79,7 +82,11 @@ export default function Header() {
       </div>
 
       {/* 모바일 햄버거 버튼 */}
-      <button onClick={toggleMenu} aria-label={isMenuOpen ? "Close menu" : "Open menu"} className="relative top-0 right-0 z-30 py-[16px] md:hidden">
+      <button
+        onClick={toggleMenu}
+        aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
+        className="relative top-0 right-0 z-30 py-[16px] md:hidden"
+      >
         {isMenuOpen ? <X size={40} /> : <Menu size={40} />}
       </button>
 
@@ -88,34 +95,34 @@ export default function Header() {
         <div className="fixed inset-0 top-0 right-0 bg-black/50 md:hidden">
           <div className="bg-background absolute top-0 right-0 h-full w-[60%] md:hidden">
             <nav aria-label="Mobile Menu">
-            <ul className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
-              <li className="px-4 py-3 hover:bg-gray-100">
-                {' '}
-                <Link href="/#project" onClick={() => setIsMenuOpen(false)}>
-                  Projets
-                </Link>
-              </li>
-              <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/#process" onClick={() => setIsMenuOpen(false)}>
-                  Ma méthode
-                </Link>
-              </li>
-              <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/#offer" onClick={() => setIsMenuOpen(false)}>
-                  Offres
-                </Link>
-              </li>
-              <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/qui-suis-je" onClick={() => setIsMenuOpen(false)}>
-                  Qui suis-je ?
-                </Link>
-              </li>
-              <li className="px-4 py-3 hover:bg-gray-100">
-                <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
-                  Contact
-                </Link>
-              </li>
-            </ul>
+              <ul className="flex list-none flex-col items-end py-4 pt-[70px] text-[24px]">
+                <li className="px-4 py-3 hover:bg-gray-100">
+                  {' '}
+                  <Link href="/#project" onClick={() => setIsMenuOpen(false)}>
+                    Projets
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100">
+                  <Link href="/#process" onClick={() => setIsMenuOpen(false)}>
+                    Ma méthode
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100">
+                  <Link href="/#offer" onClick={() => setIsMenuOpen(false)}>
+                    Offres
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100">
+                  <Link href="/qui-suis-je" onClick={() => setIsMenuOpen(false)}>
+                    Qui suis-je ?
+                  </Link>
+                </li>
+                <li className="px-4 py-3 hover:bg-gray-100">
+                  <Link href="/#contact" onClick={() => setIsMenuOpen(false)}>
+                    Contact
+                  </Link>
+                </li>
+              </ul>
             </nav>
           </div>
         </div>
