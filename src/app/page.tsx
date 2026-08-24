@@ -149,7 +149,7 @@ export default function Home() {
           className="bold w-[352px] text-center text-[20px] leading-[24px] md:w-[320px] md:text-[24px] md:leading-[28px] lg:w-[659px] lg:text-[48px] lg:leading-[48px]"
         >
           Ce que les fondateurs
-          <br className="hidden md:block" />
+          <br />
           tech vivent trop souvent
         </h2>
 
