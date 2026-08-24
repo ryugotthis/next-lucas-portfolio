@@ -195,32 +195,32 @@ export default function Home() {
             <div className="text-center md:text-left">
               <p className="bold text-[16px] leading-[20px] md:border-l-[3px] md:border-[#7061FF] md:pl-[10px] md:text-[20px] md:leading-[24px] lg:border-l-4 lg:pl-[6px] lg:text-[24px] lg:leading-[24px]">
                 Vous créez chaque nouveau
-                <br />
+                <br className="hidden md:block" />
                 support de zéro : post, pitch,
-                <br />
+                <br className="hidden md:block" />
                 page produit ?
               </p>
               <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pl-[12px] md:text-[14px] md:leading-[18px]">
                 Un kit réseaux et des assets sont
-                <br />
+                <br className="hidden md:block" />
                 prêts à l&apos;emploi dès le lendemain de
-                <br />
+                <br className="hidden md:block" />
                 la livraison.
               </p>
             </div>
             <div className="text-center md:text-left">
               <p className="bold text-[16px] leading-[20px] md:border-l-[3px] md:border-[#7061FF] md:pl-[10px] md:text-[20px] md:leading-[24px] lg:border-l-4 lg:pl-[6px] lg:text-[24px] lg:leading-[24px]">
                 Vous hésitez à montrer votre
-                <br />
+                <br className="hidden md:block" />
                 produit à des investisseurs
-                <br />
+                <br className="hidden md:block" />
                 ou des clients ?
               </p>
               <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pl-[12px] md:text-[14px] md:leading-[18px]">
                 Votre branding reflète enfin le
-                <br />
+                <br className="hidden md:block" />
                 niveau de ce que vous avez
-                <br />
+                <br className="hidden md:block" />
                 construit.
               </p>
             </div>
