@@ -4,49 +4,79 @@ export default function ReviewList() {
   const reviews = [
     {
       id: 1,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client1.jpeg',
-      name: 'Vincent Vanfleteren',
-      role: 'Co-fondateur d’Alcôve',
-      content:
-        '“Nous avons fait appel à Lucas pour définir l’intégralité de l’identité visuelle de notre Coffee Shop & Studio de Pilates Reformer. Il a su être force de proposition et s’adapter totalement à notre projet. Nous avons beaucoup apprécié ses conseils, la fluidité de nos échanges et sa réactivité. Nous sommes ravis du résultat ! Merci Lucas !”',
+      imageSrc: '/images/homepage/desktop-tablet/clients/jr.png',
+      name: 'Jean-Romain Bardet',
+      role: 'CEO SCorp-io',
+      content: (
+        <>
+          “Au-delà de la créativité, j’ai particulièrement apprécié sa capacité à challenger nos
+          idées tout en restant à l’écoute. Le travail est structuré, les livrables sont propres, et
+          surtout exploitables concrètement (ce qui n’est pas toujours le cas).
+          <br />
+          <br />
+          On sent une vraie réflexion derrière chaque choix graphique, avec une vision globale du
+          produit et de la marque. Je recommande sans hésiter.”
+        </>
+      ),
     },
     {
       id: 5,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client5.png',
-      name: 'Nadjmou B.',
-      role: 'Genopsys',
-      content:
-        "“Lucas a su s'adapter à notre projet malgré un contexte local assez particulier de l'océan indien. Bravo ! Nous sommes ravi du résultat fourni et j soulignons sa créativité et sa réactivité juste remarquables. Nous recommandons et renouvellerons notre expérience avec lui.”",
-    },
-    {
-      id: 9,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client9.jpeg',
+      imageSrc: '/images/homepage/desktop-tablet/clients/jeremy.jpeg',
       name: 'Jeremy Savary',
       role: 'Paid Media & Data Analyst',
       content:
         '“Lucas a fait un excellent travail sur mon identité graphique. Il a bien compris mes attentes et livré un résultat à la fois pro et créatif.”',
     },
     {
-      id: 2,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client2.jpeg',
-      name: 'Vincent Minaud',
-      role: 'Co-fondateur de KI Leaders',
+      id: 9,
+      imageSrc: '/images/homepage/desktop-tablet/clients/nadjmou.png',
+      name: 'Nadjmou B.',
+      role: 'Genopsys',
       content:
-        "“Travailler ensemble a été à la fois simple, rapide et efficace. Merci Lucas, de nous avoir amené des idées au-delà de ce que nous pensions au début. En espérant que nous aurons l'occasion de travailler ensemble par la suite.”",
+        "“Lucas a su s'adapter à notre projet malgré un contexte local assez particulier de l'océan indien. Bravo ! Nous sommes ravi du résultat fourni et nous soulignons sa”",
+    },
+    {
+      id: 2,
+      imageSrc: '/images/homepage/desktop-tablet/clients/tommy.png',
+      name: 'Tommy Di Luna',
+      role: 'Co-fondateur de KI Leaders',
+      content: (
+        <>
+          “Très satisfait de notre collaboration avec Lucas pour la création de notre identité
+          visuelle.
+          <br />
+          <br />
+          Son écoute et sa créativité ont permis de donner vie à une identité soignée et
+          parfaitement alignée avec nos attentes.
+          <br />
+          <br />
+          Le résultat final est à la fois conforme à nos attentes et esthétique, nous ne pouvons que
+          le recommander pour des projets similaires.”
+        </>
+      ),
     },
     {
       id: 6,
       imageSrc: '/images/homepage/desktop-tablet/clients/client6.jpeg',
       name: 'Emilie Mika',
       role: 'Hyperbare Revolution',
-      content:
-        "“Dès la découverte du portfolio de Lucas, nous avons eu l'intuition que nous avions trouvé LA personne pour réaliser un logo innovant et une charte graphique qui attire l'oeil. Nous ne nous étions pas trompés, Lucas est un graphiste de talent, sérieux, à l'écoute et très professionnel. Les outils mis en place pour faciliter la collaboration sont performants et simples à utiliser, il est à l'écoute et surtout d'une grande créativité. Nous sommes extrêmement satisfaits du résultat, merci beaucoup et au plaisir de collaborer de nouveau. Nous recommandons à 100%”",
+      content: (
+        <>
+          "Lucas est un designer de talent, sérieux, à l'écoute et très professionnel. Les outils
+          mis en place pour faciliter la collaboration sont performants et simples à utiliser, il
+          est à l'écoute et surtout d'une grande créativité.
+          <br />
+          <br />
+          Nous sommes extrêmement satisfaits du résultat, merci beaucoup et au plaisir de collaborer
+          de nouveau. Nous recommandons à 100%"
+        </>
+      ),
     },
     {
       id: 10,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client10.jpeg',
-      name: 'Morgan Noret',
-      role: 'Co-fondateur de Covr',
+      imageSrc: '/images/homepage/desktop-tablet/clients/corentin.jpeg',
+      name: 'Corentin Lambert',
+      role: 'Co-fondateur de AKA School',
       content: '',
     },
     {
@@ -59,26 +89,33 @@ export default function ReviewList() {
     },
     {
       id: 7,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client7.jpeg',
-      name: 'Louis Sarradin',
-      role: 'Fondateur de Pomecha',
+      imageSrc: '/images/homepage/desktop-tablet/clients/jf.jpeg',
+      name: 'Jean-François Legras',
+      role: 'CEO MyClerk.io',
       content:
         "“Super expérience avec Lucas lors de la création de l'identité visuelle de la marque. Bien qu'il était à distance, nous avons pu échanger sans souci. Il a bien cerné l'univers de l'entreprise et m'a fait des propositions graphiques ainsi que des révisions en ce sens. Je suis donc satisfait des livrables (fichiers, charte graphique) et ne manquerai pas de refaire appel à lui pour d'autres projets :)”",
     },
     {
       id: 11,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client11.jpeg',
-
-      name: ' Malika Ait El Mouden',
-      role: 'Co-fondatrice de Spacee',
+      imageSrc: '/images/homepage/desktop-tablet/clients/louis.jpeg',
+      name: 'Louis Sarradin',
+      role: 'Fondateur de Pomecha',
     },
     {
       id: 4,
-      imageSrc: '/images/homepage/desktop-tablet/clients/client4.jpeg',
-      name: 'Corentin Lambert',
-      role: 'Co-fondateur de AKA School',
-      content:
-        '“Lucas a parfaitement compris notre vision et a créé une identité de marque à la fois percutante et fidèle à nos valeurs. Son talent, son écoute, et son professionnalisme ont rendu cette collaboration fluide. Excellent travail, un immense merci !”',
+      imageSrc: '/images/homepage/desktop-tablet/clients/guillaume.jpeg',
+      name: 'Guillaume Adrian',
+      role: 'Fondateur de Dolmen',
+      content: (
+        <>
+          “Lucas combine deux qualités qui vont rarement ensemble : une vraie sensibilité créative
+          et la capacité à délivrer pile au bon moment. Il s'est calé sans friction sur le rythme et
+          les besoins de la mission.
+          <br />
+          <br />
+          Collaboration précieuse, je recommande sans hésiter.”
+        </>
+      ),
     },
 
     {
@@ -169,7 +206,7 @@ export default function ReviewList() {
           ))}
         </div>
         {/* 하단 그라데이션 오버레이 */}
-        <div className="from-background pointer-events-none absolute bottom-0 left-0 h-[200px] w-full bg-gradient-to-t to-transparent" />
+        <div className="from-background pointer-events-none absolute bottom-0 left-0 h-[470px] w-full bg-gradient-to-t to-transparent" />
       </div>
       {/* <div className="grid items-start gap-[2%] lg:grid-cols-4">
         {reviews.map((review) => (

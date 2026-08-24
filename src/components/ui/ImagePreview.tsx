@@ -24,9 +24,8 @@ export default function ImagePreview({
     window.open(url, '_self', 'noopener,noreferrer');
   };
 
-
   return (
-      <div
+    <div
       onClick={handleClick}
       className={`group relative overflow-hidden rounded-[2px] focus:outline-none md:rounded-[5px] ${className}`}
       aria-label={alt}
@@ -35,7 +34,7 @@ export default function ImagePreview({
       <Media
         src={imageSrc}
         alt={alt}
-        className="transition-transform duration-500 ease-in-out group-hover:scale-105"
+        // className="transition-transform duration-500 ease-in-out group-hover:scale-105"
       />
 
       {/* 오버레이 버튼 */}

@@ -9,19 +9,11 @@ export default function FAQCard() {
   const contents = [
     {
       id: 1,
-      question: 'Quelle est la durée des prestations ?',
+      question: 'Quelle est la durée de la création d’un branding ?',
       answer: (
         <>
-          <span className="bold">Le Starter</span> : Le but est de vous lancer avec une charte
-          graphique et les éléments de base d’une identité visuelle en 2 semaines.
-          <br />
-          <br />
-          <span className="bold">Identité intégrale</span> : Le but est de lancé votre image de
-          marque complète en 5 semaines.
-          <br />
-          <br />
-          Ces projections peuvent légèrement varier en fonction de vos demandes et de la rapidité de
-          vos retours
+          L’offre Brand Ready prend environ 21 jours. Ce délai peut varier en fonction de la
+          rapidité de réponse côté client.
         </>
       ),
     },
@@ -44,24 +36,15 @@ export default function FAQCard() {
       question: 'Proposez-vous d’autres prestations ?',
       answer: (
         <>
-          Oui, vous pouvez me faire une demande et nous pourrons faire un projet sur-mesure
-          spécialement pour vous.
+          Oui, vous pouvez me faire une demande via le formulaire de contact ou prendre directement
+          rendez-vous avec moi. Cela n’engage à rien.
         </>
       ),
     },
     {
       id: 4,
       question: 'Il y a t-il des révisions possibles ?',
-      answer: (
-        <>
-          <span className="bold">Charte graphique</span> : Oui, avec ce package vous avez droit à 5
-          révisions
-          <br />
-          <br />
-          <span className="bold">Identité intégrale</span> : Oui, grâce à ce package vous avez droit
-          à nombre de révisions illimités.
-        </>
-      ),
+      answer: <>Oui, vous avez droit à nombre de révisions illimités.</>,
     },
     {
       id: 5,
@@ -102,7 +85,7 @@ export default function FAQCard() {
         <div
           key={content.id}
           onClick={() => onClick(content.id)}
-          className={`${openId === content.id ? 'bg-faq-open' : 'bg-faq-closed'} cursor-pointer overflow-hidden rounded-[5px] text-sub md:z-2`}
+          className={`${openId === content.id ? 'bg-faq-open' : 'bg-faq-closed'} text-sub cursor-pointer overflow-hidden rounded-[5px] md:z-2`}
         >
           <div className="flex justify-between">
             <p className="bold p-4 text-[14px] md:text-[14px] lg:text-[16px]">{content.question}</p>

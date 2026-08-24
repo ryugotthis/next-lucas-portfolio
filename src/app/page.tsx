@@ -23,21 +23,19 @@ export default function Home() {
       {/* Hero */}
       <section aria-labelledby="hero-title" className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
         <div>
-          <span className="text-[10px] md:text-[14px] lg:text-[16px]">
-            Branding • Identité visuelle
-          </span>
+          <span className="text-[10px] md:text-[14px] lg:text-[16px]">Branding tech B2B</span>
 
           <h1
             id="hero-title"
             className="bold block text-[28px] leading-[28px] md:w-[470px] md:text-[40px] md:leading-[40px] lg:h-[153px] lg:w-[750px] lg:text-[64px] lg:leading-[64px]"
           >
-            Osez un branding unique
-            <br /> et devenez l’option N°1
+            Votre branding, conçu
+            <br /> pour votre produit.
           </h1>
 
           <p className="mt-[51px] mb-[21px] block w-[315px] text-[14px] md:mt-[60px] md:mb-[16px] md:w-[435px] lg:mt-[36px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
-            Je vous accompagne dans la création d’un branding clair et vraiment différenciant, pour
-            révéler le plein potentiel de votre marque.
+            Je construis des systèmes visuels pour les boîtes tech, qui veulent monter en gamme.
+            <b className="bold"> Livré en 21 jours, prêt à être utilisé par votre équipe.</b>
           </p>
           <BookingButton />
         </div>
@@ -134,7 +132,7 @@ export default function Home() {
             description={
               <>
                 La solution cloud sur-mesure pour accompagner les marques <br />
-                dans leurs projets en utilisant seulement ce dont ils ont besoins.
+                dans leurs projets en utilisant seulement ce dont ils ont besoin.
               </>
             }
           />
@@ -148,12 +146,12 @@ export default function Home() {
         className="mt-[64px] md:mt-[76px] lg:mt-[138px]"
       >
         <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
-          <h2 className="bold w-[252px] text-center text-[20px] leading-[24px] md:w-[340px] md:text-[24px] md:leading-[28px] lg:w-[582px] lg:text-[48px] lg:leading-[48px]">
-            La méthode pour garantir la réussite de votre projet
+          <h2 className="bold w-[352px] text-center text-[20px] leading-[24px] md:w-[320px] md:text-[24px] md:leading-[28px] lg:w-[659px] lg:text-[48px] lg:leading-[48px]">
+            Une méthode pensée pour les produits qui évoluent vite
           </h2>
           <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
-            En tant que brand designer, je vous accompagne pour définir les meilleures solutions
-            pour votre marque
+            Je ne crée pas un branding figé. Je construis un système visuel que votre équipe peut
+            faire grandir sans moi.
           </p>
         </div>
         <ProcessList />
