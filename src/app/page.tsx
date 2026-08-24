@@ -159,27 +159,27 @@ export default function Home() {
             <div className="text-center md:text-right">
               <p className="bold text-[16px] leading-[20px] md:border-r-[3px] md:border-[#7061FF] md:pr-[10px] md:text-[20px] md:leading-[24px] lg:border-r-4 lg:pr-[6px] lg:text-[24px] lg:leading-[24px]">
                 Votre produit avance,
-                <br />
+                <br className="hidden md:block" />
                 mais votre marque reste
-                <br />à la traîne ?
+                <br className="hidden md:block" />à la traîne ?
               </p>
               <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pr-[12px] md:text-[14px] md:leading-[18px]">
                 Je construis une identité qui évolue
-                <br />
+                <br className="hidden md:block" />
                 avec votre produit, pas contre lui.
               </p>
             </div>
             <div className="text-center md:text-right">
               <p className="bold text-[16px] leading-[20px] md:border-r-[3px] md:border-[#7061FF] md:pr-[10px] md:text-[20px] md:leading-[24px] lg:border-r-4 lg:pr-[6px] lg:text-[24px] lg:leading-[24px]">
                 Vos devs inventent des
-                <br />
-                couleurs et des polices à<br />
+                <br className="hidden md:block" />
+                couleurs et des polices à<br className="hidden md:block" />
                 chaque nouvelle feature ?
               </p>
               <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pr-[12px] md:text-[14px] md:leading-[18px]">
                 Je livre un Figma structuré avec
-                <br />
-                variables et composants prêts à<br />
+                <br className="hidden md:block" />
+                variables et composants prêts à <br className="hidden md:block" />
                 implémenter.
               </p>
             </div>
