@@ -83,9 +83,19 @@ export default function DesignSystemCarousel() {
       </h2>
 
       <div className="relative mt-[32px] w-full">
-        {/* 스크린샷 */}
-        <div className="relative aspect-[970/600] w-full overflow-hidden">
-          {/* 화살표 — 왼쪽 (모바일 축소, 이미지 기준 세로 중앙) */}
+        {/* 스크린샷 프레임 (크기 기준 박스) */}
+        <div className="relative aspect-[970/600] w-full">
+          {/* 이미지만 클리핑 */}
+          <div className="absolute inset-0 overflow-hidden">
+            <Image
+              src={currentSlide.image}
+              alt={currentSlide.title}
+              fill
+              className="object-contain"
+            />
+          </div>
+
+          {/* 화살표 — 왼쪽 (모바일 축소, 이미지 기준 세로 중앙, 안 잘림) */}
           <button
             type="button"
             onClick={handlePrev}
@@ -95,7 +105,7 @@ export default function DesignSystemCarousel() {
             <ChevronLeft className="h-[16px] w-[16px] text-[#0A0832] md:h-[24px] md:w-[24px]" />
           </button>
 
-          {/* 화살표 — 오른쪽 (모바일 축소, 이미지 기준 세로 중앙) */}
+          {/* 화살표 — 오른쪽 (모바일 축소, 이미지 기준 세로 중앙, 안 잘림) */}
           <button
             type="button"
             onClick={handleNext}
@@ -105,15 +115,8 @@ export default function DesignSystemCarousel() {
             <ChevronRight className="h-[16px] w-[16px] text-[#0A0832] md:h-[24px] md:w-[24px]" />
           </button>
 
-          <Image
-            src={currentSlide.image}
-            alt={currentSlide.title}
-            fill
-            className="object-contain"
-          />
-
           {/* 점(dot) 네비게이션 — 이미지 위에 오버레이, 하단에서 살짝 띄움 */}
-          <div className="absolute bottom-[24px] left-0 z-10 flex w-full items-center justify-center gap-[10px] md:bottom-[64px]">
+          <div className="absolute bottom-[12px] left-0 z-10 flex w-full items-center justify-center gap-[10px] md:bottom-[64px]">
             {designSystemSlides.map((slide, index) => (
               <button
                 key={slide.title}
@@ -121,7 +124,7 @@ export default function DesignSystemCarousel() {
                 onClick={() => setCurrentIndex(index)}
                 aria-label={`Aller au slide ${index + 1}`}
                 aria-current={index === currentIndex}
-                className={`h-[10px] w-[10px] rounded-full transition-all md:h-[14px] md:w-[14px] ${
+                className={`h-[8px] w-[8px] rounded-full transition-all md:h-[14px] md:w-[14px] ${
                   index === currentIndex ? 'bg-[#0A0832]' : 'bg-[#B8B8C8]'
                 }`}
               />
