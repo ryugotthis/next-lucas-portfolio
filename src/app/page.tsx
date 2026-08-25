@@ -11,6 +11,7 @@ import PreviewCard from '@/components/ui/PreviewCard';
 import Link from 'next/link';
 import Image from 'next/image';
 import Comparison from '@/components/homepage/Comparison';
+import Fit from '@/components/homepage/Fit';
 
 export const metadata = {
   alternates: {
@@ -253,6 +254,11 @@ export default function Home() {
           </p>
         </div>
         <ProcessList />
+      </section>
+
+      {/* fit section */}
+      <section>
+        <Fit />
       </section>
       {/* offer section */}
       <section
