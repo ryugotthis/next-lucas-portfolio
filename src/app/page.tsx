@@ -12,6 +12,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import Comparison from '@/components/homepage/Comparison';
 import Fit from '@/components/homepage/Fit';
+import PackageDetails from '@/components/homepage/PackageDetails';
 
 export const metadata = {
   alternates: {
@@ -259,6 +260,11 @@ export default function Home() {
       {/* fit section */}
       <section>
         <Fit />
+      </section>
+
+      {/* pacakage section */}
+      <section>
+        <PackageDetails />
       </section>
       {/* offer section */}
       <section
