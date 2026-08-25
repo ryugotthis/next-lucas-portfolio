@@ -82,7 +82,7 @@ export default function Fit() {
           {yesItems.map((item) => (
             <div key={item} className="flex items-start gap-[12px]">
               <Image src="/icons/Yes.svg" alt="Check" width={36} height={36} />
-              <p className="bold pt-[4px] text-[14px] leading-[20px] md:text-[15px] md:leading-[21px] lg:text-[16px] lg:leading-[22px]">
+              <p className="bold pt-[4px] text-[14px] leading-[20px] md:text-[15px] md:leading-[21px] lg:text-[18px] lg:leading-[22px]">
                 {item}
               </p>
             </div>
@@ -97,7 +97,7 @@ export default function Fit() {
           {noItems.map((item) => (
             <div key={item} className="flex items-start gap-[12px]">
               <Image src="/icons/No.svg" alt="Cross" width={36} height={36} />
-              <p className="pt-[4px] text-[14px] leading-[20px] text-[#9B9BAF] md:text-[15px] md:leading-[21px] lg:text-[16px] lg:leading-[22px]">
+              <p className="pt-[4px] text-[14px] leading-[20px] text-[#9B9BAF] md:text-[15px] md:leading-[21px] lg:text-[18px] lg:leading-[22px]">
                 {item}
               </p>
             </div>
