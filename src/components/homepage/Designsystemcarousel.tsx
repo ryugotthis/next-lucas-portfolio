@@ -73,7 +73,7 @@ export default function DesignSystemCarousel() {
   return (
     <section
       aria-labelledby="design-system-title"
-      className="mt-[64px] flex flex-col items-center px-[12px] md:mt-[76px] md:px-0 lg:mt-[138px]"
+      className="mt-[64px] flex flex-col items-center md:mt-[76px] md:px-0 lg:mt-[138px]"
     >
       <h2
         id="design-system-title"
