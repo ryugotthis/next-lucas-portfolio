@@ -10,6 +10,7 @@ import PreviewCard from '@/components/ui/PreviewCard';
 
 import Link from 'next/link';
 import Image from 'next/image';
+import Comparison from '@/components/homepage/Comparison';
 
 export const metadata = {
   alternates: {
@@ -226,6 +227,14 @@ export default function Home() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* comparison section */}
+      <section
+        aria-labelledby="comparison-title"
+        className="mt-[64px] flex flex-col items-center px-[24px] md:mt-[76px] md:px-0 lg:mt-[138px]"
+      >
+        <Comparison />
       </section>
 
       {/* process section */}
