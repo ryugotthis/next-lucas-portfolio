@@ -117,8 +117,11 @@ const contents: ProjectGroup[] = [
         ),
         imgType: 1,
         imgSrc: '/images/dgk/1.mp4',
-        description:
-          'Bien que sa marque principale soit Data Galaxy, Laurent Dresse a créé Data Governance Kitchen pour sensibiliser et conseiller sur la création de bonnes stratégies data.',
+        description: (
+          <div className="bold">
+            “C'est notre deuxième projet avec Lucas, et tout s'est parfaitement déroulé.”
+          </div>
+        ),
         introduction: {
           client: 'Data Governance Kitchen',
           secteur: 'Data analytics',
@@ -149,7 +152,7 @@ const contents: ProjectGroup[] = [
         imgType: 1,
         imgSrc: '/images/dgk/4.jpg',
         description:
-          'L’image de marque est donc terre-à-terre, décalée et gourmande — tout en évoquant l’univers de la data à travers ses designs et ses couleurs.',
+          'L’image de marque est donc terre-à-terre, décalée et gourmande, tout en évoquant l’univers de la data à travers ses designs et ses couleurs.',
       },
       {
         order: 3,
