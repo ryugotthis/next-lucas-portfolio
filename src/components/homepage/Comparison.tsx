@@ -50,9 +50,9 @@ export default function Comparison() {
       {/* 모바일: flex-col(세로 스택) → 태블릿부터 md:flex-row(가로 배치, PC와 동일) */}
       <div className="mt-[32px] flex w-full max-w-[814px] flex-col gap-[16px] md:mt-[48px] md:flex-row md:gap-0 lg:mt-[56px]">
         {/* Left column — Brand Ready (여백 추가로 박스 확장) */}
-        <div className="rounded-5px] flex-1 overflow-hidden bg-[#F1F3FF] pt-[8px] pb-[16px] shadow-[0_4px_24px_rgba(112,97,255,0.3)]">
+        <div className="rounded-5px] bg-background-sub flex-1 overflow-hidden pt-[8px] pb-[16px] shadow-[0_4px_24px_rgba(112,97,255,0.3)]">
           {/* 제목은 그대로 유지 */}
-          <div className="bg-[#F1F3FF] px-[16px] py-[16px] md:px-[24px] md:py-[20px]">
+          <div className="bg-background-sub px-[16px] py-[16px] md:px-[24px] md:py-[20px]">
             <p className="bold text-center text-[16px] leading-[20px] md:text-right md:text-[20px] md:leading-[24px] lg:text-[32px] lg:leading-[28px]">
               Brand Ready
             </p>
@@ -61,7 +61,7 @@ export default function Comparison() {
           {comparisonRows.map((row) => (
             <div
               key={row.brandReady}
-              className="flex flex-row-reverse items-center justify-end gap-[8px] border-t border-[#C9C8E4] bg-[#F1F3FF] py-[16px] pl-[16px] md:flex-row md:justify-end md:px-[24px] md:py-[20px]"
+              className="border-foreground/10 bg-background-sub flex flex-row-reverse items-center justify-end gap-[8px] border-t py-[16px] pl-[16px] md:flex-row md:justify-end md:px-[24px] md:py-[20px]"
             >
               <p className="bold text-left text-[12px] leading-[16px] md:text-right md:text-[14px] md:leading-[18px] lg:text-[18px] lg:leading-[20px]">
                 {row.brandReady}
@@ -73,7 +73,7 @@ export default function Comparison() {
           ))}
 
           {/* 마지막 행 밑 구분선 */}
-          <div className="border-t border-[#C9C8E4]" />
+          <div className="border-foreground/10 border-t" />
         </div>
 
         {/* Right column — Branding classique (왼쪽과 세로 여백 맞춰서 줄 정렬) */}
@@ -88,19 +88,19 @@ export default function Comparison() {
           {comparisonRows.map((row) => (
             <div
               key={row.classic}
-              className="flex items-center justify-start gap-[8px] border-t border-[#C9C8E4] px-[16px] py-[16px] md:justify-start md:px-[24px] md:py-[20px]"
+              className="border-foreground/10 flex items-center justify-start gap-[8px] border-t px-[16px] py-[16px] md:justify-start md:px-[24px] md:py-[20px]"
             >
               <span aria-hidden="true" className="text-[#b8b8b8]">
                 <Image src="/icons/Done-grey.svg" alt="check" width={24} height={24} />
               </span>
-              <p className="text-left text-[12px] leading-[16px] text-[#888888] md:text-left md:text-[14px] md:leading-[18px] lg:text-[18px] lg:leading-[20px]">
+              <p className="text-description text-left text-[12px] leading-[16px] md:text-left md:text-[14px] md:leading-[18px] lg:text-[18px] lg:leading-[20px]">
                 {row.classic}
               </p>
             </div>
           ))}
 
           {/* 마지막 행 밑 구분선 (왼쪽과 대칭) */}
-          <div className="border-t border-[#C9C8E4]" />
+          <div className="border-foreground/10 border-t" />
         </div>
       </div>
     </>

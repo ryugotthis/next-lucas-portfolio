@@ -47,6 +47,7 @@ export async function generateStaticParams() {
     'okna-2',
     'scorp-io-2',
     'lidory-2',
+    'Dolmen',
   ];
   return slugs.map((slug) => ({ slug }));
 }

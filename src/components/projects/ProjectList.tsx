@@ -710,6 +710,144 @@ const contents: ProjectGroup[] = [
       },
     ],
   },
+  // Dolmen
+  {
+    project: 'Dolmen',
+    section: [
+      {
+        isFirst: true,
+        order: 0,
+        title: 'Dolmen',
+        semiTitle: (
+          <>
+            Une identité solide pour une agence qui structure
+            <br />
+            la croissance des entreprises tech B2B et IA.
+          </>
+        ),
+        imgType: 1,
+        imgSrc: '/images/dolmen/1.mp4',
+        description: (
+          <>
+            Lidory développe des applications performantes et sécurisées. Dans un secteur où la
+            confiance se gagne par la rigueur, leur identité visuelle devait incarner exactement ça
+            : expertise maîtrisée, clarté, stabilité.
+            <br />
+            <br />
+            La mission : créer une identité capable de s'imposer tout en exprimant une vision
+            moderne de la sécurité applicative.
+          </>
+        ),
+        introduction: {
+          client: 'Lidory',
+          secteur: 'Développement d’applications',
+          accompagnement: 'Branding',
+        },
+      },
+      {
+        order: 1,
+        imgType: 2,
+        imgSrc1: '/images/lidory/2.mp4',
+        imgSrc2: '/images/lidory/3.mp4',
+        description: (
+          <>
+            L'enjeu était de traduire la fiabilité, l’architecture solide, la protection des
+            données, sans tomber dans les codes froids et impersonnels souvent associés à la
+            cybersécurité.
+            <br />
+            <br />
+            Une marque qui inspire confiance naturellement, par sa structure et sa clarté.
+          </>
+        ),
+      },
+      {
+        order: 2,
+        imgType: 1,
+        imgSrc: '/images/lidory/4.mp4',
+        description: (
+          <>
+            La combinaison de jaune et de blanc traduit à la fois la rigueur technique et
+            l'accessibilité, loin des tons sombres du secteur, sans jamais sacrifier le sérieux.
+            <br />
+            <br />
+            La typographie Plus Jakarta Sans accompagne cette direction : semi-bold pour affirmer,
+            italic pour nuancer, regular pour expliquer.
+          </>
+        ),
+      },
+      {
+        order: 3,
+        imgType: 5,
+        imgSrc1: '/images/lidory/5.mp4',
+        imgSrc2: '/images/lidory/6.jpg',
+        imgSrc3: '/images/lidory/7.jpg',
+        description: (
+          <>
+            Le logo Lidory s'articule autour d'une étoile inscrite dans un cercle, symbole de
+            protection, d'orientation et de maîtrise.
+            <br />
+            <br />
+            Simple dans sa forme, fort dans ce qu'il évoque : un environnement sécurisé où chaque
+            projet est protégé dès sa conception.
+          </>
+        ),
+      },
+      {
+        order: 4,
+        imgType: 2,
+        imgSrc1: '/images/lidory/8.mp4',
+        imgSrc2: '/images/lidory/9.mp4',
+        description: `Les illustrations Lidory prolongent l'identité sans la décorer. Chacune porte une idée : sécurité, architecture, accompagnement, simplicité d'usage. Toujours pour rendre la complexité technique immédiatement lisible.`,
+      },
+      {
+        order: 5,
+        imgType: 2,
+        imgSrc1: '/images/lidory/10.jpg',
+        imgSrc2: '/images/lidory/11.jpg',
+        description: (
+          <>
+            “Très satisfait de notre collaboration avec Lucas pour la création de notre identité
+            visuelle.
+            <br />
+            <br />
+            Son écoute et sa créativité ont permis de donner vie à une identité soignée et
+            parfaitement alignée avec nos attentes.
+            <br />
+            <br />
+            Le processus a été efficace, avec des propositions pertinentes et des ajustements
+            rapides.
+            <br />
+            <br />
+            Le résultat final est à la fois conforme à nos attentes et esthétique, nous ne pouvons
+            que le recommander pour des projets similaires.”
+          </>
+        ),
+        semiDescription: `Tommy DI LUNA - Co-fondateur de Lidory`,
+      },
+
+      {
+        isLast: true,
+        order: 7,
+        imgType: 1,
+        imgSrc: '/images/lidory/12.jpg',
+        description: (
+          <>
+            <span className="bold">Package :</span>
+            <br />
+            Brandbook
+            <br />
+            Système logos
+            <br />
+            Système de couleurs et typographique
+            <br />
+            Éléments graphiques
+            <br />
+            Kits réseaux sociaux
+          </>
+        ),
+      },
+    ],
+  },
 ];
 type ProjectListProps = {
   project: string; // slug 문자열
