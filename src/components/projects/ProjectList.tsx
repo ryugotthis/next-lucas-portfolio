@@ -928,7 +928,7 @@ const contents: ProjectGroup[] = [
       {
         order: 1,
         imgType: 2,
-        imgSrc1: '/images/myclerck/2.jpg',
+        imgSrc1: '/images/myclerk/2.jpg',
         imgSrc2: '/images/myclerk/3.jpg',
         description: (
           <>
