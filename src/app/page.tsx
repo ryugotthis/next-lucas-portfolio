@@ -56,6 +56,7 @@ export default function Home() {
         aria-labelledby="project-title"
         className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]"
       >
+        {/* SCORP-IO */}
         <PreviewCard
           url="/project/scorp-io"
           className="aspect-[340/192] cursor-pointer md:aspect-[16/9]"
@@ -69,63 +70,42 @@ export default function Home() {
             </>
           }
         />
+        {/* DOLMEN & LIDORY */}
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
           <PreviewCard
-            url="/project/kenko"
-            imageSrc="/images/homepage/desktop-tablet/1.mp4"
+            url="/project/dolmen"
+            imageSrc="/images/homepage/desktop-tablet/9.mp4"
             className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            title="Kenko"
-            description="Kenko, un studio où la poterie et le bien-être intérieur ne font qu’un."
-          />
-          <PreviewCard
-            url="/project/dgk"
-            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            imageSrc="/images/homepage/desktop-tablet/2_ios.mp4"
-            title="Data Governance Kitchen"
+            title="Dolmen"
             description={
               <>
-                Le canal de communication qui aide à concocter de savoureuses stratégies
+                Une identité solide pour une agence qui structure la croissance
                 <br />
-                grâce à vos données.
+                des entreprises tech B2B et IA.
+              </>
+            }
+          />
+          <PreviewCard
+            url="/project/lidory"
+            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
+            imageSrc="/images/homepage/desktop-tablet/8.mp4"
+            title="Lidory"
+            description={
+              <>
+                Construire une identité à la hauteur d'une <br />
+                promesse : la sécurité dès la conception.
               </>
             }
           />
         </div>
-
-        <PreviewCard
-          url="/project/alcove"
-          className="aspect-[340/192] cursor-pointer md:aspect-[16/9]"
-          imageSrc="/images/homepage/desktop-tablet/3.jpg"
-          title="Alcôve"
-          description={
-            <>
-              Un coffee shop, un studio de pilates, dans un seul et même lieu.
-              <br />
-              Un double concept pensé pour vous revitaliser et vous apaiser.
-            </>
-          }
-        />
+        {/* MYCLERK, OKNA, DGK */}
         <div className="grid grid-cols-1 gap-[12px] md:grid-cols-3 md:gap-[24px]">
           <PreviewCard
-            url="/project/lidory"
+            url="/project/myclerk"
             className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/8.mp4"
-            title="Lidory"
-            description={
-              <>Une identité visuelle tech et premium pour un profil data d’exception.</>
-            }
-          />
-          <PreviewCard
-            url="/project/sneaky"
-            className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/5.jpg"
-            title="Sneaky"
-            description={
-              <>
-                L’agence de voyage pour enfin pouvoir profitez et être loin des <br />
-                foules. Partez là où 99% des touristes ne vont pas.
-              </>
-            }
+            imageSrc="/images/homepage/desktop-tablet/10.jpg"
+            title="MyClerk"
+            description={<>L’outil qui gère la présence en ligne des restaurateurs</>}
           />
           <PreviewCard
             url="/project/okna"
@@ -134,8 +114,22 @@ export default function Home() {
             title="Okna"
             description={
               <>
-                La solution cloud sur-mesure pour accompagner les marques <br />
+                La solution cloud sur-mesure pour accompagner les marques
+                <br />
                 dans leurs projets en utilisant seulement ce dont ils ont besoin.
+              </>
+            }
+          />
+          <PreviewCard
+            url="/project/dgk"
+            className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
+            imageSrc="/images/homepage/desktop-tablet/2.mp4"
+            title="Data Governance Kitchen"
+            description={
+              <>
+                Le canal de communication qui aide à concocter de
+                <br />
+                savoureuses stratégies grâce à vos données.
               </>
             }
           />
