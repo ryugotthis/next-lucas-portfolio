@@ -578,7 +578,6 @@ const contents: ProjectGroup[] = [
             confort ressenti à l'intérieur des bâtiments qu'elle pilote.
           </>
         ),
-        semiDescription: `Jean-Romain Bardet - Co-fondateur & CEO chez SCORP-IO`,
       },
 
       {

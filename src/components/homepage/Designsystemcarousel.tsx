@@ -60,12 +60,16 @@ const designSystemSlides: DesignSystemSlide[] = [
 export default function DesignSystemCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  const goToSlide = (index: number) => {
+    setCurrentIndex(index);
+  };
+
   const handlePrev = () => {
-    setCurrentIndex((prev) => (prev === 0 ? designSystemSlides.length - 1 : prev - 1));
+    goToSlide(currentIndex === 0 ? designSystemSlides.length - 1 : currentIndex - 1);
   };
 
   const handleNext = () => {
-    setCurrentIndex((prev) => (prev === designSystemSlides.length - 1 ? 0 : prev + 1));
+    goToSlide(currentIndex === designSystemSlides.length - 1 ? 0 : currentIndex + 1);
   };
 
   const currentSlide = designSystemSlides[currentIndex];
@@ -95,22 +99,22 @@ export default function DesignSystemCarousel() {
             />
           </div>
 
-          {/* 화살표 — 왼쪽 (모바일 축소, 이미지 기준 세로 중앙, 안 잘림) */}
+          {/* 화살표 — 왼쪽 (호버/클릭 피드백, 커서 포인터 명시) */}
           <button
             type="button"
             onClick={handlePrev}
             aria-label="Slide précédent"
-            className="absolute top-1/2 left-[-8px] z-10 flex h-[32px] w-[32px] -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] md:left-[-20px] md:h-[48px] md:w-[48px]"
+            className="absolute top-1/2 left-[-8px] z-10 flex h-[32px] w-[32px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all duration-150 hover:scale-105 hover:bg-[#F1F3FF] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] focus-visible:ring-2 focus-visible:ring-[#7061FF] focus-visible:outline-none active:scale-95 md:left-[-20px] md:h-[48px] md:w-[48px]"
           >
             <ChevronLeft className="h-[16px] w-[16px] text-[#0A0832] md:h-[24px] md:w-[24px]" />
           </button>
 
-          {/* 화살표 — 오른쪽 (모바일 축소, 이미지 기준 세로 중앙, 안 잘림) */}
+          {/* 화살표 — 오른쪽 (호버/클릭 피드백, 커서 포인터 명시) */}
           <button
             type="button"
             onClick={handleNext}
             aria-label="Slide suivant"
-            className="absolute top-1/2 right-[-8px] z-10 flex h-[32px] w-[32px] -translate-y-1/2 items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] md:right-[-20px] md:h-[48px] md:w-[48px]"
+            className="absolute top-1/2 right-[-8px] z-10 flex h-[32px] w-[32px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all duration-150 hover:scale-105 hover:bg-[#F1F3FF] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] focus-visible:ring-2 focus-visible:ring-[#7061FF] focus-visible:outline-none active:scale-95 md:right-[-20px] md:h-[48px] md:w-[48px]"
           >
             <ChevronRight className="h-[16px] w-[16px] text-[#0A0832] md:h-[24px] md:w-[24px]" />
           </button>
@@ -121,10 +125,10 @@ export default function DesignSystemCarousel() {
               <button
                 key={slide.title}
                 type="button"
-                onClick={() => setCurrentIndex(index)}
+                onClick={() => goToSlide(index)}
                 aria-label={`Aller au slide ${index + 1}`}
                 aria-current={index === currentIndex}
-                className={`h-[8px] w-[8px] rounded-full transition-all md:h-[14px] md:w-[14px] ${
+                className={`h-[8px] w-[8px] cursor-pointer rounded-full transition-all duration-200 hover:scale-125 md:h-[14px] md:w-[14px] ${
                   index === currentIndex ? 'bg-[#0A0832]' : 'bg-[#B8B8C8]'
                 }`}
               />
