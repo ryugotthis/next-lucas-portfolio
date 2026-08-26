@@ -11,6 +11,7 @@ type ProjectSection = {
   isLast?: boolean;
   title?: string;
   semiTitle?: ReactNode;
+  review?: ReactNode;
   leadText?: ReactNode;
   description?: ReactNode;
   semiDescription?: ReactNode;
@@ -124,10 +125,16 @@ const contents: ProjectGroup[] = [
           accompagnement: 'Identité visuelle',
         },
         clientProfile: {
-          avatarSrc: '/images/dgk/profile.jpg',
+          avatarSrc: '/images/homepage/desktop-tablet/clients/brenna.jpeg',
           name: 'Brenna Palmer',
           role: 'Brand & Content Manager chez Data Governance Kitchen & Data Galaxy',
         },
+        review: (
+          <>
+            Bien que sa marque principale soit Data Galaxy, Laurent Dresse a créé Data Governance
+            Kitchen pour sensibiliser et conseiller sur la création de bonnes stratégies data.
+          </>
+        ),
       },
       {
         order: 1,
@@ -301,7 +308,7 @@ const contents: ProjectGroup[] = [
         order: 1,
         imgType: 2,
         imgSrc1: '/images/okna/2.jpg',
-        imgSrc2: '/images/okna/3.mp4',
+        imgSrc2: '/images/okna/3.gif',
         description:
           'Ma mission ? Créer une identité visuelle friendly, tech et audacieuse pour représenter l’équipe d’experts passionnés qui compose la marque.',
       },
@@ -636,6 +643,22 @@ const contents: ProjectGroup[] = [
         imgType: 1,
         imgSrc: '/images/lidory/1.mp4',
         description: (
+          <div className="bold">
+            “Son écoute et sa créativité ont permis de donner vie à une identité soignée et
+            parfaitement alignée avec nos attentes.”
+          </div>
+        ),
+        introduction: {
+          client: 'Lidory',
+          secteur: 'Développement d’applications',
+          accompagnement: 'Branding',
+        },
+        clientProfile: {
+          avatarSrc: '/images/homepage/desktop-tablet/clients/tommy.png',
+          name: 'Tommy DI LUNA',
+          role: 'Co-fondateur de Lidory',
+        },
+        review: (
           <>
             Lidory développe des applications performantes et sécurisées. Dans un secteur où la
             confiance se gagne par la rigueur, leur identité visuelle devait incarner exactement ça
@@ -646,22 +669,14 @@ const contents: ProjectGroup[] = [
             moderne de la sécurité applicative.
           </>
         ),
-        introduction: {
-          client: 'Lidory',
-          secteur: 'Développement d’applications',
-          accompagnement: 'Branding',
-        },
-        clientProfile: {
-          avatarSrc: '/images/lidory/profile.jpg',
-          name: 'Tommy DI LUNA',
-          role: 'Co-fondateur de Lidory',
-        },
       },
       {
         order: 1,
-        imgType: 2,
+        imgType: 5,
         imgSrc1: '/images/lidory/2.mp4',
         imgSrc2: '/images/lidory/3.mp4',
+        imgSrc3: '/images/lidory/4.jpg',
+
         description: (
           <>
             L'enjeu était de traduire la fiabilité, l’architecture solide, la protection des
@@ -676,7 +691,7 @@ const contents: ProjectGroup[] = [
       {
         order: 2,
         imgType: 1,
-        imgSrc: '/images/lidory/4.mp4',
+        imgSrc: '/images/lidory/5.mp4',
         description: (
           <>
             La combinaison de jaune et de blanc traduit à la fois la rigueur technique et
@@ -691,9 +706,9 @@ const contents: ProjectGroup[] = [
       {
         order: 3,
         imgType: 5,
-        imgSrc1: '/images/lidory/5.mp4',
-        imgSrc2: '/images/lidory/6.jpg',
-        imgSrc3: '/images/lidory/7.jpg',
+        imgSrc1: '/images/lidory/6.mp4',
+        imgSrc2: '/images/lidory/7.jpg',
+        imgSrc3: '/images/lidory/8.jpg',
         description: (
           <>
             Le logo Lidory s'articule autour d'une étoile inscrite dans un cercle, symbole de
@@ -707,9 +722,8 @@ const contents: ProjectGroup[] = [
       },
       {
         order: 4,
-        imgType: 2,
-        imgSrc1: '/images/lidory/8.mp4',
-        imgSrc2: '/images/lidory/9.mp4',
+        imgType: 1,
+        imgSrc1: '/images/lidory/9.mp4',
         description: `Les illustrations Lidory prolongent l'identité sans la décorer. Chacune porte une idée : sécurité, architecture, accompagnement, simplicité d'usage. Toujours pour rendre la complexité technique immédiatement lisible.`,
       },
       {
@@ -743,21 +757,6 @@ const contents: ProjectGroup[] = [
         order: 7,
         imgType: 1,
         imgSrc: '/images/lidory/12.jpg',
-        description: (
-          <>
-            <span className="bold">Package :</span>
-            <br />
-            Brandbook
-            <br />
-            Système logos
-            <br />
-            Système de couleurs et typographique
-            <br />
-            Éléments graphiques
-            <br />
-            Kits réseaux sociaux
-          </>
-        ),
       },
     ],
   },
@@ -894,6 +893,110 @@ const contents: ProjectGroup[] = [
       },
     ],
   },
+  // myclerk.io
+  {
+    project: 'myclerk',
+    section: [
+      {
+        isFirst: true,
+        order: 0,
+        title: 'MyClerk',
+        semiTitle: (
+          <>
+            Une identité pensée pour un produit fait pour les
+            <br />
+            cafés, restaurateurs et hotels.
+          </>
+        ),
+        imgType: 1,
+        imgSrc: '/images/myclerk/1.jpg',
+        description: (
+          <>
+            MyClerk est une application qui automatise la présence en ligne des indépendants CHR :
+            restaurateurs, cafetiers, hôteliers.
+            <br />
+            <br />
+            Jean-François, le fondateur, m'a contacté avant le lancement : il voulait être crédible
+            dès le jour 1.
+          </>
+        ),
+        introduction: {
+          client: 'MyClerk',
+          secteur: 'CHR',
+          accompagnement: 'Branding',
+        },
+      },
+      {
+        order: 1,
+        imgType: 2,
+        imgSrc1: '/images/myclerck/2.jpg',
+        imgSrc2: '/images/myclerk/3.jpg',
+        description: (
+          <>
+            <div className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
+              Le problème
+            </div>
+            Les restaurateurs savent que leur présence en ligne compte, mais ils n'ont ni le temps,
+            ni l'énergie, ni l'envie de devenir community manager.
+            <br />
+            <br />
+            Résultat : comptes à l'abandon, avis sans réponse, et la conviction que ce sujet-là,
+            c'est pour les grandes enseignes, pas pour eux.
+          </>
+        ),
+      },
+      {
+        order: 2,
+        imgType: 1,
+        imgSrc: '/images/myclerk/4.mp4',
+        description:
+          "MyClerk gère tout à leur place, en autonomie. Mais un produit qui promet ça ne peut pas avoir l'air d'un logiciel technique de plus, sinon la marque contredit sa propre promesse avant même l'ouverture de l'app.",
+      },
+      {
+        order: 3,
+        imgType: 2,
+        imgSrc1: '/images/myclerk/5.jpg',
+        imgSrc2: '/images/myclerk/6.jpg',
+        description: (
+          <>
+            <div className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
+              La solution
+            </div>
+            La décision de départ : personnifier MyClerk au-delà du nom, avec une mascotte ronde qui
+            accompagne le patron et fait les tâches à sa place.
+            <br />
+            <br />
+            Ce n'est pas de la décoration, c'est le cœur de la stratégie, un patron CHR se reconnaît
+            dans un collègue silencieux, pas dans un logo abstrait.
+          </>
+        ),
+      },
+      {
+        order: 4,
+        imgType: 1,
+        imgSrc: '/images/myclerk/7.jpg',
+        description: (
+          <>
+            Le reste en découle : une typographie ronde et affirmée, une palette
+            beige/violet/vert/orange à l'opposé du bleu corporate habituel du SaaS, un ton de voix
+            simple et complice qui bannit le jargon marketing.
+            <br />
+            <br />
+            Et un refus assumé du code "agence" : il fallait qu'en une seconde, on comprenne que
+            MyClerk n'est pas un nouvel outil à apprendre, mais un collaborateur de plus.
+          </>
+        ),
+      },
+      {
+        order: 5,
+        isLast: true,
+        imgType: 5,
+        imgSrc1: '/images/myclerk/8.jpg',
+        imgSrc2: '/images/myclerk/9.jpg',
+        imgSrc3: '/images/myclerk/10.jpg',
+      },
+    ],
+  },
 ];
 type ProjectListProps = {
   project: string; // slug 문자열
@@ -963,6 +1066,12 @@ export default function ProjectList({ project }: ProjectListProps) {
           </div>
         </div>
       </div>
+      {/* 리뷰(부가 설명) — review가 있는 프로젝트만 선택적으로, 프로필 밑에 여백 크게 두고 표시 */}
+      {hero.review && (
+        <div className="mt-[40px] w-[60%] text-[14px] md:mt-[54px] md:text-[24px] lg:text-[26px]">
+          {hero.review}
+        </div>
+      )}
 
       {/* 나머지 섹션들: 이미지 갤러리 + 설명 → ProjectCard 컴포넌트로 분리 */}
       {group.section

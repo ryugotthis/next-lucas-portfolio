@@ -34,8 +34,8 @@ function DescriptionBlock({
 }) {
   if (!description && !semiDescription) return null;
   return (
-    <div className="mt-[2%] w-[67%]">
-      <div className={`text-[14px] md:text-[22px] ${semiDescription ? 'bold' : ''}`}>
+    <div className="mt-[2%] w-[54%]">
+      <div className={`text-[14px] md:text-[24px] ${semiDescription ? 'bold' : ''}`}>
         {description}
       </div>
       {semiDescription && <div className="mt-[1%] md:text-[20px]">{semiDescription}</div>}
