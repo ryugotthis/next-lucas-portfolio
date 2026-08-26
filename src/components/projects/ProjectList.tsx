@@ -2,14 +2,16 @@ import Media from '../ui/Media';
 import ProjectCard from './ProjectCard';
 import { notFound } from 'next/navigation';
 import { ReactNode } from 'react';
+import Image from 'next/image';
 
 type ProjectSection = {
   order: number;
-  imgType: 1 | 2 | 3 | 4 | 5;
+  imgType: 1 | 2 | 3 | 4 | 5 | 6;
   isFirst?: boolean;
   isLast?: boolean;
   title?: string;
   semiTitle?: ReactNode;
+  leadText?: ReactNode;
   description?: ReactNode;
   semiDescription?: ReactNode;
   introduction?: {
@@ -17,11 +19,22 @@ type ProjectSection = {
     secteur: string;
     accompagnement: string;
   };
+  clientProfile?: {
+    avatarSrc: string;
+    name: string;
+    role: string;
+  };
   imgSrc?: string;
   imgSrc1?: string;
   imgSrc2?: string;
   imgSrc3?: string;
   imgSrc4?: string;
+  imgTitle1?: string;
+  imgTitle2?: string;
+  imgTitle3?: string;
+  imgTitle4?: string;
+  imgTitle5?: string;
+  imgTitle6?: string;
 };
 
 type ProjectGroup = {
@@ -109,6 +122,11 @@ const contents: ProjectGroup[] = [
           client: 'Data Governance Kitchen',
           secteur: 'Data analytics',
           accompagnement: 'Identité visuelle',
+        },
+        clientProfile: {
+          avatarSrc: '/images/dgk/profile.jpg',
+          name: 'Brenna Palmer',
+          role: 'Brand & Content Manager chez Data Governance Kitchen & Data Galaxy',
         },
       },
       {
@@ -305,9 +323,10 @@ const contents: ProjectGroup[] = [
       },
       {
         order: 4,
-        imgType: 2,
+        imgType: 3,
         imgSrc1: '/images/okna/8.mp4',
-        imgSrc2: '/images/okna/9.jpg',
+        imgSrc2: '/images/okna/9.gif',
+        imgSrc3: '/images/okna/10.jpg',
         description:
           'Cette mascotte est mise en scène à travers la marque et ses visuelles pour guider le client et rendre l’expérience client accessible et agréable.',
       },
@@ -315,9 +334,9 @@ const contents: ProjectGroup[] = [
         order: 5,
         isLast: true,
         imgType: 5,
-        imgSrc1: '/images/okna/10.mp4',
-        imgSrc2: '/images/okna/11.jpg',
-        imgSrc3: '/images/okna/12.jpg',
+        imgSrc1: '/images/okna/11.mp4',
+        imgSrc2: '/images/okna/12.jpg',
+        imgSrc3: '/images/okna/13.jpg',
       },
     ],
   },
@@ -453,78 +472,121 @@ const contents: ProjectGroup[] = [
         imgType: 1,
         imgSrc: '/images/scorp-io/1.mp4',
         description: (
-          <>
-            Dans un secteur historiquement complexe et vieillissant, leur ambition était claire :
-            affirmer un positionnement nouvelle génération, intuitif et innovant.
-            <br />
-            <br />
-            Ma mission : opérer un lifting pour devenir un marque capable d'asseoir sa crédibilité
-            dans un secteur dominé par des acteurs historiques.
-          </>
+          <div className="bold">
+            “Le travail est structuré, les livrables sont propres, et surtout exploitables
+            concrètement (ce qui n’est pas toujours le cas).”
+          </div>
         ),
         introduction: {
           client: 'SCORP-IO',
           secteur: 'Gestion Énergétique Bâtiments',
           accompagnement: 'Rebranding',
         },
+        clientProfile: {
+          avatarSrc: '/images/homepage/desktop-tablet/clients/jr.png',
+          name: 'Jean-Romain Bardet',
+          role: 'Co-fondateur & CEO chez SCORP-IO',
+        },
       },
       {
         order: 1,
+        imgType: 6,
+        imgSrc1: '/images/scorp-io/2.jpg',
+        imgTitle6: 'Avant',
+        leadText:
+          "L'identité de SCorp-io reposait sur une charte construite en interne, au fil de l'eau. Une base honnête, mais pensée pour accompagner les débuts de la marque, pas l'ambition qu'elle affichait déjà.",
+        description: (
+          <div>
+            <p className="bold">Le problème</p>
+            SCorp-io ne voulait plus être vu comme un nouvel entrant parmi d'autres, mais comme
+            l'acteur nouvelle génération de la supervision énergétique, face à des concurrents
+            solidement installés. Son identité ne suivait pas cette ambition. Trop artisanale, pas
+            assez structurée et peu moderne, elle peinait à installer la confiance et la crédibilité
+            attendues par des directeurs techniques et responsables énergie habitués aux acteurs
+            établis du secteur.
+          </div>
+        ),
+      },
+      {
+        order: 2,
         imgType: 2,
-        imgSrc1: '/images/scorp-io/2.mp4',
-        imgSrc2: '/images/scorp-io/3.jpg',
+        imgSrc1: '/images/scorp-io/3.mp4',
+        imgSrc2: '/images/scorp-io/4.jpg',
+        imgTitle2: 'La nouvelle identité',
+        description: (
+          <>
+            Dans un secteur historiquement complexe et vieillissant, l'ambition de SCorp-io était
+            claire : affirmer un positionnement nouvelle génération, intuitif et innovant.
+            <br />
+            <br />
+            Ma mission : opérer un lifting capable d'installer une vraie crédibilité, face à des
+            acteurs historiques bien plus installés.
+          </>
+        ),
+      },
+      {
+        order: 3,
+        imgType: 1,
+        imgSrc: '/images/scorp-io/5.mp4',
+
         description: (
           <>
             L'enjeu central : créer une identité tech et premium, sans tomber dans les clichés du
             secteur.
             <br />
             <br />
-            Pas de vert institutionnel ou de greenwashing visuel. SCorp-io devait inspirer
-            confiance, maîtrise et modernité.
-          </>
-        ),
-      },
-      {
-        order: 2,
-        imgType: 1,
-        imgSrc: '/images/scorp-io/4.jpg',
-        description: (
-          <>
-            Étant reconnu par leur audience pour leur dark mode rare dans ce secteur; nous avon
-            décidé de le garder pour cette nouvelle direction.
-            <br />
-            <br />À travers le côté visuel sombre de la marque, nous avons créé une palette
-            lumineuse et moderne pour traduire à la fois le côté technologique et énergétique de la
-            marque.
-          </>
-        ),
-      },
-      {
-        order: 3,
-        imgType: 5,
-        imgSrc1: '/images/scorp-io/5.mp4',
-        imgSrc2: '/images/scorp-io/6.jpg',
-        imgSrc3: '/images/scorp-io/7.jpg',
-        description: (
-          <>
-            Les éléments graphiques représentent les bâtiments que SCORP-IO accompagnent. Et les
-            dégradés sont comme chaleur qui se diffuse avec légèreté à l’intérieur des bâtiments.
-            <br />
-            <br />
-            Ils évoquent avec simplicité, le côté technologique, innovant et le confort ressenti à
-            l’intérieur de ces lieux.
+            Pas de vert institutionnel, pas de greenwashing visuel. SCorp-io devait inspirer
+            confiance, maîtrise, modernité et affirmer sa contribution réelle à la transition
+            énergétique.
           </>
         ),
       },
       {
         order: 4,
         imgType: 2,
-        imgSrc1: '/images/scorp-io/8.jpg',
-        imgSrc2: '/images/scorp-io/9.mp4',
-        description: `Dans ce secteur complexe, cette nouvelle identité retranscrit la simplicité de la solution que propose la marque et la facilité d’usage de celle-ci.`,
+        imgSrc1: '/images/scorp-io/6.mp4',
+        imgSrc2: '/images/scorp-io/7.jpg',
+        description: (
+          <>
+            Reconnus par leur audience pour leur dark mode, rare dans ce secteur, nous avons choisi
+            de le conserver pour cette nouvelle direction.
+            <br />
+            <br />À travers ce fond sombre, nous avons construit une palette lumineuse et moderne,
+            pour traduire à la fois le côté technologique et énergétique de la marque.
+          </>
+        ),
       },
       {
         order: 5,
+        imgType: 1,
+        imgSrc: '/images/scorp-io/8.jpg',
+
+        description: (
+          <>
+            Les éléments graphiques représentent les bâtiments que SCorp-io accompagne. Les dégradés
+            évoquent la chaleur qui se diffuse, avec légèreté, à l'intérieur de ces lieux.
+            <br />
+            <br />
+            Ils traduisent avec simplicité le côté technologique et innovant de la marque, et le
+            confort ressenti à l'intérieur des bâtiments qu'elle pilote.
+          </>
+        ),
+        semiDescription: `Jean-Romain Bardet - Co-fondateur & CEO chez SCORP-IO`,
+      },
+
+      {
+        order: 6,
+        imgType: 1,
+        imgSrc: '/images/scorp-io/9.jpg',
+        description: (
+          <>
+            Dans ce secteur complexe, cette nouvelle identité retranscrit la simplicité de la
+            solution que propose SCorp-io, et la facilité d'usage qui la caractérise.
+          </>
+        ),
+      },
+      {
+        order: 7,
         imgType: 4,
         imgSrc1: '/images/scorp-io/10.mp4',
         imgSrc2: '/images/scorp-io/11.jpg',
@@ -548,27 +610,11 @@ const contents: ProjectGroup[] = [
         ),
         semiDescription: `Jean-Romain Bardet - Co-fondateur & CEO chez SCORP-IO`,
       },
-
       {
         isLast: true,
-        order: 6,
+        order: 8,
         imgType: 1,
         imgSrc: '/images/scorp-io/14.jpg',
-        description: (
-          <>
-            <span className="bold">Package :</span>
-            <br />
-            Brandbook
-            <br />
-            Système logos
-            <br />
-            Système de couleurs et typographique
-            <br />
-            Éléments graphiques
-            <br />
-            Kits réseaux sociaux
-          </>
-        ),
       },
     ],
   },
@@ -604,6 +650,11 @@ const contents: ProjectGroup[] = [
           client: 'Lidory',
           secteur: 'Développement d’applications',
           accompagnement: 'Branding',
+        },
+        clientProfile: {
+          avatarSrc: '/images/lidory/profile.jpg',
+          name: 'Tommy DI LUNA',
+          role: 'Co-fondateur de Lidory',
         },
       },
       {
@@ -712,7 +763,7 @@ const contents: ProjectGroup[] = [
   },
   // Dolmen
   {
-    project: 'Dolmen',
+    project: 'dolmen',
     section: [
       {
         isFirst: true,
@@ -728,123 +779,118 @@ const contents: ProjectGroup[] = [
         imgType: 1,
         imgSrc: '/images/dolmen/1.mp4',
         description: (
-          <>
-            Lidory développe des applications performantes et sécurisées. Dans un secteur où la
-            confiance se gagne par la rigueur, leur identité visuelle devait incarner exactement ça
-            : expertise maîtrisée, clarté, stabilité.
+          <div className="bold">
+            "Lucas combine deux qualités rares : une vraie sensibilité
             <br />
-            <br />
-            La mission : créer une identité capable de s'imposer tout en exprimant une vision
-            moderne de la sécurité applicative.
-          </>
+            créative et la capacité à délivrer pile au bon moment.”
+          </div>
         ),
         introduction: {
-          client: 'Lidory',
-          secteur: 'Développement d’applications',
-          accompagnement: 'Branding',
+          client: 'Dolmen',
+          secteur: 'Agence Growth',
+          accompagnement: 'Rebranding',
+        },
+        clientProfile: {
+          avatarSrc: '/images/homepage/desktop-tablet/clients/guillaume.jpeg',
+          name: 'Guillaume ADRIAN',
+          role: 'Fondateur de Dolmen',
         },
       },
       {
         order: 1,
-        imgType: 2,
-        imgSrc1: '/images/lidory/2.mp4',
-        imgSrc2: '/images/lidory/3.mp4',
-        description: (
+        imgType: 6,
+        imgTitle6: 'Avant',
+        imgSrc1: '/images/dolmen/2.jpg',
+        leadText: (
           <>
-            L'enjeu était de traduire la fiabilité, l’architecture solide, la protection des
-            données, sans tomber dans les codes froids et impersonnels souvent associés à la
-            cybersécurité.
-            <br />
-            <br />
-            Une marque qui inspire confiance naturellement, par sa structure et sa clarté.
+            <p className="mb-2 text-[14px] md:text-[22px]">
+              Avant Dolmen, il y avait Guillaume Adrian : une marque personnelle, indépendante,
+              portée par une identité colorée, pensée pour un freelance, pas pour une agence.
+            </p>
           </>
+        ),
+        description: (
+          <div className="text-[14px] md:text-[22px]">
+            <b className="bold">Le problème</b>
+            <br />
+            Guillaume ne voulait plus être perçu comme un consultant en solo, mais comme le
+            fondateur d'une structure capable d'accompagner des startups SaaS B2B et IA exigeantes.
+            <br />
+            <br />
+            Son identité ne suivait pas cette ambition. Trop personnelle, trop décontractée, elle ne
+            portait ni la rigueur ni la crédibilité attendues par ce type de clients.
+          </div>
         ),
       },
       {
         order: 2,
-        imgType: 1,
-        imgSrc: '/images/lidory/4.mp4',
+        imgType: 2,
+        imgSrc1: '/images/dolmen/3.jpg',
+        imgSrc2: '/images/dolmen/4.jpg',
         description: (
           <>
-            La combinaison de jaune et de blanc traduit à la fois la rigueur technique et
-            l'accessibilité, loin des tons sombres du secteur, sans jamais sacrifier le sérieux.
+            Nous avons construit Dolmen comme une structure, pas comme une personne.
             <br />
             <br />
-            La typographie Plus Jakarta Sans accompagne cette direction : semi-bold pour affirmer,
-            italic pour nuancer, regular pour expliquer.
+            Le nom s'inspire des dolmens : des architectures de pierre, denses et stables,
+            assemblées pour durer. Un symbole de fondations solides, exactement ce que l'agence
+            promet à ses clients.
           </>
         ),
       },
       {
         order: 3,
-        imgType: 5,
-        imgSrc1: '/images/lidory/5.mp4',
-        imgSrc2: '/images/lidory/6.jpg',
-        imgSrc3: '/images/lidory/7.jpg',
+        imgType: 1,
+        imgSrc: '/images/dolmen/5.mp4',
+
         description: (
           <>
-            Le logo Lidory s'articule autour d'une étoile inscrite dans un cercle, symbole de
-            protection, d'orientation et de maîtrise.
-            <br />
-            <br />
-            Simple dans sa forme, fort dans ce qu'il évoque : un environnement sécurisé où chaque
-            projet est protégé dès sa conception.
+            L'enjeu était de traduire cette rigueur data-driven sans tomber dans la froideur
+            corporate : une identité capable d'imposer une autorité immédiate auprès d'une cible
+            exigeante, tout en gardant du caractère.
           </>
         ),
       },
       {
         order: 4,
         imgType: 2,
-        imgSrc1: '/images/lidory/8.mp4',
-        imgSrc2: '/images/lidory/9.mp4',
-        description: `Les illustrations Lidory prolongent l'identité sans la décorer. Chacune porte une idée : sécurité, architecture, accompagnement, simplicité d'usage. Toujours pour rendre la complexité technique immédiatement lisible.`,
+        imgSrc1: '/images/dolmen/6.mp4',
+        imgSrc2: '/images/dolmen/7.jpg',
+        description: `Cette objectif se retrouve dans chaque aspect de la marque : des contrastes marqués, de la matière brute plutôt que du décor, des formes qui s'alignent comme les blocs d'une construction.`,
       },
       {
         order: 5,
-        imgType: 2,
-        imgSrc1: '/images/lidory/10.jpg',
-        imgSrc2: '/images/lidory/11.jpg',
-        description: (
-          <>
-            “Très satisfait de notre collaboration avec Lucas pour la création de notre identité
-            visuelle.
-            <br />
-            <br />
-            Son écoute et sa créativité ont permis de donner vie à une identité soignée et
-            parfaitement alignée avec nos attentes.
-            <br />
-            <br />
-            Le processus a été efficace, avec des propositions pertinentes et des ajustements
-            rapides.
-            <br />
-            <br />
-            Le résultat final est à la fois conforme à nos attentes et esthétique, nous ne pouvons
-            que le recommander pour des projets similaires.”
-          </>
-        ),
-        semiDescription: `Tommy DI LUNA - Co-fondateur de Lidory`,
+        imgType: 1,
+        imgSrc: '/images/dolmen/8.mp4',
+        description: `
+            Cette sobriété assumée installe une autorité immédiate. Face à des CEO et Head of Growth
+            habitués aux discours gonflés du secteur, Dolmen se distingue en disant moins, mais plus
+            juste.
+          `,
       },
 
       {
-        isLast: true,
         order: 7,
-        imgType: 1,
-        imgSrc: '/images/lidory/12.jpg',
+        imgType: 2,
+        imgSrc1: '/images/dolmen/9.mp4',
+        imgSrc2: '/images/dolmen/10.jpg',
         description: (
           <>
-            <span className="bold">Package :</span>
+            "Lucas combine deux qualités qui vont rarement ensemble : une vraie sensibilité créative
+            et la capacité à délivrer pile au bon moment. Il s'est calé sans friction sur le rythme
+            et les besoins de la mission.
             <br />
-            Brandbook
             <br />
-            Système logos
-            <br />
-            Système de couleurs et typographique
-            <br />
-            Éléments graphiques
-            <br />
-            Kits réseaux sociaux
+            Collaboration précieuse, je recommande sans hésiter."
           </>
         ),
+        semiDescription: `Guillaume Adrian, Fondateur de Dolmen`,
+      },
+      {
+        isLast: true,
+        order: 8,
+        imgType: 1,
+        imgSrc: '/images/dolmen/11.jpg',
       },
     ],
   },
@@ -854,7 +900,7 @@ type ProjectListProps = {
 };
 export default function ProjectList({ project }: ProjectListProps) {
   // 전체 프로젝트 배열(contents)에서 현재 slug와 매칭되는 프로젝트만 필터링
-  const group = contents.find((g) => g.project === project.toLowerCase());
+  const group = contents.find((g) => g.project.toLowerCase() === project.toLowerCase());
   if (!group) return notFound(); // 혹은 notFound()
 
   const hero = group.section[0];
@@ -875,21 +921,45 @@ export default function ProjectList({ project }: ProjectListProps) {
 
       {/* 히어로 설명 + 오른쪽 정보 패널(Client / Secteur / Accompagnement) */}
       <div className="flex justify-between">
-        <p className="w-[67%] text-[11px] md:text-[18px] lg:text-[26px]">{hero.description}</p>
+        <div className="w-full md:w-[67%]">
+          <div className="text-[11px] md:text-[18px] lg:text-[26px]">{hero.description}</div>
+
+          {/* 프로필 사진 + 이름 + 역할 — 데이터 없으면 자동으로 안 나옴 */}
+          {hero.clientProfile && (
+            <div className="mt-[12px] flex items-center gap-[10px] md:mt-[16px] md:gap-[12px]">
+              <div className="relative h-[42px] w-[42px] flex-shrink-0 overflow-hidden rounded-full">
+                <Image
+                  src={hero.clientProfile.avatarSrc}
+                  alt={hero.clientProfile.name}
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <div>
+                <p className="bold text-[12px] leading-[14px] md:text-[16px] md:leading-[18px]">
+                  {hero.clientProfile.name}
+                </p>
+                <p className="text-description text-[12px] leading-[13px] md:text-[16px] md:leading-[16px]">
+                  {hero.clientProfile.role}
+                </p>
+              </div>
+            </div>
+          )}
+        </div>
 
         {/* 데스크탑에서만 보이는 정보 섹션 */}
         <div className="divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
           <div className="flex justify-between">
             <div className="text-description">Client</div>
-            <div>{hero.introduction?.client}</div>
+            <div className="bold">{hero.introduction?.client}</div>
           </div>
           <div className="flex justify-between">
             <div className="text-description">Secteur</div>
-            <div>{hero.introduction?.secteur}</div>
+            <div className="bold">{hero.introduction?.secteur}</div>
           </div>
           <div className="flex justify-between">
             <div className="text-description">Accompagnement</div>
-            <div>{hero.introduction?.accompagnement}</div>
+            <div className="bold">{hero.introduction?.accompagnement}</div>
           </div>
         </div>
       </div>
