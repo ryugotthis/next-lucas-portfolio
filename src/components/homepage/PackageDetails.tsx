@@ -5,20 +5,19 @@ import BookingButton from '../ui/BookingButton';
 
 // 👇 여기 텍스트만 수정하면 내용이 바뀝니다.
 const livrables: string[] = [
-  'Logos et ses variantes',
-  'Système colorimétrique (base et sémantique)',
-  'Typographie web-ready',
-  'Kit UI (boutons, styles de texte et couleurs)',
+  'Suite logo',
+  'Système de couleurs & polices',
   'Kit réseaux sociaux',
-  'Pattern / texture de marque',
-  'Open Graph image',
+  'Pattern / texture',
+  'Illustrations',
+  'Brandbook',
 ];
 
 const deroule: string[] = [
-  'Audit du produit',
   'Atelier stratégique',
   '2-3 directions créatives',
   'Identité structurée dans Figma',
+  '4 séances conseils post-projet',
 ];
 
 type Option = {
@@ -39,7 +38,7 @@ export default function PackageDetails() {
     >
       <h2
         id="package-details-title"
-        className="bold text-center text-[24px] leading-[28px] md:text-[32px] md:leading-[36px] lg:text-[48px] lg:leading-[44px]"
+        className="bold text-center text-[24px] leading-[28px] uppercase md:text-[32px] md:leading-[36px] lg:text-[48px] lg:leading-[44px]"
       >
         Ce que vous recevez
       </h2>
@@ -56,28 +55,17 @@ export default function PackageDetails() {
         {/* 헤더: 패키지명(+밑줄) + 가격 */}
         <div className="flex flex-col gap-[8px] md:flex-row md:items-start md:justify-between">
           <div>
-            <p className="bold text-[28px] leading-[32px] md:text-[32px] md:leading-[36px] lg:text-[40px] lg:leading-[44px]">
+            <p className="text-[28px] leading-[32px] md:text-[32px] md:leading-[36px] lg:text-[40px] lg:leading-[44px]">
               Brand Ready
             </p>
             <div className="border-foreground/10 mt-[16px] border-t md:mt-[20px] md:w-[700px] dark:border-[#AFACDB]" />
-          </div>
-
-          <div className="text-left md:text-right">
-            <p className="bold text-[28px] leading-[32px] md:text-[32px] md:leading-[36px] lg:text-[40px] lg:leading-[44px]">
-              2700€
-            </p>
-            <p className="text-description text-[11px] leading-[14px] md:text-[14px] md:leading-[16px] dark:text-[#AFACDB]">
-              Hors taxe
-              <br />
-              Exonéré de TVA
-            </p>
           </div>
         </div>
 
         {/* 두 컬럼: 배송 항목 / 진행 과정 */}
         <div className="mt-[12px] grid grid-cols-1 gap-y-[28px] md:mt-[16px] md:grid-cols-2 md:gap-x-[32px]">
           <div>
-            <p className="bold mb-[16px] text-[16px] leading-[20px] md:text-[24px] md:leading-[22px]">
+            <p className="mb-[16px] text-[16px] leading-[20px] md:text-[24px] md:leading-[22px]">
               Les livrables
             </p>
             <div className="flex flex-col gap-y-[14px]">
@@ -94,7 +82,7 @@ export default function PackageDetails() {
           </div>
 
           <div>
-            <p className="bold mb-[16px] text-[16px] leading-[20px] md:text-[24px] md:leading-[22px]">
+            <p className="mb-[16px] text-[16px] leading-[20px] md:text-[24px] md:leading-[22px]">
               Le déroulé
             </p>
             <div className="flex flex-col gap-y-[14px]">
@@ -112,21 +100,15 @@ export default function PackageDetails() {
 
         <div className="border-foreground/10 mt-[24px] max-w-[220px] border-t md:mt-[32px] dark:border-[#AFACDB]" />
 
-        {/* 하단: 옵션 + CTA */}
-        <div className="mt-[20px] flex flex-col gap-[20px] md:mt-[24px] md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="text-description bold mb-[10px] text-[14px] leading-[18px] md:text-[24px] md:leading-[20px] dark:text-[#AFACDB]">
-              Options
+        {/* 하단: 가격 + CTA */}
+        <div className="bg-background-sub mt-[20px] flex flex-col gap-[16px] md:mt-[24px] md:flex-row md:items-center md:justify-between">
+          <div className="flex items-end gap-[10px] md:items-center md:gap-[12px]">
+            <p className="text-[24px] leading-[28px] md:text-[28px] md:leading-[32px] lg:text-[36px] lg:leading-[40px]">
+              3250€
             </p>
-            <div className="flex flex-col gap-y-[6px]">
-              {options.map((option) => (
-                <p
-                  key={option.label}
-                  className="text-description text-[13px] leading-[18px] md:text-[18px] md:leading-[20px] dark:text-[#AFACDB]"
-                >
-                  + {option.label} ({option.price})
-                </p>
-              ))}
+            <div className="text-description text-[12px] leading-[14px] md:text-[14px] md:leading-[16px] dark:text-[#AFACDB]">
+              <p>Hors taxe</p>
+              <p>Exonéré de TVA</p>
             </div>
           </div>
 

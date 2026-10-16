@@ -6,7 +6,7 @@ export default function InquiryCard() {
     <div className="flex flex-col gap-[23px] md:grid md:grid-cols-2 md:gap-0">
       <div>
         <div>
-          <h1 className="bold text-center text-[20px] md:text-start md:text-[24px] lg:text-[48px]">
+          <h1 className="bold text-center text-[20px] uppercase md:text-start md:text-[24px] lg:text-[48px]">
             Un projet ? Une question ?
           </h1>
           <p className="mt-[16px] text-[12px] md:mt-[20px] md:max-w-[300px] lg:mt-[41px] lg:max-w-[518px] lg:text-[16px]">
@@ -18,7 +18,7 @@ export default function InquiryCard() {
             sociaux.
             <br />
             <br />
-            <span className="bold">Adresse email</span> : provostlucas.design@gmail.com
+            <b className="bold">Adresse email : provostlucas.design@gmail.com</b>
           </p>
         </div>
         {/* contact */}

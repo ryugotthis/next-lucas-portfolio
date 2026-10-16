@@ -8,12 +8,13 @@ export default function ProcessList() {
       title: 'Étude du produit',
       description: (
         <>
-          Avant de toucher à design, on se parle.
+          Après avoir répondu à un questionnaire pour{' '}
+          <b className="bold">comprendre en profondeur votre marque,</b> nous échangerons ensemble
+          pendant une petite heure.
           <br />
           <br />
-          Je prends le temps de{' '}
-          <b className="bold">comprendre votre produit, vos utilisateurs, votre marché</b> et ce que
-          votre marque doit transmettre. On aligne la vision avant de commencer à construire.
+          Ceci dans le but de creuser sur vos objectifs, votre cible, ce qui vous rend différent et
+          comment l’exploiter à travers votre branding.
         </>
       ),
       imageSrc: '/illustrations/Echange.png',
@@ -26,12 +27,12 @@ export default function ProcessList() {
       description: (
         <>
           Sur la base de nos échanges et en étudiant vos concurrents,{' '}
-          <b className="bold">je créé 2 à 3 moodboards</b>. Ceci dans le but d’affiner la direction
+          <b className="bold">je crée 2 à 3 moodboards.</b> Ceci dans le but d’affiner la direction
           créative à prendre avant toute création.
           <br />
           <br />
-          Cela nous servira boussole durant toute la durée du projet afin de respecter la direction
-          à suivre.
+          Cela nous servira de boussole durant toute la durée du projet afin de respecter la
+          direction à suivre.
         </>
       ),
       imageSrc: '/illustrations/Think_illu.png',
@@ -43,12 +44,15 @@ export default function ProcessList() {
       title: 'Système de marque',
       description: (
         <>
-          Sur la base de la stratégie et de la direction créative, je construis votre système visuel
-          complet : logo, couleurs sémantiques, typographie web-ready, kit UI.
+          Maintenant que nos visions sont alignées, Je passe aux fourneaux. C’est là que débute la
+          création.
           <br />
           <br />
-          Chaque décision est prise en pensant à votre interface, pas à une affiche ou une
-          plaquette.
+          Je travaille sur les meilleures solutions pour répondre à vos objectifs et visions.
+          <br />
+          <br />
+          Vous avez le droit à un nombre de <b className="bold">révisions illimités</b> afin d’être
+          sûr que le résultat vous plaît à 100%.
         </>
       ),
       imageSrc: '/illustrations/Blurred_Illu.png',
@@ -60,12 +64,12 @@ export default function ProcessList() {
       title: 'Intégration Figma',
       description: (
         <>
-          Vous recevez tous vos assets dans un fichier Figma structuré, avec des variables nommées
-          selon les conventions de vos développeurs.
+          Une fois que l’ensemble du projet est validé, vous aurez accès à tous les éléments de
+          votre nouvelle identité.
           <br />
           <br />
-          Vos équipes savent exactement quoi utiliser et comment l'intégrer. Zéro aller-retour
-          inutile.
+          Besoin de moi après le projet ? Pas de panique, je reste toujours disponible pour vous
+          accompagner sur la bonne utilisation de votre charte graphique.
         </>
       ),
       imageSrc: '/illustrations/Fusée.png',

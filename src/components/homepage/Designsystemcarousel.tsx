@@ -15,45 +15,40 @@ type DesignSystemSlide = {
 // 👇 여기 이미지 경로와 텍스트만 수정하면 슬라이드 내용이 바뀝니다.
 const designSystemSlides: DesignSystemSlide[] = [
   {
-    image: '/images/homepage/design-system/1.jpg',
-    title: 'Boutons',
+    image: '/images/homepage/design-system/visual01.jpg',
+    title: 'Logo Suite',
     description:
-      'Les composants interactifs du produit, 4 types, 4 tailles, tous les états, prêts à intégrer directement dans votre interface.',
+      'Toutes les versions de votre logo, avec les règles pour savoir laquelle utiliser, sur quel fond et à quelle taille.',
   },
   {
-    image: '/images/homepage/design-system/2.jpg',
+    image: '/images/homepage/design-system/visual02.jpg',
     title: 'Couleurs',
     description:
-      'Palette principale, accents de marque et couleurs sémantiques organisés en variables Figma, directement exportables pour vos développeurs.',
+      'Votre palette, avec le rôle de chaque couleur et les bonnes proportions pour garder une marque cohérente partout.',
   },
   {
-    image: '/images/homepage/design-system/3.jpg',
-    title: 'Typographie',
+    image: '/images/homepage/design-system/visual03.jpg',
+    title: 'Typographies',
     description:
-      "La hiérarchie complète, de l'accroche hero aux labels de formulaire, avec toutes les specs utilisables dans le code.",
+      'Vos polices et leur hiérarchie, du grand titre au petit texte, avec des exemples pour savoir quoi utiliser où.',
   },
   {
-    image: '/images/homepage/design-system/4.jpg',
-    title: 'Open Graph',
+    image: '/images/homepage/design-system/visual04.jpg',
+    title: 'Illustrations',
     description:
-      "Le visuel qui s'affiche quand vous partagez un lien, aux bonnes dimensions et dans votre identité de marque.",
+      "Une patte graphique qui rend votre marque reconnaissable, avec des règles simples pour l'utiliser sur chaque support.",
   },
   {
-    image: '/images/homepage/design-system/5.jpg',
-    title: 'Logo',
+    image: '/images/homepage/design-system/visual05.jpg',
+    title: 'Kit réseaux sociaux',
     description:
-      "Toutes les variantes documentées avec leurs règles d'usage, quelle version utiliser, sur quel fond, à quelle taille minimum.",
+      "Des modèles de posts prêts à personnaliser sur Canva ou Figma, sans avoir besoin d'être designer.",
   },
   {
-    image: '/images/homepage/design-system/6.jpg',
-    title: 'Pattern',
-    description: "La texture graphique de marque et ses règles d'utilisation selon le support.",
-  },
-  {
-    image: '/images/homepage/design-system/7.jpg',
-    title: 'Social kit',
+    image: '/images/homepage/design-system/visual06.jpg',
+    title: 'Brandbook',
     description:
-      "Les formats réseaux sociaux prêts à l'emploi, bannières et visuels aux dimensions exactes des plateformes.",
+      "Tout votre système réuni dans un seul document : chaque élément, ses règles d'usage et des exemples pour l'appliquer.",
   },
 ];
 
@@ -79,12 +74,19 @@ export default function DesignSystemCarousel() {
       aria-labelledby="design-system-title"
       className="mt-[64px] flex flex-col items-center md:mt-[76px] md:px-0 lg:mt-[138px]"
     >
-      <h2
-        id="design-system-title"
-        className="bold text-center text-[24px] leading-[28px] md:text-[32px] md:leading-[36px] lg:text-[48px] lg:leading-[44px]"
-      >
-        Le design system
-      </h2>
+      <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
+        <h2
+          id="design-system-title"
+          className="bold w-[352px] text-center text-[20px] leading-[24px] uppercase md:w-[380px] md:text-[24px] md:leading-[28px] lg:w-[750px] lg:text-[48px] lg:leading-[48px]"
+        >
+          Votre système visuel
+        </h2>
+        <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
+          Pas juste un PDF mais un vrai système de marque
+          <br />
+          simple à prendre en main sur Figma ou Canva
+        </p>
+      </div>
 
       <div className="relative mt-[32px] w-full">
         {/* 스크린샷 프레임 (크기 기준 박스) */}
@@ -104,9 +106,17 @@ export default function DesignSystemCarousel() {
             type="button"
             onClick={handlePrev}
             aria-label="Slide précédent"
-            className="absolute top-1/2 left-[-8px] z-10 flex h-[32px] w-[32px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all duration-150 hover:scale-105 hover:bg-[#F1F3FF] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] focus-visible:ring-2 focus-visible:ring-[#7061FF] focus-visible:outline-none active:scale-95 md:left-[-20px] md:h-[48px] md:w-[48px]"
+            className="bg-foreground text-background absolute top-1/2 left-[8px] z-10 flex h-[40px] w-[40px] -translate-y-1/2 items-center justify-center rounded-full shadow-md transition-opacity hover:opacity-80"
           >
-            <ChevronLeft className="h-[16px] w-[16px] text-[#0A0832] md:h-[24px] md:w-[24px]" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M15 5l-7 7 7 7"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
           {/* 화살표 — 오른쪽 (호버/클릭 피드백, 커서 포인터 명시) */}
@@ -114,9 +124,17 @@ export default function DesignSystemCarousel() {
             type="button"
             onClick={handleNext}
             aria-label="Slide suivant"
-            className="absolute top-1/2 right-[-8px] z-10 flex h-[32px] w-[32px] -translate-y-1/2 cursor-pointer items-center justify-center rounded-full bg-white shadow-[0_4px_16px_rgba(0,0,0,0.15)] transition-all duration-150 hover:scale-105 hover:bg-[#F1F3FF] hover:shadow-[0_6px_20px_rgba(0,0,0,0.2)] focus-visible:ring-2 focus-visible:ring-[#7061FF] focus-visible:outline-none active:scale-95 md:right-[-20px] md:h-[48px] md:w-[48px]"
+            className="bg-foreground text-background absolute top-1/2 right-[8px] z-10 flex h-[40px] w-[40px] -translate-y-1/2 items-center justify-center rounded-full shadow-md transition-opacity hover:opacity-80"
           >
-            <ChevronRight className="h-[16px] w-[16px] text-[#0A0832] md:h-[24px] md:w-[24px]" />
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path
+                d="M9 5l7 7-7 7"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              />
+            </svg>
           </button>
 
           {/* 점(dot) 네비게이션 — 이미지 위에 오버레이, 하단에서 살짝 띄움 */}

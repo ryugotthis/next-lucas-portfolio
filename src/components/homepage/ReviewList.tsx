@@ -1,224 +1,348 @@
+'use client';
+
+import { ReactNode, useCallback, useEffect, useRef, useState } from 'react';
 import ReviewCard from './ReviewCard';
 
+type Review = {
+  id: number;
+  imageSrc: string;
+  name: string;
+  role: string;
+  content: ReactNode;
+  highlight?: string;
+  logoSrc?: string;
+  logoAlt?: string;
+  projectUrl?: string;
+};
+
+const reviews: Review[] = [
+  {
+    id: 1,
+    imageSrc: '/images/homepage/desktop-tablet/clients/jf.jpeg',
+    name: 'Jean-François Legras',
+    role: 'Fondateur de MyClerk.IO',
+    content:
+      "Le résultat est à la hauteur de nos attentes, et c'est clairement un travail que nous n'aurions jamais pu produire nous-mêmes.",
+    highlight: 'jamais pu produire nous-mêmes',
+    logoSrc: '/images/homepage/logos/myclerk.svg',
+    logoAlt: 'MyClerk',
+    projectUrl: '/project/myclerk',
+  },
+  {
+    id: 2,
+    imageSrc: '/images/homepage/desktop-tablet/clients/vincent.jpeg',
+    name: 'Vincent Vanfleteren',
+    role: 'Co-fondateur de Alcôve',
+    content:
+      'Lucas a su être force de proposition et s’adapter totalement à notre projet. Nous avons beaucoup apprécié ses conseils et sa réactivité. Nous sommes ravis du résultat !',
+    highlight: 's’adapter totalement à notre projet',
+    logoSrc: '/images/homepage/logos/alcove.svg',
+    logoAlt: 'Alcove',
+    projectUrl: '/project/alcove',
+  },
+  {
+    id: 3,
+    imageSrc: '/images/homepage/desktop-tablet/clients/jr.png',
+    name: 'Jean-Romain Bardet',
+    role: 'CEO de SCorp-io',
+    content:
+      'Le travail est structuré, les livrables sont propres, et surtout exploitables concrètement (ce qui n’est pas toujours le cas).',
+    highlight: 'exploitables concrètement',
+    logoSrc: '/images/homepage/logos/scorp-io.svg',
+    logoAlt: 'SCorp-io',
+    projectUrl: '/project/scorp-io',
+  },
+  {
+    id: 4,
+    imageSrc: '/images/homepage/desktop-tablet/clients/brenna.jpeg',
+    name: 'Brenna Palmer',
+    role: 'Brand Manager Data Governance Kitchen',
+    content:
+      "C'est notre deuxième projet avec Lucas, et tout s'est parfaitement déroulé. Nous avons beaucoup apprécié la façon dont il a organisé le projet.",
+    highlight: "tout s'est parfaitement déroulé",
+    logoSrc: '/images/homepage/logos/dgk.svg',
+    logoAlt: 'Data Governance Kitchen',
+    projectUrl: '/project/dgk',
+  },
+  {
+    id: 5,
+    imageSrc: '/images/homepage/desktop-tablet/clients/guillaume.jpeg',
+    name: 'Guillaume Adrian',
+    role: 'Fondateur Dolmen',
+    content:
+      'Lucas combine deux qualités qui vont rarement ensemble : une vraie sensibilité créative et la capacité à délivrer pile au bon moment.',
+    highlight: 'délivrer pile au bon moment',
+    logoSrc: '/images/homepage/logos/dolmen.svg',
+    logoAlt: 'Dolmen',
+    projectUrl: '/project/dolmen',
+  },
+  {
+    id: 6,
+    imageSrc: '/images/homepage/desktop-tablet/clients/tommy.png',
+    name: 'Tommy Di Luna',
+    role: 'Co-fondateur Lidory',
+    content:
+      'Son écoute et sa créativité ont permis de donner vie à une identité soignée et parfaitement alignée avec nos attentes.',
+    highlight: 'parfaitement alignée avec nos attentes',
+    logoSrc: '/images/homepage/logos/lidory.svg',
+    logoAlt: 'Lidory',
+    projectUrl: '/project/lidory',
+  },
+  {
+    id: 7,
+    imageSrc: '/images/homepage/desktop-tablet/clients/thomas.jpeg',
+    name: 'Thomas Bihannic',
+    role: 'Fondateur de L’Atelier',
+    content:
+      'Lucas a su traduire rapidement l’univers qu’on voulait créer en une identité visuelle cohérente, affirmée et directement utilisable. Le résultat parle de lui-même.',
+    highlight: 'directement utilisable',
+    logoSrc: '/images/homepage/logos/latelier.svg',
+    logoAlt: 'L’Atelier',
+  },
+];
+
+const N = reviews.length;
+// 같은 카드 세트를 3번 이어 붙여서 무한처럼 보이게 함
+const items = [...reviews, ...reviews, ...reviews];
+
+const AUTO_DELAY = 5000;
+const DURATION = 600;
+const SWIPE_THRESHOLD = 50;
+
+// 화면 크기별 카드 폭 비율과 간격
+function getLayout(vw: number) {
+  if (vw >= 1024) return { ratio: 0.29, gap: 24 };
+  if (vw >= 768) return { ratio: 0.4, gap: 24 };
+  return { ratio: 0.8, gap: 12 };
+}
+
 export default function ReviewList() {
-  const reviews = [
-    {
-      id: 1,
-      imageSrc: '/images/homepage/desktop-tablet/clients/jr.png',
-      name: 'Jean-Romain Bardet',
-      role: 'CEO SCorp-io',
-      content: (
-        <>
-          “Au-delà de la créativité, j’ai particulièrement apprécié sa capacité à challenger nos
-          idées tout en restant à l’écoute. Le travail est structuré, les livrables sont propres, et
-          surtout exploitables concrètement (ce qui n’est pas toujours le cas).
-          <br />
-          <br />
-          On sent une vraie réflexion derrière chaque choix graphique, avec une vision globale du
-          produit et de la marque. Je recommande sans hésiter.”
-        </>
-      ),
-    },
-    {
-      id: 5,
-      imageSrc: '/images/homepage/desktop-tablet/clients/jeremy.jpeg',
-      name: 'Jeremy Savary',
-      role: 'Paid Media & Data Analyst',
-      content:
-        '“Lucas a fait un excellent travail sur mon identité graphique. Il a bien compris mes attentes et livré un résultat à la fois pro et créatif.”',
-    },
-    {
-      id: 9,
-      imageSrc: '/images/homepage/desktop-tablet/clients/nadjmou.png',
-      name: 'Nadjmou B.',
-      role: 'Genopsys',
-      content:
-        "“Lucas a su s'adapter à notre projet malgré un contexte local assez particulier de l'océan indien. Bravo ! Nous sommes ravi du résultat fourni et nous soulignons sa”",
-    },
-    {
-      id: 2,
-      imageSrc: '/images/homepage/desktop-tablet/clients/tommy.png',
-      name: 'Tommy Di Luna',
-      role: 'Co-fondateur de KI Leaders',
-      content: (
-        <>
-          “Très satisfait de notre collaboration avec Lucas pour la création de notre identité
-          visuelle.
-          <br />
-          <br />
-          Son écoute et sa créativité ont permis de donner vie à une identité soignée et
-          parfaitement alignée avec nos attentes.
-          <br />
-          <br />
-          Le résultat final est à la fois conforme à nos attentes et esthétique, nous ne pouvons que
-          le recommander pour des projets similaires.”
-        </>
-      ),
-    },
-    {
-      id: 6,
-      imageSrc: '/images/homepage/desktop-tablet/clients/emilie.jpeg',
-      name: 'Emilie Mika',
-      role: 'Hyperbare Revolution',
-      content: (
-        <>
-          "Lucas est un designer de talent, sérieux, à l'écoute et très professionnel. Les outils
-          mis en place pour faciliter la collaboration sont performants et simples à utiliser, il
-          est à l'écoute et surtout d'une grande créativité.
-          <br />
-          <br />
-          Nous sommes extrêmement satisfaits du résultat, merci beaucoup et au plaisir de collaborer
-          de nouveau. Nous recommandons à 100%"
-        </>
-      ),
-    },
-    {
-      id: 10,
-      imageSrc: '/images/homepage/desktop-tablet/clients/corentin.jpeg',
-      name: 'Corentin Lambert',
-      role: 'Co-fondateur de AKA School',
-      content: '',
-    },
-    {
-      id: 3,
-      imageSrc: '/images/homepage/desktop-tablet/clients/brenna.jpeg',
-      name: 'Brenna Palmer',
-      role: 'Data Governance Kitchen',
-      content:
-        "“C'est notre deuxième projet avec Lucas, et tout s'est parfaitement déroulé. Nous avons beaucoup apprécié la façon dont il a organisé le projet sur Notion, qui nous a donné beaucoup de visibilité sur chaque étape du processus et un moyen facile de donner nos retours. Nous sommes très satisfaits du résultat et n'hésiterons pas à retravailler avec Lucas.”",
-    },
-    {
-      id: 7,
-      imageSrc: '/images/homepage/desktop-tablet/clients/jf.jpeg',
-      name: 'Jean-François Legras',
-      role: 'CEO MyClerk.io',
-      content:
-        "“Super expérience avec Lucas lors de la création de l'identité visuelle de la marque. Bien qu'il était à distance, nous avons pu échanger sans souci. Il a bien cerné l'univers de l'entreprise et m'a fait des propositions graphiques ainsi que des révisions en ce sens. Je suis donc satisfait des livrables (fichiers, charte graphique) et ne manquerai pas de refaire appel à lui pour d'autres projets :)”",
-    },
-    {
-      id: 11,
-      imageSrc: '/images/homepage/desktop-tablet/clients/louis.jpeg',
-      name: 'Louis Sarradin',
-      role: 'Fondateur de Pomecha',
-    },
-    {
-      id: 4,
-      imageSrc: '/images/homepage/desktop-tablet/clients/guillaume.jpeg',
-      name: 'Guillaume Adrian',
-      role: 'Fondateur de Dolmen',
-      content: (
-        <>
-          “Lucas combine deux qualités qui vont rarement ensemble : une vraie sensibilité créative
-          et la capacité à délivrer pile au bon moment. Il s'est calé sans friction sur le rythme et
-          les besoins de la mission.
-          <br />
-          <br />
-          Collaboration précieuse, je recommande sans hésiter.”
-        </>
-      ),
-    },
+  const viewportRef = useRef<HTMLDivElement>(null);
+  const startX = useRef<number | null>(null);
+  const dragged = useRef(false);
 
-    {
-      id: 8,
-      imageSrc: '/images/homepage/desktop-tablet/clients/laura.jpeg',
-      name: 'Laura Israel',
-      role: 'Fondatrice de BCKL',
-      content: (
-        <>
-          “L&apos;expérience avec Lucas était tout simplement parfaite. Il est créatif, à
-          l&apos;écoute et extrêmement efficace. Il a parfaitement cerné mon besoin. Je recommande
-          Lucas les yeux fermés et serais ravie de faire encore appel à lui pour de nouvelles
-          missions.
-          <br />
-          Merci pour tout !”
-        </>
-      ),
-    },
+  const [width, setWidth] = useState(0);
+  const [vw, setVw] = useState(1280);
+  const [pos, setPos] = useState(N); // 가운데 세트의 첫 카드에서 시작
+  const [animate, setAnimate] = useState(true);
+  const [dragX, setDragX] = useState(0);
+  const [dragging, setDragging] = useState(false);
+  const [paused, setPaused] = useState(false);
+  const [reduced, setReduced] = useState(false);
 
-    {
-      id: 12,
-      imageSrc: '/images/homepage/desktop-tablet/clients/thierry.jpeg',
-      name: 'Thierry Gomez ',
-      role: 'Fondateur INTECHDIEM',
-      content:
-        '“Très bonne expérience avec Lucas. Demande de création d&apos;identité visuelle sur les besoins de mon entreprise avec un travail sérieux et très respectueux concernant les délais accordés. Je le recommande. Je n&apos;hésiterai pas à refaire”',
-    },
-  ];
+  // 움직임 줄이기 설정 존중
+  useEffect(() => {
+    const mq = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setReduced(mq.matches);
+    const onChange = () => setReduced(mq.matches);
+    mq.addEventListener('change', onChange);
+    return () => mq.removeEventListener('change', onChange);
+  }, []);
 
-  type ReviewType = {
-    id: number;
-    name: string;
-    role: string;
-    content: string;
-    imageSrc: string;
+  // 컨테이너 폭과 화면 폭 측정
+  useEffect(() => {
+    const el = viewportRef.current;
+    if (!el) return;
+    const measure = () => {
+      setWidth(el.clientWidth);
+      setVw(window.innerWidth);
+    };
+    measure();
+    const ro = new ResizeObserver(measure);
+    ro.observe(el);
+    window.addEventListener('resize', measure);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', measure);
+    };
+  }, []);
+
+  const { ratio, gap } = getLayout(vw);
+  const cardW = width * ratio;
+  const step = cardW + gap;
+  const baseOffset = (width - cardW) / 2 - pos * step;
+
+  const go = useCallback((delta: number) => {
+    setAnimate(true);
+    setPos((p) => p + delta);
+  }, []);
+
+  // 점을 눌렀을 때: 가장 가까운 방향으로 이동
+  const goToIndex = (i: number) => {
+    const current = ((pos % N) + N) % N;
+    let delta = i - current;
+    if (delta > N / 2) delta -= N;
+    if (delta < -N / 2) delta += N;
+    go(delta);
   };
 
-  const tabletOrder = [1, 3, 8, 2, 4, 7, 3, 6, 9];
+  // 가운데 세트를 벗어나면 애니메이션 없이 같은 카드의 가운데 세트 위치로 순간이동
+  useEffect(() => {
+    if (pos >= N && pos < 2 * N) return;
+    const t = setTimeout(
+      () => {
+        setAnimate(false);
+        setPos((p) => (p >= 2 * N ? p - N : p < N ? p + N : p));
+      },
+      reduced ? 0 : DURATION + 20
+    );
+    return () => clearTimeout(t);
+  }, [pos, reduced]);
 
-  const tabletReviews = tabletOrder
-    .map((id) => reviews.find((review) => review.id === id))
-    .filter((review): review is ReviewType => Boolean(review)); // 타입 가드
+  // 순간이동 직후 애니메이션 다시 켜기
+  useEffect(() => {
+    if (animate) return;
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => setAnimate(true));
+    });
+    return () => cancelAnimationFrame(id);
+  }, [animate]);
 
-  const mobileOrder = [1, 2, 3, 5, 8, 9];
-  const mobileReviews = mobileOrder
-    .map((id) => reviews.find((review) => review.id === id))
-    .filter((review): review is ReviewType => Boolean(review)); // 타입 가드
+  // 자동 넘김
+  useEffect(() => {
+    if (paused || reduced || dragging) return;
+    const t = setTimeout(() => go(1), AUTO_DELAY);
+    return () => clearTimeout(t);
+  }, [pos, paused, reduced, dragging, go]);
+
+  // 스와이프 (마우스, 터치 공통)
+  const onPointerDown = (e: React.PointerEvent) => {
+    startX.current = e.clientX;
+    dragged.current = false;
+    setDragging(true);
+    setPaused(true);
+  };
+
+  const onPointerMove = (e: React.PointerEvent) => {
+    if (startX.current === null) return;
+    const dx = e.clientX - startX.current;
+    if (Math.abs(dx) > 5) dragged.current = true;
+    setDragX(dx);
+  };
+
+  const endDrag = () => {
+    if (startX.current === null) return;
+    if (dragX <= -SWIPE_THRESHOLD) go(1);
+    else if (dragX >= SWIPE_THRESHOLD) go(-1);
+    startX.current = null;
+    setDragX(0);
+    setDragging(false);
+    setPaused(false);
+  };
+
+  const active = ((pos % N) + N) % N;
+
   return (
-    <>
-      <div className="relative">
-        {/* pc버전 */}
-        <div className="hidden lg:block lg:columns-4 lg:space-y-4 lg:gap-x-[2%]">
-          {reviews.map((review) => (
-            <div key={review.name} className="mb-4 break-inside-avoid">
+    <div
+      className="relative w-full"
+      onMouseEnter={() => setPaused(true)}
+      onMouseLeave={() => setPaused(false)}
+      onFocus={() => setPaused(true)}
+      onBlur={() => setPaused(false)}
+    >
+      <div
+        ref={viewportRef}
+        className="w-full cursor-grab touch-pan-y overflow-hidden select-none active:cursor-grabbing"
+        onPointerDown={onPointerDown}
+        onPointerMove={onPointerMove}
+        onPointerUp={endDrag}
+        onPointerCancel={endDrag}
+        onPointerLeave={endDrag}
+        // 드래그 후에는 링크가 눌리지 않게
+        onClickCapture={(e) => {
+          if (dragged.current) {
+            e.preventDefault();
+            e.stopPropagation();
+          }
+        }}
+      >
+        <div
+          className="flex items-stretch"
+          style={{
+            gap,
+            opacity: width ? 1 : 0,
+            transform: `translateX(${baseOffset + dragX}px)`,
+            transition:
+              animate && !dragging && !reduced ? `transform ${DURATION}ms ease-in-out` : 'none',
+          }}
+        >
+          {items.map((review, i) => (
+            <div
+              key={`${Math.floor(i / N)}-${review.id}`}
+              style={{ width: cardW }}
+              aria-hidden={i < N || i >= 2 * N}
+              className={`shrink-0 transition-opacity duration-500 ${
+                i === pos ? 'opacity-100' : 'opacity-60'
+              }`}
+            >
               <ReviewCard
                 imageSrc={review.imageSrc}
                 name={review.name}
                 role={review.role}
                 content={review.content}
+                highlight={review.highlight}
+                logoSrc={review.logoSrc}
+                logoAlt={review.logoAlt}
+                projectUrl={review.projectUrl}
               />
             </div>
           ))}
         </div>
-        {/* tablet 버전 */}
-        <div className="hidden md:block md:columns-3 md:space-y-4 md:gap-x-[2%] lg:hidden">
-          {tabletReviews.map((review, i) => (
-            <div key={`${review.name}-${review.id}-${i}`} className="mb-4 break-inside-avoid">
-              <ReviewCard
-                imageSrc={review.imageSrc}
-                name={review.name}
-                role={review.role}
-                content={review.content}
-              />
-            </div>
-          ))}
-        </div>
-        {/* mobile 버전 */}
-        <div className="flex flex-col md:hidden">
-          {mobileReviews.map((review, i) => (
-            <div key={`${review.name}-${review.id}-${i}`} className="mb-2 break-inside-avoid">
-              <ReviewCard
-                imageSrc={review.imageSrc}
-                name={review.name}
-                role={review.role}
-                content={review.content}
-              />
-            </div>
-          ))}
-        </div>
-        {/* 하단 그라데이션 오버레이 */}
-        <div className="from-background pointer-events-none absolute bottom-0 left-0 h-[470px] w-full bg-gradient-to-t to-transparent" />
       </div>
-      {/* <div className="grid items-start gap-[2%] lg:grid-cols-4">
-        {reviews.map((review) => (
-          <ReviewCard
-            key={review.name}
-            imageSrc={review.imageSrc}
-            name={review.name}
-            role={review.role}
-            content={review.content}
+
+      {/* 좌우 끝 페이드 */}
+      <div className="from-background pointer-events-none absolute top-0 left-0 h-full w-[24px] bg-gradient-to-r to-transparent" />
+      <div className="from-background pointer-events-none absolute top-0 right-0 h-full w-[24px] bg-gradient-to-l to-transparent" />
+
+      {/* 좌우 화살표 (태블릿, 데스크탑만) */}
+      <button
+        type="button"
+        aria-label="Avis précédent"
+        onClick={() => go(-1)}
+        className="bg-foreground text-background absolute top-1/2 left-[8px] hidden h-[40px] w-[40px] -translate-y-1/2 items-center justify-center rounded-full shadow-md transition-opacity hover:opacity-80 md:flex"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M15 5l-7 7 7 7"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <button
+        type="button"
+        aria-label="Avis suivant"
+        onClick={() => go(1)}
+        className="bg-foreground text-background absolute top-1/2 right-[8px] hidden h-[40px] w-[40px] -translate-y-1/2 items-center justify-center rounded-full shadow-md transition-opacity hover:opacity-80 md:flex"
+      >
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M9 5l7 7-7 7"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+
+      {/* 현재 위치 표시 */}
+      <div className="mt-[20px] flex justify-center gap-[8px]">
+        {reviews.map((review, i) => (
+          <button
+            key={review.id}
+            type="button"
+            aria-label={`Avis ${i + 1}`}
+            aria-current={i === active}
+            onClick={() => goToIndex(i)}
+            className={`h-[8px] rounded-full transition-all duration-300 ${
+              i === active ? 'bg-foreground w-[24px]' : 'bg-foreground/20 w-[8px]'
+            }`}
           />
         ))}
-      </div> */}
-    </>
+      </div>
+    </div>
   );
 }

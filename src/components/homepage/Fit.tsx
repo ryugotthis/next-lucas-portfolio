@@ -4,17 +4,17 @@ import Image from 'next/image';
 
 // 👇 여기 텍스트만 수정하면 리스트 내용이 바뀝니다.
 const yesItems: string[] = [
-  'Vous vous lancez ou voulez monter en gamme',
-  'Vous voulez que vos développeurs puissent intégrer le branding sans vous solliciter à chaque étape',
-  "Vous voulez un branding qui s'adapte à votre produit. Et pas le contraire.",
-  "Vous cherchez un partenaire qui comprend les contraintes d'un produit digital",
+  'Vous vous lancez ou voulez monter en gamme.',
+  'Branding livré en 3 semaines, un seul projet à la fois.',
+  'Une marque prête à utiliser dès la livraison, avec un suivi après le projet.',
+  'Un designer qui vous guide et vous explique ses choix.',
 ];
 
 const noItems: string[] = [
   'Vous cherchez juste un logo rapide et pas cher.',
-  "Votre produit n'est pas encore validé et vous n'êtes pas prêt à investir dans la marque",
+  'Une agence qui jongle entre plusieurs projets et prend 2 à 3 mois.',
+  'Vous préférez recevoir vos fichiers et être lâché ensuite.',
   'Vous cherchez un exécutant et pas un designer qui vous guide.',
-  'Votre marque sera exclusivement print ou physique',
 ];
 
 function CheckCircleIcon() {
@@ -69,7 +69,7 @@ export default function Fit() {
     >
       <h2
         id="fit-title"
-        className="bold w-[300px] text-center text-[20px] leading-[24px] md:w-[420px] md:text-[24px] md:leading-[28px] lg:w-[560px] lg:text-[40px] lg:leading-[44px]"
+        className="bold w-[300px] text-center text-[20px] leading-[24px] uppercase md:w-[420px] md:text-[24px] md:leading-[28px] lg:w-[560px] lg:text-[40px] lg:leading-[44px]"
       >
         Mon offre est-elle
         <br />
@@ -82,7 +82,7 @@ export default function Fit() {
           {yesItems.map((item) => (
             <div key={item} className="flex items-start gap-[12px]">
               <Image src="/icons/Yes.svg" alt="Check" width={36} height={36} />
-              <p className="bold pt-[4px] text-[14px] leading-[20px] md:text-[15px] md:leading-[21px] lg:text-[18px] lg:leading-[22px]">
+              <p className="pt-[4px] text-[14px] leading-[20px] md:text-[15px] md:leading-[21px] lg:text-[18px] lg:leading-[22px]">
                 {item}
               </p>
             </div>

@@ -25,20 +25,25 @@ export default function Home() {
     <main>
       {/* Hero */}
       <section aria-labelledby="hero-title" className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
-        <div>
-          <span className="text-[10px] md:text-[14px] lg:text-[16px]">Branding tech B2B</span>
+        <div className="flex flex-col gap-[12px] md:gap-[16px] lg:gap-[20px]">
+          <span className="text-text-sub text-[10px] md:text-[14px] lg:text-[16px]">
+            BRANDING CLÉ EN MAIN
+          </span>
 
           <h1
             id="hero-title"
-            className="bold block text-[28px] leading-[28px] md:w-[470px] md:text-[40px] md:leading-[40px] lg:h-[153px] lg:w-[750px] lg:text-[64px] lg:leading-[64px]"
+            className="bold block text-[28px] leading-[28px] md:w-[470px] md:text-[40px] md:leading-[40px] lg:w-[750px] lg:text-[64px] lg:leading-[64px]"
           >
-            Votre branding, conçu
-            <br /> pour votre produit.
+            VOTRE IMAGE DE
+            <br />
+            MARQUE EN 21 JOURS.
           </h1>
 
-          <p className="mt-[51px] mb-[21px] block w-[315px] text-[14px] md:mt-[60px] md:mb-[16px] md:w-[435px] lg:mt-[36px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
-            Je construis des systèmes visuels pour les boîtes tech qui veulent monter en gamme.
-            <b className="bold"> Livré en 21 jours, prêt à être utilisé par votre équipe.</b>
+          <p className="text-text-sub mb-[21px] block w-[315px] text-[14px] md:mb-[16px] md:w-[435px] lg:mb-[12px] lg:w-[421px] lg:text-[16px]">
+            Je construis des systèmes visuels pour les fondateurs qui
+            <br />
+            veulent monter en gamme. Livré en 21 jours, prêt à<br />
+            l'emploi dès le premier jour.
           </p>
           <BookingButton />
         </div>
@@ -136,6 +141,49 @@ export default function Home() {
         </div>
       </section>
 
+      {/* about me */}
+      <section
+        aria-labelledby="about-title"
+        className="mt-[64px] flex flex-col-reverse items-center gap-[28px] px-[24px] md:mt-[76px] md:flex-row-reverse md:justify-center md:gap-[48px] md:px-0 lg:mt-[138px] lg:gap-[64px]"
+      >
+        {/* 오른쪽 텍스트 */}
+        <div className="flex w-full flex-col items-center gap-[12px] text-center md:max-w-[420px] md:items-start md:text-left">
+          <span className="text-text-sub text-[12px] md:text-[14px]">
+            +100 fondateurs accompagnés & 6 ans d'expérience
+          </span>
+          <h2
+            id="about-title"
+            className="bold text-[24px] leading-[26px] md:text-[40px] md:leading-[40px] lg:text-[48px] lg:leading-[48px]"
+          >
+            JE SUIS LUCAS,
+            <br />
+            BRAND DESIGNER.
+          </h2>
+          <p className="text-description text-[14px] leading-[20px] lg:text-[16px] lg:leading-normal">
+            Plus qu'une identité visuelle, je construis un système de marque que vous pouvez faire
+            vivre seul, dès la livraison, même si vous n’êtes pas designer.
+            <br />
+            <br />
+            Et je reste avec vous après le projet, parce que c'est à ce moment que tout commence
+            vraiment.
+          </p>
+          <div className="mt-[8px] md:mt-0">
+            <BookingButton />
+          </div>
+        </div>
+
+        {/* 왼쪽 이미지 */}
+        <div className="relative aspect-[4/5] w-[200px] overflow-hidden rounded-[4px] sm:w-[240px] md:aspect-[3/4] md:w-[260px] lg:w-[460px]">
+          <Image
+            src="/images/me/lucas.jpg"
+            alt="Lucas en train de dessiner dans son carnet"
+            fill
+            sizes="(min-width: 1024px) 460px, (min-width: 768px) 260px, (min-width: 640px) 240px, 200px"
+            className="object-cover"
+          />
+        </div>
+      </section>
+
       {/* pain points section */}
       <section
         aria-labelledby="pain-points-title"
@@ -143,82 +191,55 @@ export default function Home() {
       >
         <h2
           id="pain-points-title"
-          className="bold w-[352px] text-center text-[20px] leading-[24px] md:w-[320px] md:text-[24px] md:leading-[28px] lg:w-[659px] lg:text-[48px] lg:leading-[48px]"
+          className="bold w-[352px] text-center text-[20px] leading-[24px] uppercase md:w-[320px] md:text-[24px] md:leading-[28px] lg:w-[659px] lg:text-[48px] lg:leading-[48px]"
         >
-          Ce que les fondateurs
+          CE QUE LES FONDATEURS
           <br />
-          tech vivent trop souvent
+          VIVENT TROP SOUVENT
         </h2>
 
-        <div className="mt-[32px] grid w-full grid-cols-1 items-center gap-y-[28px] md:mt-[48px] md:grid-cols-[1fr_auto_1fr] md:gap-x-0 md:gap-y-0 lg:mt-[64px]">
-          {/* 왼쪽 컬럼 */}
-          <div className="mx-auto flex w-full max-w-[420px] flex-col gap-[20px] md:mx-0 md:max-w-none md:gap-[32px]">
-            <div className="text-center md:text-right">
-              <p className="bold text-[16px] leading-[20px] md:border-r-[3px] md:border-[#7061FF] md:pr-[10px] md:text-[20px] md:leading-[24px] lg:border-r-4 lg:pr-[6px] lg:text-[24px] lg:leading-[24px]">
-                Votre produit avance,
-                <br className="hidden md:block" />
-                mais votre marque reste
-                <br className="hidden md:block" />à la traîne ?
-              </p>
-              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pr-[12px] md:text-[14px] md:leading-[18px]">
-                Je construis une identité qui évolue
-                <br className="hidden md:block" />
-                avec votre produit, pas contre lui.
-              </p>
-            </div>
-            <div className="text-center md:text-right">
-              <p className="bold text-[16px] leading-[20px] md:border-r-[3px] md:border-[#7061FF] md:pr-[10px] md:text-[20px] md:leading-[24px] lg:border-r-4 lg:pr-[6px] lg:text-[24px] lg:leading-[24px]">
-                Vos devs inventent des
-                <br className="hidden md:block" />
-                couleurs et des polices à<br className="hidden md:block" />
-                chaque nouvelle feature ?
-              </p>
-              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pr-[12px] md:text-[14px] md:leading-[18px]">
-                Je livre un Figma structuré avec
-                <br className="hidden md:block" />
-                variables et composants prêts à <br className="hidden md:block" />
-                implémenter.
-              </p>
-            </div>
-          </div>
-
-          {/* 중앙 일러스트 - 작은 화면에서는 숨김 */}
-          <div className="relative mx-auto hidden h-[340px] w-[340px] md:block md:grid-cols-[1fr_340px_1fr] lg:h-[560px] lg:w-[560px] lg:grid-cols-[1fr_560px_1fr]">
+        <div className="mt-[32px] grid w-full grid-cols-1 items-center gap-y-[28px] md:mt-[48px] md:grid-cols-[auto_auto] md:justify-center lg:mt-[64px]">
+          {/* 왼쪽 일러스트 */}
+          <div className="relative mx-auto hidden h-[340px] w-[340px] md:block lg:h-[560px] lg:w-[560px]">
             <Image src="/illustrations/Thinking_illu.png" alt="" fill aria-hidden="true" />
           </div>
 
-          {/* 오른쪽 컬럼 */}
-          <div className="mx-auto flex w-full max-w-[420px] flex-col gap-[20px] md:mx-0 md:max-w-none md:gap-[32px]">
-            <div className="text-center md:text-left">
-              <p className="bold text-[16px] leading-[20px] md:border-l-[3px] md:border-[#7061FF] md:pl-[10px] md:text-[20px] md:leading-[24px] lg:border-l-4 lg:pl-[6px] lg:text-[24px] lg:leading-[24px]">
-                Vous créez chaque nouveau
-                <br className="hidden md:block" />
-                support de zéro : post, pitch,
-                <br className="hidden md:block" />
-                page produit ?
+          {/* 오른쪽 텍스트 컬럼 */}
+          <div className="mx-auto flex w-full max-w-[420px] flex-col gap-[20px] md:mx-0 md:w-[540px] md:max-w-none md:gap-[24px] md:pr-[80px] lg:w-[580px] lg:gap-[28px] lg:pr-[120px]">
+            <div className="border-l-[3px] border-[#7061FF] pl-[12px] lg:border-l-4 lg:pl-[16px]">
+              <p className="bold text-[16px] leading-[20px] md:text-[20px] md:leading-[24px] lg:text-[24px] lg:leading-[28px]">
+                Votre activité grandit, mais votre marque reste à la traîne ?
               </p>
-              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pl-[12px] md:text-[14px] md:leading-[18px]">
-                Un kit réseaux et des assets sont
-                <br className="hidden md:block" />
-                prêts à l&apos;emploi dès le lendemain de
-                <br className="hidden md:block" />
-                la livraison.
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:text-[14px] md:leading-[18px]">
+                Je construis une identité à la hauteur de ce que vous êtes devenu.
               </p>
             </div>
-            <div className="text-center md:text-left">
-              <p className="bold text-[16px] leading-[20px] md:border-l-[3px] md:border-[#7061FF] md:pl-[10px] md:text-[20px] md:leading-[24px] lg:border-l-4 lg:pl-[6px] lg:text-[24px] lg:leading-[24px]">
-                Vous hésitez à montrer votre
-                <br className="hidden md:block" />
-                produit à des investisseurs
-                <br className="hidden md:block" />
-                ou des clients ?
+
+            <div className="border-l-[3px] border-[#7061FF] pl-[12px] lg:border-l-4 lg:pl-[16px]">
+              <p className="bold text-[16px] leading-[20px] md:text-[20px] md:leading-[24px] lg:text-[24px] lg:leading-[28px]">
+                Vos supports ne se ressemblent pas d&apos;un endroit à l&apos;autre ?
               </p>
-              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:pl-[12px] md:text-[14px] md:leading-[18px]">
-                Votre branding reflète enfin le
-                <br className="hidden md:block" />
-                niveau de ce que vous avez
-                <br className="hidden md:block" />
-                construit.
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:text-[14px] md:leading-[18px]">
+                Je livre un système pour que tout reste cohérent.
+              </p>
+            </div>
+
+            <div className="border-l-[3px] border-[#7061FF] pl-[12px] lg:border-l-4 lg:pl-[16px]">
+              <p className="bold text-[16px] leading-[20px] md:text-[20px] md:leading-[24px] lg:text-[24px] lg:leading-[28px]">
+                Vous recréez chaque support de zéro : post, menu, présentation ?
+              </p>
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:text-[14px] md:leading-[18px]">
+                Un kit réseaux et des assets sont prêts à l&apos;emploi dès le lendemain de la
+                livraison.
+              </p>
+            </div>
+
+            <div className="border-l-[3px] border-[#7061FF] pl-[12px] lg:border-l-4 lg:pl-[16px]">
+              <p className="bold text-[16px] leading-[20px] md:text-[20px] md:leading-[24px] lg:text-[24px] lg:leading-[28px]">
+                Vous hésitez à montrer votre marque à vos clients ou partenaires ?
+              </p>
+              <p className="text-description mt-[8px] text-[12px] leading-[16px] md:text-[14px] md:leading-[18px]">
+                Votre branding reflète enfin le niveau de ce que vous avez construit.
               </p>
             </div>
           </div>
@@ -226,12 +247,12 @@ export default function Home() {
       </section>
 
       {/* comparison section */}
-      <section
+      {/* <section
         aria-labelledby="comparison-title"
         className="mt-[64px] flex flex-col items-center px-[24px] md:mt-[76px] md:px-0 lg:mt-[138px]"
       >
         <Comparison />
-      </section>
+      </section> */}
 
       {/* process section */}
       <section
@@ -240,8 +261,8 @@ export default function Home() {
         className="mt-[64px] md:mt-[76px] lg:mt-[138px]"
       >
         <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
-          <h2 className="bold w-[352px] text-center text-[20px] leading-[24px] md:w-[320px] md:text-[24px] md:leading-[28px] lg:w-[659px] lg:text-[48px] lg:leading-[48px]">
-            Une méthode pensée pour les produits qui évoluent vite
+          <h2 className="bold w-[352px] text-center text-[20px] leading-[24px] uppercase md:w-[380px] md:text-[24px] md:leading-[28px] lg:w-[750px] lg:text-[48px] lg:leading-[48px]">
+            Une méthode pensée pour que votre projet prenne vie.
           </h2>
           <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
             Je ne crée pas un branding figé. Je construis un système visuel que votre équipe peut
@@ -266,10 +287,15 @@ export default function Home() {
         aria-labelledby="review-title"
         className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]"
       >
-        <h2 className="bold text-[20px] leading-[24px] md:text-[24px] md:leading-[24px] lg:text-[48px] lg:leading-[48px]">
-          + de 100 marques accompagnées
-        </h2>
-        <div className="mt-[23px] md:mt-[34px] lg:mt-[36px]">
+        <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
+          <h2 className="bold w-[352px] text-center text-[20px] leading-[24px] uppercase md:w-[380px] md:text-[24px] md:leading-[28px] lg:w-[750px] lg:text-[48px] lg:leading-[48px]">
+            Ce que disent mes clients
+          </h2>
+          <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
+            + de 100 fondateurs accompagnés & 6 ans d’expériences
+          </p>
+        </div>
+        <div className="mt-[23px] w-full md:mt-[34px] lg:mt-[36px]">
           <ReviewList />
         </div>
 
