@@ -24,7 +24,7 @@ export default function Home() {
   return (
     <main>
       {/* Hero */}
-      <section aria-labelledby="hero-title" className="mt-[80px] flex md:mt-[80px] lg:mt-[178px]">
+      <section aria-labelledby="hero-title" className="mt-[104px] flex md:mt-[80px] lg:mt-[178px]">
         <div className="flex flex-col gap-[12px] md:gap-[16px] lg:gap-[20px]">
           <span className="text-text-sub text-[10px] md:text-[14px] lg:text-[16px]">
             BRANDING CLÉ EN MAIN
@@ -59,7 +59,7 @@ export default function Home() {
       <section
         id="project"
         aria-labelledby="project-title"
-        className="mt-[27px] flex flex-col gap-[24px] md:mt-[55px] md:gap-[40px] lg:mt-[70px] lg:gap-[67px]"
+        className="mt-[27px] flex flex-col gap-[20px] md:mt-[55px] md:gap-[28px] lg:mt-[70px] lg:gap-[40px]"
       >
         {/* 1행: ALCÔVE (전체 너비) */}
         <PreviewCard

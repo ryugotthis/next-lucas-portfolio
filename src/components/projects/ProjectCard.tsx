@@ -56,7 +56,7 @@ function DescriptionBlock({
 }) {
   if (!description && !semiDescription) return null;
   return (
-    <div className={`${position === 'top' ? 'mb-[2%]' : 'mt-[2%]'} w-[54%]`}>
+    <div className={`${position === 'top' ? 'mb-[2%]' : 'mt-[2%]'} w-full md:w-[54%]`}>
       <div
         className={`text-[14px] md:text-[24px] ${
           semiDescription ? 'text-foreground' : 'text-text-sub'

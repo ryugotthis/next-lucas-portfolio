@@ -278,6 +278,10 @@ const contents: ProjectGroup[] = [
             28 Rue Saint-Nicolas,
             <br />
             17000 La Rochelle, France
+            <br />
+            <br />
+            <br />
+            <br />
           </>
         ),
       },
