@@ -1,6 +1,7 @@
 @import 'tailwindcss';
 
 :root {
+  color-scheme: light;
   --background: #faf9ff;
   --foreground: #0a0832;
   --background-sub: #f1f3ff;
@@ -16,25 +17,25 @@
   --faq-open: #f0f0f0;
   --faq-closed: #d9d9d9;
 
-  --font-regular: 'SkModernist-Regular', Arial, Helvetica, sans-serif;
-  --font-bold: 'SkModernist-Bold', Arial, Helvetica, sans-serif;
+  --font-regular: 'MyFont', Arial, Helvetica, sans-serif;
+  --font-bold: 'MyFont', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-  font-family: 'SkModernist-Regular';
-  src: url('/font/Sk-Modernist-Regular.woff2') format('woff2');
+  font-family: 'MyFont';
+  src: url('/font/MyFont-Variable.woff2') format('woff2');
   font-display: swap;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 100 900;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'SkModernist-Bold';
   src: url('/font/Sk-Modernist-Bold.woff2') format('woff2');
   font-display: swap;
   font-style: normal;
   font-weight: 700;
-}
+} */
 
 @theme inline {
   --color-background: var(--background);
@@ -54,27 +55,23 @@
   --color-faq-closed: var(--faq-closed);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0832;
     --foreground: #faf9ff;
     --background-sub: #292749;
     --background-card: #2f314d;
 
-    /* --brand-primary: #7a74ff;        
-    --brand-primary-active: #5c53ff; */
     --brand-secondary: #cfcfff;
 
     --text-description: #bbb;
     --text-sub: #e6e6ff;
     --text-email: #cacaff;
 
-    /* --faq-open: #3a3a3a;
-    --faq-closed: #2b2b2b; */
     --faq-open: #2f314d;
     --faq-closed: #2f314d;
   }
-}
+} */
 
 body {
   background: var(--background);
@@ -111,5 +108,9 @@ body {
 
 .bold {
   font-family: var(--font-bold);
-  font-weight: normal;
+  font-weight: 700;
+}
+.light {
+  font-family: var(--font-regular);
+  font-weight: 300;
 }
