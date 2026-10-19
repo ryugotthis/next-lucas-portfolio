@@ -1,7 +1,11 @@
 @import 'tailwindcss';
 
+/* dark: 클래스는 <html class="dark">일 때만 적용 (기기 다크 모드는 무시) */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   color-scheme: light;
+
   --background: #faf9ff;
   --foreground: #0a0832;
   --background-sub: #f1f3ff;
@@ -17,25 +21,17 @@
   --faq-open: #f0f0f0;
   --faq-closed: #d9d9d9;
 
-  --font-regular: 'MyFont', Arial, Helvetica, sans-serif;
-  --font-bold: 'MyFont', Arial, Helvetica, sans-serif;
+  --font-regular: 'Host Grotesk', Arial, Helvetica, sans-serif;
+  --font-bold: 'Host Grotesk', Arial, Helvetica, sans-serif;
 }
 
 @font-face {
-  font-family: 'MyFont';
-  src: url('/font/MyFont-Variable.woff2') format('woff2');
+  font-family: 'Host Grotesk';
+  src: url('/font/HostGrotesk-VariableFont_wght.ttf') format('truetype');
   font-display: swap;
   font-style: normal;
-  font-weight: 100 900;
+  font-weight: 300 800;
 }
-
-/* @font-face {
-  font-family: 'SkModernist-Bold';
-  src: url('/font/Sk-Modernist-Bold.woff2') format('woff2');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 700;
-} */
 
 @theme inline {
   --color-background: var(--background);
@@ -54,24 +50,6 @@
   --color-faq-open: var(--faq-open);
   --color-faq-closed: var(--faq-closed);
 }
-
-/* @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0832;
-    --foreground: #faf9ff;
-    --background-sub: #292749;
-    --background-card: #2f314d;
-
-    --brand-secondary: #cfcfff;
-
-    --text-description: #bbb;
-    --text-sub: #e6e6ff;
-    --text-email: #cacaff;
-
-    --faq-open: #2f314d;
-    --faq-closed: #2f314d;
-  }
-} */
 
 body {
   background: var(--background);
@@ -110,6 +88,7 @@ body {
   font-family: var(--font-bold);
   font-weight: 700;
 }
+
 .light {
   font-family: var(--font-regular);
   font-weight: 300;
