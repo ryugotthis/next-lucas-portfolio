@@ -13,6 +13,8 @@ type ProjectSection = {
   semiTitle?: ReactNode;
   review?: ReactNode;
   leadText?: ReactNode;
+  topDescription?: ReactNode; // 추가: 이미지 위에 오는 설명
+  topSemiDescription?: ReactNode; // 추가: 이미지 위 설명 밑의 작은 글씨
   description?: ReactNode;
   semiDescription?: ReactNode;
   introduction?: {
@@ -204,14 +206,14 @@ const contents: ProjectGroup[] = [
       {
         isFirst: true,
         order: 0,
-        title: 'Alcôve',
+        title: 'Alcôve & ALCôVE EVENTS',
         semiTitle: (
           <>
             Un lieu unique au double concept :<br /> Coffee shop et studio de pilates.
           </>
         ),
         imgType: 1,
-        imgSrc: '/images/alcove/1.jpg',
+        imgSrc: '/images/alcove/01.jpg',
         description:
           'Un café pour se booster avant une séance de pilates ou bien l’inverse. C’est vous qui décider. Vincent et Marine m’ont laissé les accompagnés pour l’identité d’Alcôve.',
         introduction: {
@@ -225,6 +227,12 @@ const contents: ProjectGroup[] = [
         imgType: 2,
         imgSrc1: '/images/alcove/2.mp4',
         imgSrc2: '/images/alcove/3.jpg',
+        topDescription: (
+          <>
+            Un café pour se booster avant une séance de pilates ou bien l’inverse. C’est vous qui
+            décider. Vincent et Marine m’ont laissé les accompagnés pour l’identité d’Alcôve.
+          </>
+        ),
         description:
           'Que ce soit pour l’espace café ou pilates, la direction artistique est basée sur une ambiance chaleureuse, accueillante et accessible à tous.',
       },
@@ -275,11 +283,53 @@ const contents: ProjectGroup[] = [
       },
       {
         order: 5,
-        isLast: true,
-        imgType: 5,
-        imgSrc1: '/images/alcove/10.png',
-        imgSrc2: '/images/alcove/11.jpg',
-        imgSrc3: '/images/alcove/12.jpg',
+        title: 'Alcôve & ALCôVE EVENTS',
+        semiTitle: <>Un an après : Alcôve Events</>,
+        imgType: 1,
+        imgSrc: '/images/alcove/AE1.jpg',
+        topDescription: (
+          <>
+            En quelques mois, Alcôve a conquis La Rochelle. Seulement un an après, Vincent et Marine
+            ont décidé d’aller encore plus loin : apporter l’excellence artisanale du café pour les
+            moments d’exception.
+          </>
+        ),
+        description:
+          'Alcôve Events, c’est un stand qui combine le savoir-faire du barista, la noblesse du café travaillé et une esthétique raffinée, discrète et profondément élégante.',
+      },
+      {
+        order: 6,
+        imgType: 2,
+        imgSrc1: '/images/alcove/AE2.jpg',
+        imgSrc2: '/images/alcove/AE3.jpg',
+        description: (
+          <>
+            Nous avons donc fait évoluer l’identité d’Alcôve pour l’adapter à cette nouvelle marque
+            : plus d’élégance, de sobriété et de matière pour traduire le côté haut de gamme
+            d’Alcôve Events.
+          </>
+        ),
+      },
+      {
+        order: 7,
+        imgType: 2,
+        imgSrc1: '/images/alcove/AE4.jpg',
+        imgSrc2: '/images/alcove/AE5.jpg',
+        description: (
+          <>
+            Nous avons donc fait évoluer l’identité d’Alcôve pour l’adapter à cette nouvelle marque
+            : plus d’élégance, de sobriété et de matière pour traduire le côté haut de gamme
+            d’Alcôve Events.
+          </>
+        ),
+      },
+      {
+        order: 8,
+        imgType: 4,
+        imgSrc1: '/images/alcove/AE6.jpg',
+        imgSrc2: '/images/alcove/AE7.mp4',
+        imgSrc3: '/images/alcove/AE8.jpg',
+        imgSrc4: '/images/alcove/AE9.jpg',
       },
     ],
   },
@@ -507,7 +557,7 @@ const contents: ProjectGroup[] = [
           "L'identité de SCorp-io reposait sur une charte construite en interne, au fil de l'eau. Une base honnête, mais pensée pour accompagner les débuts de la marque, pas l'ambition qu'elle affichait déjà.",
         description: (
           <div>
-            <p className="bold">Le problème</p>
+            <p className="bold text-primary">Le problème</p>
             SCorp-io ne voulait plus être vu comme un nouvel entrant parmi d'autres, mais comme
             l'acteur nouvelle génération de la supervision énergétique, face à des concurrents
             solidement installés. Son identité ne suivait pas cette ambition. Trop artisanale, pas
@@ -617,7 +667,13 @@ const contents: ProjectGroup[] = [
             produit et de la marque. Je recommande sans hésiter.”
           </>
         ),
-        semiDescription: `Jean-Romain Bardet - Co-fondateur & CEO chez SCORP-IO`,
+        semiDescription: (
+          <>
+            Jean-Romain Bardet
+            <br />
+            Co-fondateur & CEO chez SCORP-IO
+          </>
+        ),
       },
       {
         isLast: true,
@@ -800,26 +856,23 @@ const contents: ProjectGroup[] = [
       {
         order: 1,
         imgType: 6,
-        imgTitle6: 'Avant',
+        imgTitle6: 'Le problème',
         imgSrc1: '/images/dolmen/2.jpg',
         leadText: (
-          <>
-            <p className="mb-2 text-[14px] md:text-[22px]">
+          <div className="space-y-4 text-[14px] md:text-[18px] lg:text-[22px]">
+            <p>
               Avant Dolmen, il y avait Guillaume Adrian : une marque personnelle, indépendante,
               portée par une identité colorée, pensée pour un freelance, pas pour une agence.
             </p>
-          </>
-        ),
-        description: (
-          <div className="text-[14px] md:text-[22px]">
-            <b className="bold">Le problème</b>
-            <br />
-            Guillaume ne voulait plus être perçu comme un consultant en solo, mais comme le
-            fondateur d'une structure capable d'accompagner des startups SaaS B2B et IA exigeantes.
-            <br />
-            <br />
-            Son identité ne suivait pas cette ambition. Trop personnelle, trop décontractée, elle ne
-            portait ni la rigueur ni la crédibilité attendues par ce type de clients.
+            <p>
+              Guillaume ne voulait plus être perçu comme un consultant en solo, mais comme le
+              fondateur d'une structure capable d'accompagner des startups SaaS B2B et IA
+              exigeantes.
+            </p>
+            <p>
+              Son identité ne suivait pas cette ambition. Trop personnelle, trop décontractée, elle
+              ne portait ni la rigueur ni la crédibilité attendues par ce type de clients.
+            </p>
           </div>
         ),
       },
@@ -914,6 +967,28 @@ const contents: ProjectGroup[] = [
         imgSrc: '/images/myclerk/1.jpg',
         description: (
           <>
+            "Lucas a parfaitement saisi nos intentions et les a traduites dans le logo, le
+            brandbook, ainsi que la mascotte”
+          </>
+        ),
+        introduction: {
+          client: 'MyClerk',
+          secteur: 'CHR',
+          accompagnement: 'Branding',
+        },
+        clientProfile: {
+          avatarSrc: '/images/homepage/desktop-tablet/clients/jf.jpeg',
+          name: 'Jean-François Legras',
+          role: 'Fondateur de MyClerk',
+        },
+      },
+      {
+        order: 1,
+        imgType: 2,
+        imgSrc1: '/images/myclerk/2.jpg',
+        imgSrc2: '/images/myclerk/3.jpg',
+        topDescription: (
+          <>
             MyClerk est une application qui automatise la présence en ligne des indépendants CHR :
             restaurateurs, cafetiers, hôteliers.
             <br />
@@ -922,20 +997,9 @@ const contents: ProjectGroup[] = [
             dès le jour 1.
           </>
         ),
-        introduction: {
-          client: 'MyClerk',
-          secteur: 'CHR',
-          accompagnement: 'Branding',
-        },
-      },
-      {
-        order: 1,
-        imgType: 2,
-        imgSrc1: '/images/myclerk/2.jpg',
-        imgSrc2: '/images/myclerk/3.jpg',
         description: (
           <>
-            <div className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
+            <div className="bold text-primary text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
               Le problème
             </div>
             Les restaurateurs savent que leur présence en ligne compte, mais ils n'ont ni le temps,
@@ -961,7 +1025,7 @@ const contents: ProjectGroup[] = [
         imgSrc2: '/images/myclerk/6.jpg',
         description: (
           <>
-            <div className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
+            <div className="text-primary bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
               La solution
             </div>
             La décision de départ : personnifier MyClerk au-delà du nom, avec une mascotte ronde qui
@@ -992,10 +1056,105 @@ const contents: ProjectGroup[] = [
       {
         order: 5,
         isLast: true,
-        imgType: 5,
+        imgType: 2,
         imgSrc1: '/images/myclerk/8.jpg',
         imgSrc2: '/images/myclerk/9.jpg',
-        imgSrc3: '/images/myclerk/10.jpg',
+        description: (
+          <>
+            “Nous avions du mal à savoir nous-mêmes ce que que nous voulions, ou tout du moins à
+            l'exprimer.
+            <br />
+            <br />
+            Lucas a pris le temps de nous questionner, comprendre nos objectifs et valider avec nous
+            la direction artistique dans laquelle nous souhaitions aller.
+            <br />
+            <br />
+            Le résultat est à la hauteur de nos attentes, et c'est clairement un travail que nous
+            n'aurions jamais pu produire nous-mêmes. Je recommande Lucas sans hésiter”
+          </>
+        ),
+        semiDescription: (
+          <>
+            Jean-François Legras
+            <br />
+            Fondateur de MyClerk
+            <br />
+            <br />
+            myclerk.io
+          </>
+        ),
+      },
+      {
+        order: 6,
+        isLast: true,
+        imgType: 1,
+        imgSrc: '/images/myclerk/10.jpg',
+      },
+    ],
+  },
+  // Radiant
+  {
+    project: 'radiant',
+    section: [
+      {
+        isFirst: true,
+        order: 0,
+        title: 'Radiant',
+        semiTitle: (
+          <>
+            Rebranding pour le café Radiant en
+            <br /> plein Séoul.
+          </>
+        ),
+        topDescription: (
+          <>
+            Projet très spécial que j'ai réalisé à Séoul et que j'ai présenté en coréen au patron.
+            Vidéo de sa réaction juste en dessous.
+          </>
+        ),
+        imgType: 1,
+        imgSrc1: '/images/radiant/1.mp4',
+        imgSrc2: '/images/radiant/2.jpg',
+        imgTitle1: 'Le contexte',
+        description:
+          "J'habite en France et en Corée du Sud depuis quelque temps. Alors, pour me challenger, j'ai voulu faire le rebranding d'un café qui me plaît à Séoul. Et surtout, le présenter au patron.",
+        introduction: {
+          client: 'Radiant',
+          secteur: 'Café',
+          accompagnement: 'Identité visuelle',
+        },
+      },
+      {
+        order: 1,
+        imgType: 2,
+        imgSrc1: '/images/radiant/3.jpg',
+        imgSrc2: '/images/radiant/4.jpg',
+        description:
+          'J’ai dû définir la direction créative à prendre pour ne pas dénaturer l’ambiance du café, mais plutôt l’enrichir grâce à des éléments visuels forts et facilement identifiables.',
+      },
+      {
+        order: 2,
+        imgType: 2,
+        imgSrc1: '/images/radiant/5.gif',
+        imgSrc2: '/images/radiant/6.jpg',
+        description:
+          'Le café a vraiment une ambiance intéressante, mais son identité restait simple. Alors plutôt que de tout casser, j’ai gardé cette ambiance brute, artisanale et imparfaite pour la traduire dans l’identité visuelle.',
+      },
+      {
+        order: 3,
+        imgType: 2,
+        imgSrc1: '/images/radiant/7.jpg',
+        imgSrc2: '/images/radiant/8.jpg',
+        description:
+          'J’ai davantage appuyé sur le côté vintage et élégant qui fait le charme du café. J’ai défini le logo, les illustrations et la direction photo dans cet univers imparfait et brut, notamment grâce à de la texture.',
+      },
+      {
+        order: 4,
+        imgType: 4,
+        imgSrc1: '/images/radiant/9.jpg',
+        imgSrc2: '/images/radiant/10.jpg',
+        imgSrc3: '/images/radiant/11.jpg',
+        imgSrc4: '/images/radiant/12.jpg',
       },
     ],
   },
@@ -1012,21 +1171,45 @@ export default function ProjectList({ project }: ProjectListProps) {
   // const filteredContents = contents.filter((group) => group.project === project.toLowerCase());
   return (
     <div>
-      <h1 className="pl-1.5 text-[11px] md:text-[16px]">{hero.title}</h1>
-      <h2 className="bold text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
+      <h1 className="text-text-sub pl-1.5 text-[11px] uppercase md:text-[16px]">{hero.title}</h1>
+      <h2 className="bold text-primary text-[16px] md:text-[28px] lg:text-[48px] lg:leading-[54px]">
         {hero.semiTitle}
       </h2>
 
-      {/* 히어로 이미지/영상 렌더링 (Media 컴포넌트로 통일 처리) */}
-      {hero.imgSrc && (
-        <div className="relative my-[2%] aspect-video w-full overflow-hidden rounded-[5px]">
-          <Media src={hero.imgSrc} alt={`${hero.title} hero`} />
+      {/* 제목 바로 아래 소개 문구 (topDescription이 있는 프로젝트만) */}
+      {hero.topDescription && (
+        <div className="text-text-sub mt-[8px] w-full text-[11px] md:w-[54%] md:text-[18px] lg:text-[22px]">
+          {hero.topDescription}
         </div>
+      )}
+
+      {/* 히어로 미디어: imgSrc1 + imgSrc2가 있으면 폭이 다른 2장, 아니면 기존 1장 */}
+      {hero.imgSrc1 && hero.imgSrc2 ? (
+        <div className="my-[2%] grid aspect-video w-full grid-cols-[1fr_2fr] gap-[10px]">
+          <div className="relative overflow-hidden rounded-[5px]">
+            <Media src={hero.imgSrc1} alt={`${hero.title} hero 1`} />
+          </div>
+          <div className="relative overflow-hidden rounded-[5px]">
+            <Media src={hero.imgSrc2} alt={`${hero.title} hero 2`} />
+          </div>
+        </div>
+      ) : (
+        hero.imgSrc && (
+          <div className="relative my-[2%] aspect-video w-full overflow-hidden rounded-[5px]">
+            <Media src={hero.imgSrc} alt={`${hero.title} hero`} />
+          </div>
+        )
       )}
 
       {/* 히어로 설명 + 오른쪽 정보 패널(Client / Secteur / Accompagnement) */}
       <div className="flex justify-between">
         <div className="w-full md:w-[67%]">
+          {/* 설명 위 작은 제목 (imgTitle1이 있는 프로젝트만) */}
+          {hero.imgTitle1 && (
+            <p className="bold text-primary mb-[8px] text-[20px] md:text-[32px] lg:text-[40px]">
+              {hero.imgTitle1}
+            </p>
+          )}
           <div className="text-[11px] md:text-[18px] lg:text-[26px]">{hero.description}</div>
 
           {/* 프로필 사진 + 이름 + 역할 — 데이터 없으면 자동으로 안 나옴 */}
@@ -1053,17 +1236,17 @@ export default function ProjectList({ project }: ProjectListProps) {
         </div>
 
         {/* 데스크탑에서만 보이는 정보 섹션 */}
-        <div className="divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
+        <div className="text-text-sub divide-description hidden w-[30%] divide-y text-[14px] leading-[32px] md:block">
           <div className="flex justify-between">
-            <div className="text-description">Client</div>
+            <div className="">Client</div>
             <div className="bold">{hero.introduction?.client}</div>
           </div>
           <div className="flex justify-between">
-            <div className="text-description">Secteur</div>
+            <div className="">Secteur</div>
             <div className="bold">{hero.introduction?.secteur}</div>
           </div>
           <div className="flex justify-between">
-            <div className="text-description">Accompagnement</div>
+            <div className="">Accompagnement</div>
             <div className="bold">{hero.introduction?.accompagnement}</div>
           </div>
         </div>

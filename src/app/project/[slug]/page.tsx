@@ -45,6 +45,8 @@ export async function generateStaticParams() {
     'lidory',
     'dolmen',
     'myclerk',
+    'latelier',
+    'radiant',
   ];
   return slugs.map((slug) => ({ slug }));
 }
