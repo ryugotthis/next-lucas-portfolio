@@ -175,6 +175,37 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Review section */}
+      <section
+        id="review"
+        aria-labelledby="review-title"
+        className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]"
+      >
+        <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
+          <h2 className="bold w-[352px] text-center text-[20px] leading-[24px] uppercase md:w-[380px] md:text-[24px] md:leading-[28px] lg:w-[750px] lg:text-[48px] lg:leading-[48px]">
+            Ce que disent mes clients
+          </h2>
+          <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
+            + de 100 fondateurs accompagnés & 6 ans d’expériences
+          </p>
+        </div>
+        <div className="mt-[23px] w-full md:mt-[34px] lg:mt-[36px]">
+          <ReviewList />
+        </div>
+
+        <Link
+          className="text-description hidden underline md:block"
+          href="https://www.malt.fr/profile/lucasprovost"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Voir plus d’avis
+        </Link>
+
+        <div className="mt-[16px] md:mt-[12px] lg:mt-[18px]">
+          <BookingButton />
+        </div>
+      </section>
       {/* pain points section */}
       <section
         aria-labelledby="pain-points-title"
@@ -271,38 +302,6 @@ export default function Home() {
 
       {/* Design carousel section */}
       <DesignSystemCarousel />
-
-      {/* Review section */}
-      <section
-        id="review"
-        aria-labelledby="review-title"
-        className="mt-[72px] flex flex-col items-center md:mt-[68px] lg:mt-[152px]"
-      >
-        <div className="mb-[36px] flex flex-col items-center gap-[12px] md:mb-[32px] lg:mb-[44px] lg:gap-[20px]">
-          <h2 className="bold w-[352px] text-center text-[20px] leading-[24px] uppercase md:w-[380px] md:text-[24px] md:leading-[28px] lg:w-[750px] lg:text-[48px] lg:leading-[48px]">
-            Ce que disent mes clients
-          </h2>
-          <p className="w-[293px] text-center text-[12px] leading-[16px] text-[#b8b8b8] md:w-[339px] md:text-[14px] md:leading-[16px] lg:w-[469px] lg:text-[18px] lg:leading-[22px]">
-            + de 100 fondateurs accompagnés & 6 ans d’expériences
-          </p>
-        </div>
-        <div className="mt-[23px] w-full md:mt-[34px] lg:mt-[36px]">
-          <ReviewList />
-        </div>
-
-        <Link
-          className="text-description hidden underline md:block"
-          href="https://www.malt.fr/profile/lucasprovost"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Voir plus d’avis
-        </Link>
-
-        <div className="mt-[16px] md:mt-[12px] lg:mt-[18px]">
-          <BookingButton />
-        </div>
-      </section>
 
       {/* contact section & FAQ 사이에 메시지 공간 조정 위해 합침  */}
       <section
