@@ -59,84 +59,75 @@ export default function Home() {
       <section
         id="project"
         aria-labelledby="project-title"
-        className="mt-[27px] flex flex-col gap-[12px] md:mt-[55px] md:gap-[33px] lg:mt-[70px] lg:gap-[67px]"
+        className="mt-[27px] flex flex-col gap-[24px] md:mt-[55px] md:gap-[40px] lg:mt-[70px] lg:gap-[67px]"
       >
-        {/* SCORP-IO */}
+        {/* 1행: ALCÔVE (전체 너비) */}
         <PreviewCard
-          url="/project/scorp-io"
+          url="/project/alcove"
+          imageSrc="/images/homepage/projects-images/alcove.jpg"
           className="aspect-[340/192] cursor-pointer md:aspect-[16/9]"
-          imageSrc="/images/homepage/desktop-tablet/7.mp4"
-          title="SCORP-IO"
-          description={
-            <>
-              Rebranding pour la solution ultra simplifiée de gestion
-              <br />
-              énergétique pour bâtiments tertiaires.
-            </>
-          }
+          subtitle="CAFE & STUDIO DE PILATE"
+          title="ALCOVE & ALCOVE EVENTS"
         />
-        {/* DOLMEN & LIDORY */}
-        <div className="grid grid-cols-1 gap-[12px] md:grid-cols-2 md:gap-[24px]">
-          <PreviewCard
-            url="/project/dolmen"
-            imageSrc="/images/homepage/desktop-tablet/9.mp4"
-            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            title="Dolmen"
-            description={
-              <>
-                Une identité solide pour une agence qui structure la croissance
-                <br />
-                des entreprises tech B2B et IA.
-              </>
-            }
-          />
-          <PreviewCard
-            url="/project/lidory"
-            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
-            imageSrc="/images/homepage/desktop-tablet/8.mp4"
-            title="Lidory"
-            description={
-              <>
-                Construire une identité à la hauteur d'une <br />
-                promesse : la sécurité dès la conception.
-              </>
-            }
-          />
-        </div>
-        {/* MYCLERK, OKNA, DGK */}
-        <div className="grid grid-cols-1 gap-[12px] md:grid-cols-3 md:gap-[24px]">
+
+        {/* 2행: MYCLERK & SCORP-IO */}
+        <div className="grid grid-cols-1 gap-x-[24px] gap-y-[24px] md:grid-cols-2 md:gap-y-[40px]">
           <PreviewCard
             url="/project/myclerk"
-            className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/10.jpg"
-            title="MyClerk"
-            description={<>L’outil qui gère la présence en ligne des restaurateurs</>}
+            imageSrc="/images/homepage/projects-images/myclerk.jpg"
+            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
+            subtitle="APP POUR RESTAURATEURS"
+            title="MYCLERK"
           />
           <PreviewCard
-            url="/project/okna"
+            url="/project/scorp-io"
+            imageSrc="/images/homepage/projects-images/scorp-io.mp4"
+            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
+            subtitle="TECH & ENERGIES"
+            title="SCORP-IO"
+          />
+        </div>
+
+        {/* 3행: DOLMEN & DGK & SNEAKY */}
+        <div className="grid grid-cols-1 gap-x-[24px] gap-y-[24px] md:grid-cols-3 md:gap-y-[40px]">
+          <PreviewCard
+            url="/project/dolmen"
+            imageSrc="/images/homepage/projects-images/dolmen.mp4"
             className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/6.mp4"
-            title="Okna"
-            description={
-              <>
-                La solution cloud sur-mesure pour accompagner les marques
-                <br />
-                dans leurs projets en utilisant seulement ce dont ils ont besoin.
-              </>
-            }
+            subtitle="AGENCE GROWTH"
+            title="DOLMEN"
           />
           <PreviewCard
             url="/project/dgk"
+            imageSrc="/images/homepage/projects-images/dgk.jpg"
             className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
-            imageSrc="/images/homepage/desktop-tablet/2.mp4"
-            title="Data Governance Kitchen"
-            description={
-              <>
-                Le canal de communication qui aide à concocter de
-                <br />
-                savoureuses stratégies grâce à vos données.
-              </>
-            }
+            subtitle="DATA ANALYTICS"
+            title="DATA GOVERNANCE KITCHEN"
+          />
+          <PreviewCard
+            url="/project/sneaky"
+            imageSrc="/images/homepage/projects-images/sneaky.jpg"
+            className="aspect-[340/192] cursor-pointer md:aspect-[432/450]"
+            subtitle="AGENCE DE VOYAGE"
+            title="SNEAKY"
+          />
+        </div>
+
+        {/* 4행: KENKO & RADIANT */}
+        <div className="grid grid-cols-1 gap-x-[24px] gap-y-[24px] md:grid-cols-2 md:gap-y-[40px]">
+          <PreviewCard
+            url="/project/kenko"
+            imageSrc="/images/homepage/projects-images/kenko.jpg"
+            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
+            subtitle="STUDIO DE POTERIE"
+            title="KENKO"
+          />
+          <PreviewCard
+            url="/project/radiant"
+            imageSrc="/images/homepage/projects-images/radiant.jpg"
+            className="aspect-[340/192] cursor-pointer md:aspect-[660/450]"
+            subtitle="CAFÉ"
+            title="RADIANT"
           />
         </div>
       </section>
